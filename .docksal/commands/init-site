@@ -86,7 +86,7 @@ site_install ()
 	cd "$DOCROOT_PATH"
 
 	echo-green "Installing Drupal..."
-	drush site-install standard -y --site-name='My Drupal 9 Site'
+	drush site-install minimal --existing-config
 }
 
 #-------------------------- END: Functions --------------------------------

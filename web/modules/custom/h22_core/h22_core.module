@@ -33,32 +33,3 @@ function h22_core_theme() {
     ],
   ];
 }
-
-/**
- * Implements hook_toolbar().
- */
-function h22_core_toolbar() {
-  $items = [];
-
-  // Add a search field to the toolbar. The search field employs no toolbar
-  // module theming functions.
-  $items['global_search'] = [
-    '#type' => 'toolbar_item',
-    'tab' => [
-      '#type' => 'search',
-      '#attributes' => [
-        'placeholder' => t('Search the site'),
-        'class' => ['search-global'],
-      ],
-    ],
-    '#weight' => 200,
-    // Custom CSS, JS or a library can be associated with the toolbar item.
-    '#attached' => [
-      'library' => [
-        'search/global',
-      ],
-    ],
-  ];
-
-  return $items;
-}

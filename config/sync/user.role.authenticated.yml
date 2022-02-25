@@ -12,9 +12,9 @@ dependencies:
     - media
     - node
     - search
-    - shortcut
     - system
     - toolbar
+    - toolbar_language_switcher
 _core:
   default_config_hash: I44QAB4es39lNzMQWiJLq2dfjX7VRSOzT_5KzAcUq_M
 id: authenticated
@@ -24,7 +24,6 @@ is_admin: false
 permissions:
   - 'access comments'
   - 'access content'
-  - 'access shortcuts'
   - 'access site-wide contact form'
   - 'access toolbar'
   - 'create host_location content'
@@ -33,5 +32,6 @@ permissions:
   - 'search content'
   - 'skip comment approval'
   - 'use text format basic_html'
+  - 'use toolbar_language_switcher'
   - 'view media'
   - 'view the administration theme'

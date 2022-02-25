@@ -1,0 +1,20 @@
+label: 'Останні коментарі'
+description: 'Останні коментарі.'
+display:
+  default:
+    display_title: Базово
+    display_options:
+      title: 'Останні коментарі'
+      fields:
+        changed:
+          settings:
+            future_format: '@interval віднині'
+            past_format: '@interval тому'
+      empty:
+        area_text_custom:
+          content: 'Коментарі відсутні.'
+  block_1:
+    display_title: Блок
+    display_options:
+      block_description: 'Останні коментарі'
+      block_category: 'Списки (Види)'

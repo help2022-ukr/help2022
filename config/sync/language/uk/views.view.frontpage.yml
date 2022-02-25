@@ -1,0 +1,33 @@
+label: 'Головна сторінка'
+description: 'Всі матеріали винесені на головну сторінку.'
+display:
+  default:
+    display_title: Базово
+    display_options:
+      pager:
+        options:
+          tags:
+            next: 'Наступна ›'
+            previous: '‹ Попередня'
+            first: '« Перша'
+            last: 'Остання »'
+          expose:
+            items_per_page_label: 'Елементів на сторінку'
+            items_per_page_options_all_label: '- Усе -'
+            offset_label: Зміщення
+      exposed_form:
+        options:
+          submit_button: Застосувати
+          reset_button_label: Скинути
+          exposed_sorts_label: 'Впорядкувати за'
+          sort_asc_label: Зрост
+          sort_desc_label: Спад
+      empty:
+        area_text_custom:
+          content: 'Вміст головної сторінки ще не створено.<br />Щоб розпочати створення сайту перегляньте <a target="_blank" href="https://www.drupal.org/docs/user_guide/en/index.html">Посібник користувача</a>.'
+        title:
+          title: 'Вітаємо на сайті [site:name]'
+  feed_1:
+    display_title: Канал
+  page_1:
+    display_title: Сторінка

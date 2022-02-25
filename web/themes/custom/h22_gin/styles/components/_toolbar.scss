@@ -10,5 +10,13 @@
         }
       }
     }
+
+    .toolbar-icon {
+      &.toolbar-icon-language {
+        &:before {
+          mask-image: icon('tmgmt');
+        }
+      }
+    }
   }
 }

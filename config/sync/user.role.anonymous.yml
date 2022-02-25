@@ -12,6 +12,7 @@ dependencies:
     - search
     - system
     - toolbar
+    - toolbar_language_switcher
 _core:
   default_config_hash: 6WavjUYXIegP9AAg2zXGx54MWIVoomC3SZhNiqe-Dyk
 id: anonymous
@@ -25,5 +26,6 @@ permissions:
   - 'access toolbar'
   - 'search content'
   - 'use text format restricted_html'
+  - 'use toolbar_language_switcher'
   - 'view media'
   - 'view the administration theme'

@@ -1,0 +1,27 @@
+parameters:
+  ascii:
+    failed: scripts/assets/grumpy.txt
+    succeeded: scripts/assets/happy.txt
+  git_dir: .
+  bin_dir: vendor/bin
+  git_hook_variables:
+    EXEC_GRUMPHP_COMMAND: bash ./scripts/shell/git.sh
+  parallel:
+    enabled: true
+    max_workers: 32
+    fixer:
+      enabled: true
+      fix_by_default: false
+  tasks:
+    composer: ~
+    composer_normalize: ~
+    composer_lint:
+      script: 'lint'
+      triggered_by: [php,module,inc,install,test,profile,theme,css,info,txt,md,scss,js]
+      metadata:
+        task: composer_script
+    composer_sniff:
+      script: 'code-sniff'
+      triggered_by: [php,module,inc,install,test,profile,theme,css,info,txt,md,scss,js]
+      metadata:
+        task: composer_script

@@ -1,0 +1,20 @@
+label: 'В редактировании'
+type_settings:
+  states:
+    archived:
+      label: Заархивированный
+    draft:
+      label: Черновик
+    published:
+      label: Опубликовано
+  transitions:
+    archive:
+      label: Архивировать
+    archived_draft:
+      label: 'Восстановить из Черновика'
+    archived_published:
+      label: Восстановить
+    create_new_draft:
+      label: 'Создать новый черновик'
+    publish:
+      label: Опубликовать

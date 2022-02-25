@@ -1,0 +1,22 @@
+uuid: a2c53f4f-a254-4213-8ad4-f59f7d2d5309
+langcode: en
+status: true
+dependencies:
+  module:
+    - help
+  theme:
+    - h22_gin
+_core:
+  default_config_hash: jP32xTCUvql3dH4bUoexXb9nYCUJ3dD7v3Zn9vMmgjg
+id: h22_gin_help
+theme: h22_gin
+region: help
+weight: 0
+provider: null
+plugin: help_block
+settings:
+  id: help_block
+  label: Help
+  label_display: '0'
+  provider: help
+visibility: {  }

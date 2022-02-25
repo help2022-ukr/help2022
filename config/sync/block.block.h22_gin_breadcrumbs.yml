@@ -1,0 +1,22 @@
+uuid: 008d973b-b36c-4312-8da2-53584d5f1178
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - h22_gin
+_core:
+  default_config_hash: qEJWWMoj7sD4jKYdkutYE5yAI0Tddd7aUo4AkVncMFM
+id: h22_gin_breadcrumbs
+theme: h22_gin
+region: breadcrumb
+weight: 0
+provider: null
+plugin: system_breadcrumb_block
+settings:
+  id: system_breadcrumb_block
+  label: Breadcrumbs
+  label_display: '0'
+  provider: system
+visibility: {  }

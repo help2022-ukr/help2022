@@ -1,0 +1,20 @@
+uuid: afee42c1-30f9-4224-9a67-3efcc5f81f23
+langcode: en
+status: true
+dependencies:
+  theme:
+    - h22_gin
+_core:
+  default_config_hash: ka_IhX281KTeXfJldSCUKQQPfDOhGdwJcNzSS2qYMN8
+id: h22_gin_local_actions
+theme: h22_gin
+region: content
+weight: -10
+provider: null
+plugin: local_actions_block
+settings:
+  id: local_actions_block
+  label: 'Primary admin actions'
+  label_display: '0'
+  provider: core
+visibility: {  }

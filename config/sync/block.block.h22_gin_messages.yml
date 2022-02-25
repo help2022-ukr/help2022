@@ -1,0 +1,22 @@
+uuid: 324cabcf-d669-4e0c-9350-70078ced6141
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - h22_gin
+_core:
+  default_config_hash: MFoX4vHwm8iIL7x0jCcs0rnT4Eqtt72673LrH_6wSwk
+id: h22_gin_messages
+theme: h22_gin
+region: highlighted
+weight: 0
+provider: null
+plugin: system_messages_block
+settings:
+  id: system_messages_block
+  label: 'Status messages'
+  label_display: '0'
+  provider: system
+visibility: {  }

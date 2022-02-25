@@ -1,0 +1,17 @@
+uuid: 691ed7bf-30e4-4c3d-8988-e8b194576715
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: 'Host Location'
+type: host_location
+description: 'A location supplied by a host.'
+help: ''
+new_revision: true
+preview_mode: 0
+display_submitted: true

@@ -1,0 +1,22 @@
+uuid: 93c785ab-d635-4704-a71d-418cfeecdb63
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.host_location
+id: node.host_location.status
+field_name: status
+entity_type: node
+bundle: host_location
+label: Published
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

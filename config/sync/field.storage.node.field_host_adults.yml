@@ -1,0 +1,20 @@
+uuid: 73b1106d-1212-4fad-bf05-9f3dcf9809c4
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_host_adults
+field_name: field_host_adults
+entity_type: node
+type: integer
+settings:
+  unsigned: false
+  size: normal
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

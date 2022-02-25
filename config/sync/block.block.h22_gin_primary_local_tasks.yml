@@ -1,0 +1,22 @@
+uuid: 0269ca0c-c945-4298-b962-307c03419562
+langcode: en
+status: true
+dependencies:
+  theme:
+    - h22_gin
+_core:
+  default_config_hash: MRB7ZpLnshQUYXuIMzmLQNs89QYLmWY9bsbwTQ-s4Z0
+id: h22_gin_primary_local_tasks
+theme: h22_gin
+region: header
+weight: 0
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: 'Primary tabs'
+  label_display: '0'
+  provider: core
+  primary: true
+  secondary: false
+visibility: {  }

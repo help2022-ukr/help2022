@@ -1,0 +1,14 @@
+uuid: e40c744c-774d-4a47-b12c-a50a4df430f8
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.refugee
+  module:
+    - user
+id: user_remove_role_action.refugee
+label: 'Remove the Refugee role from the selected user(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: refugee

@@ -1,0 +1,25 @@
+uuid: 9360c550-0a24-4bd9-8bd3-21e0f48487ff
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_host_kids
+    - node.type.host_location
+id: node.host_location.field_host_kids
+field_name: field_host_kids
+entity_type: node
+bundle: host_location
+label: Kids
+description: 'How many kids / teenagers (under 18)?'
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  min: 1
+  max: 20
+  prefix: ''
+  suffix: ''
+field_type: integer

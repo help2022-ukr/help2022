@@ -1,0 +1,25 @@
+uuid: 304d9b7c-cbc5-40f2-9644-2b2def14e587
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_host_adults
+    - node.type.host_location
+id: node.host_location.field_host_adults
+field_name: field_host_adults
+entity_type: node
+bundle: host_location
+label: Adults
+description: 'How many adults? (18+ years old)'
+required: true
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  min: 0
+  max: 20
+  prefix: ''
+  suffix: ''
+field_type: integer

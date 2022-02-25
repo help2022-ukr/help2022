@@ -1,0 +1,20 @@
+uuid: a644dce0-66f7-4af6-bf75-97f7093066c6
+langcode: en
+status: true
+dependencies:
+  theme:
+    - h22_gin
+_core:
+  default_config_hash: xe5gKKmdJtj14wVRkPp_qUCPnxT4dxKNtyXroahiLXM
+id: h22_gin_page_title
+theme: h22_gin
+region: header
+weight: -30
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Page title'
+  label_display: '0'
+  provider: core
+visibility: {  }

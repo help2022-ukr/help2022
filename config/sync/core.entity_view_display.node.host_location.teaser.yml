@@ -1,0 +1,35 @@
+uuid: 2a8ba9cb-d8c9-47b9-83f6-708c022e3cff
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.host_location.body
+    - field.field.node.host_location.field_host_adults
+    - field.field.node.host_location.field_host_kids
+    - node.type.host_location
+  module:
+    - text
+    - user
+id: node.host_location.teaser
+targetEntityType: node
+bundle: host_location
+mode: teaser
+content:
+  body:
+    type: text_summary_or_trimmed
+    label: hidden
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_host_adults: true
+  field_host_kids: true
+  langcode: true

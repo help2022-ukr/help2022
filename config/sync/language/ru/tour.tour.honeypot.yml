@@ -1,0 +1,6 @@
+label: Honeypot
+tips:
+  honeypot-configuration:
+    label: Honeypot
+  log-blocked-form-submissions:
+    label: 'Записывать в системный журнал заблокированные запросы'

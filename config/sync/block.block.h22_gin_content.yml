@@ -1,0 +1,22 @@
+uuid: 46efb71c-6a05-49e2-a0c9-3f9b04b81cdc
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - h22_gin
+_core:
+  default_config_hash: 8wpTUvpP7tms84au9CLbOtp4jgukIQfefwNQWuCmcrI
+id: h22_gin_content
+theme: h22_gin
+region: content
+weight: 0
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Main page content'
+  label_display: '0'
+  provider: system
+visibility: {  }

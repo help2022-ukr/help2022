@@ -4,11 +4,13 @@ status: true
 dependencies:
   config:
     - filter.format.basic_html
+    - node.type.host_location
   module:
     - comment
     - contact
     - filter
     - media
+    - node
     - search
     - shortcut
     - system
@@ -25,6 +27,8 @@ permissions:
   - 'access shortcuts'
   - 'access site-wide contact form'
   - 'access toolbar'
+  - 'create host_location content'
+  - 'edit own host_location content'
   - 'post comments'
   - 'search content'
   - 'skip comment approval'

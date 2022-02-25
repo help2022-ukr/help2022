@@ -147,6 +147,7 @@ $settings['file_chmod_file'] = 0666;
 
 # File system settings.
 $config['system.file']['path']['temporary'] = '/tmp';
+$settings['config_sync_directory'] = '../config/sync';
 
 // Reverse proxy configuration (Docksal vhost-proxy)
 if (PHP_SAPI !== 'cli') {

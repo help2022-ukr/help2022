@@ -1,0 +1,14 @@
+.toolbar {
+  #toolbar-bar  {
+    #toolbar-item-administration-tray {
+      .toolbar-icon {
+        &.toolbar-icon-admin-toolbar-tools-help.toolbar-icon-default {
+          &:before {
+            mask-image: icon('logo');
+            background: halfs(#005bbc, #ffd600);
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,42 @@
+// adjusts appearance of Chosen to gin theme
+.chosen-container-single {
+  .chosen-single {
+    color: inherit;
+  }
+}
+
+.chosen-container-multi {
+  .chosen-choices {
+    li.search-choice {
+      background: transparent;
+      color: inherit;
+      border: none;
+      box-shadow: inset 0 0 0 1px var(--colorGinText);
+    }
+  }
+}
+
+.chosen-container {
+  .chosen-drop {
+    color: inherit;
+    background: inherit;
+
+    .chosen-results {
+      .result-selected {
+        display: none;
+      }
+
+      li.active-result {
+        color: var(--colorGinText);
+        background-color: var(--colorGinLayer2Background);
+        border: none;
+      }
+
+      li.highlighted {
+        background-color: var(--colorGinPrimaryHover);
+        background-image: none;
+        color: var(--colorGinLayer2Background);
+      }
+    }
+  }
+}

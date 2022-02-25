@@ -19,7 +19,7 @@ Follow [Docksal environment setup instructions](https://docs.docksal.io/getting-
 1. Clone this repo into your Projects directory
 
     ```
-    git clone https://github.com/Nikro/help2022.git help2022
+    git clone https://github.com/help2022-ukr/help2022.git help2022
     cd help2022
     ```
 

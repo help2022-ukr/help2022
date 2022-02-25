@@ -1,0 +1,4 @@
+global-styling:
+  css:
+    component:
+      dist/css/styles.css: {}

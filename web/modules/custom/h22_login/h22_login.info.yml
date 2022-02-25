@@ -1,0 +1,5 @@
+name: 'H22 Login'
+type: module
+description: 'Custom log-in and on-boarding.'
+core_version_requirement: ^8 || ^9
+package: 'Help2022'

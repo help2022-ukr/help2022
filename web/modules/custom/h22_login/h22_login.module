@@ -1,0 +1,24 @@
+<?php
+
+/**
+ * @file
+ * Contains h22_login.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function h22_login_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the h22_login module.
+    case 'help.page.h22_login':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Custom log-in and onboarding.') . '</p>';
+      return $output;
+
+    default:
+  }
+}

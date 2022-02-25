@@ -1,0 +1,5 @@
+name: 'H22 Core'
+type: module
+description: 'Core module, required by the project.'
+core_version_requirement: ^8 || ^9
+package: 'Help2022'

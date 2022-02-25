@@ -1,0 +1,64 @@
+<?php
+
+/**
+ * @file
+ * Contains h22_core.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function h22_core_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the h22_core module.
+    case 'help.page.h22_core':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Core module, required by the project.') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function h22_core_theme() {
+  return [
+    'h22_core' => [
+      'render element' => 'children',
+    ],
+  ];
+}
+
+/**
+ * Implements hook_toolbar().
+ */
+function h22_core_toolbar() {
+  $items = [];
+
+  // Add a search field to the toolbar. The search field employs no toolbar
+  // module theming functions.
+  $items['global_search'] = [
+    '#type' => 'toolbar_item',
+    'tab' => [
+      '#type' => 'search',
+      '#attributes' => [
+        'placeholder' => t('Search the site'),
+        'class' => ['search-global'],
+      ],
+    ],
+    '#weight' => 200,
+    // Custom CSS, JS or a library can be associated with the toolbar item.
+    '#attached' => [
+      'library' => [
+        'search/global',
+      ],
+    ],
+  ];
+
+  return $items;
+}

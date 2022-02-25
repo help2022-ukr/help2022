@@ -1,150 +1,143 @@
-#!/usr/bin/env bash
-
-## Runs fin code-sniff from within the docker.
-##
-## Usage: fin code-sniff
-
-# Abort if anything fails
-set -e
-
-# Debug mode switch
-if [[ "${DEBUG}" != "" ]]; then
-set -x
-fi
-
-# Check whether we have a working tty.
-# We assume the environment is interactive if there is a tty.
-# See http://stackoverflow.com/questions/911168/how-to-detect-if-my-shell-script-is-running-through-a-pipe/911213#911213
-is_tty ()
 {
-[[ -t 0 ]]
+    "name": "nikro/help2022",
+    "description": "A quick-and-dirty Drupal 9 implementation to help people during Rus-Ukr war.",
+    "type": "project",
+    "license": "GPL-2.0-or-later",
+    "homepage": "https://help2022.com",
+    "support": {
+        "docs": "https://github.com/Nikro/help2022"
+    },
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://packages.drupal.org/8"
+        }
+    ],
+    "require": {
+        "composer/installers": "^1.9",
+        "drupal/admin_toolbar": "^3.1",
+        "drupal/auto_entitylabel": "^3.0@beta",
+        "drupal/captcha": "^1.2",
+        "drupal/chosen": "^3.0",
+        "drupal/coffee": "^1.2",
+        "drupal/config_split": "^1.7",
+        "drupal/core-composer-scaffold": "^9",
+        "drupal/core-project-message": "^9",
+        "drupal/core-recommended": "^9",
+        "drupal/ctools": "^3.7",
+        "drupal/date_popup": "^1.1",
+        "drupal/dropzonejs": "^2.5",
+        "drupal/embed": "^1.4",
+        "drupal/entity": "^1.2",
+        "drupal/entity_usage": "^2.0@beta",
+        "drupal/environment_indicator": "^4.0",
+        "drupal/field_group": "^3.2",
+        "drupal/gin": "^3.0@alpha",
+        "drupal/gin_login": "^1.0",
+        "drupal/honeypot": "^2.0",
+        "drupal/mailsystem": "^4.3",
+        "drupal/module_filter": "^3.2",
+        "drupal/pathauto": "^1.9",
+        "drupal/recaptcha": "^3.0",
+        "drupal/redirect": "^1.7",
+        "drupal/smart_trim": "^1.3",
+        "drupal/social_api": "^3.0",
+        "drupal/social_auth": "^3.0",
+        "drupal/social_auth_facebook": "^3.0",
+        "drupal/social_auth_google": "^3.0@RC",
+        "drupal/structure_sync": "^2.0",
+        "drupal/symfony_mailer": "^1.0",
+        "drupal/token": "^1.10",
+        "drupal/toolbar_language_switcher": "^2.0@alpha",
+        "drupal/twig_field_value": "^2.0",
+        "drupal/twig_tweak": "^3.1",
+        "harvesthq/chosen": "^1.8",
+        "vlucas/phpdotenv": "^5.4"
+    },
+    "conflict": {
+        "drupal/drupal": "*"
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "drupal-scaffold": {
+            "locations": {
+                "web-root": "web/"
+            }
+        },
+        "installer-paths": {
+            "web/core": [
+                "type:drupal-core"
+            ],
+            "web/libraries/{$name}": [
+                "type:drupal-library"
+            ],
+            "web/modules/contrib/{$name}": [
+                "type:drupal-module"
+            ],
+            "web/profiles/contrib/{$name}": [
+                "type:drupal-profile"
+            ],
+            "web/themes/contrib/{$name}": [
+                "type:drupal-theme"
+            ],
+            "drush/Commands/contrib/{$name}": [
+                "type:drupal-drush"
+            ],
+            "web/modules/custom/{$name}": [
+                "type:drupal-custom-module"
+            ],
+            "web/themes/custom/{$name}": [
+                "type:drupal-custom-theme"
+            ]
+        },
+        "drupal-core-project-message": {
+            "include-keys": [
+                "homepage",
+                "support"
+            ]
+        }
+    },
+    "scripts": {
+        "pre-install-cmd": [
+            "DrupalProject\\composer\\ScriptHandler::checkComposerVersion"
+        ],
+        "post-install-cmd": [
+            "DrupalProject\\composer\\ScriptHandler::createRequiredFiles"
+        ],
+        "pre-update-cmd": [
+            "DrupalProject\\composer\\ScriptHandler::checkComposerVersion"
+        ],
+        "post-update-cmd": [
+            "DrupalProject\\composer\\ScriptHandler::createRequiredFiles"
+        ],
+        "build-assets": [
+            "composer install --optimize-autoloader --no-dev"
+        ],
+        "code-fix": [
+            "phpcbf --standard=Drupal --extensions=php,module,inc,install,test,profile,theme,css,info,txt,md --ignore=node_modules,bower_components,vendor --warning-severity=8 ./web/modules/custom",
+            "phpcbf --standard=Drupal --extensions=php,module,inc,install,test,profile,theme,css,info,txt,md,scss,js --ignore=node_modules,bower_components,vendor,SUBTHEME,dist,fonts --warning-severity=8 ./web/themes/custom",
+            "phpcbf --standard=DrupalPractice --extensions=php,module,inc,install,test,profile,theme,css,info,txt,md --ignore=node_modules,bower_components,vendor --warning-severity=8 ./web/modules/custom",
+            "phpcbf --standard=DrupalPractice --extensions=php,module,inc,install,test,profile,theme,css,info,txt,md,scss,js --ignore=node_modules,bower_components,vendor,SUBTHEME,dist,fonts --warning-severity=8 ./web/themes/custom"
+        ],
+        "code-sniff": [
+            "phpcs --standard=Drupal --extensions=php,module,inc,install,test,profile,theme,css,info,txt,md --ignore=node_modules,bower_components,vendor --warning-severity=8 ./web/modules/custom",
+            "phpcs --standard=Drupal --extensions=php,module,inc,install,test,profile,theme,css,info,txt,md,scss,js --ignore=node_modules,bower_components,vendor,SUBTHEME,dist,fonts --warning-severity=8 ./web/themes/custom",
+            "phpcs --standard=DrupalPractice --extensions=php,module,inc,install,test,profile,theme,css,info,txt,md --ignore=node_modules,bower_components,vendor --warning-severity=8 ./web/modules/custom",
+            "phpcs --standard=DrupalPractice --extensions=php,module,inc,install,test,profile,theme,css,info,txt,md,scss,js --ignore=node_modules,bower_components,vendor,SUBTHEME,dist,fonts --warning-severity=8 ./web/themes/custom"
+        ],
+        "drupal-scaffold": "DrupalComposer\\DrupalScaffold\\Plugin::scaffold",
+        "lint": "find web/modules/custom web/themes/custom -name '*.php' -exec php -l {} \\;",
+        "unit-test": "echo 'No unit test step defined.'"
+    },
+    "require-dev": {
+        "drupal/console": "^1.9",
+        "drupal/devel": "^4.1",
+        "drupal/examples": "^3.0",
+        "drush/drush": "^10.6",
+        "vijaycs85/drupal-quality-checker": "^1.5"
+    }
 }
-
-# Get project container id by service name
-# @param $1 docker compose service name (e.g., cli)
-# @return docker container id
-get_project_container_id ()
-{
-local project=$COMPOSE_PROJECT_NAME_SAFE
-local service=$1
-
-# Trim \r from output (necessary on Windows)
-echo $(docker ps -q --no-trunc \
---filter="label=com.docker.compose.project=${project}" \
---filter="label=com.docker.compose.service=${service}" \
---filter="status=running" 2>/dev/null | tr -d '\r')
-}
-
-# Get path to .docksal folder using upfind
-get_project_path ()
-{
-if [[ "$DOCKSAL_PATH" == "" ]]; then
-DOCKSAL_PATH=$(upfind ".docksal")
-fi
-# If we reached $HOME, then we did not find the project root.
-if [[ "$DOCKSAL_PATH" != "$HOME" ]]; then
-echo "$DOCKSAL_PATH"
-fi
-}
-
-# Return current path relative to project root with trailing slash
-get_current_relative_path ()
-{
-# Check that we're inside project folder
-local proj_root=$(get_project_path)
-local cwd=$(pwd)
-
-# Output relative path unless we are in the project root (empty relative path)
-if [[ "$proj_root" != "$cwd" ]]; then
-# if cwd substract proj_root is still cwd then it means we're out of proj_root (unsubstractable)
-# ex: cwd=/a/b/c/d, proj_root=/a/b/c, pathdiff==d
-# ex: cwd=/a/b, proj_root=/a/b/c, pathdiff==/a/b
-local pathdiff=${cwd#${proj_root}/}
-echo "$pathdiff"
-fi
-}
-
-# Run all the tests here.
-_code_sniff ()
-{
-# Allow overriding container, where to run
-local container_name="cli"
-
-# Allow entering arbitrary containers by name (e.g., system containers like vhost-proxy).
-local container_id=$(get_project_container_id "$container_name")
-if [[ "$container_id" == "" ]]; then
-container_id="$container_name"
-fi
-
-# Determine shell to run
-local shell_interactive
-local shell_noninteractive
-local container_shell=$(docker inspect --format '{{ index .Config.Labels "io.docksal.shell"}}' ${container_id} 2>/dev/null)
-if [[ "$container_shell" != "" ]]; then
-# Use configured shell
-shell_interactive="$container_shell -ilc"
-shell_noninteractive="$container_shell -lc"
-elif [[ "$container_name" == 'cli' ]] || [[ "$container_name" == 'db' ]]; then
-# For cli and db use bash (complex SQL queries fail when fed from stdin to sh)
-shell_interactive="bash -ilc"
-shell_noninteractive="bash -lc"
-else
-# Use sh as default shell
-shell_interactive="sh -ilc"
-shell_noninteractive="sh -lc"
-fi
-
-# ------------------------------------------------ #
-# 1) working directory and user
-
-# Inside the cli and web containers, start in the same dir
-# RUN_NO_CDIR can be used to override this (used in mysql_import)
-local workdir_arg=""
-if [[ "$container_name" == 'cli' || "$container_name" == 'web' ]] && [[ "$RUN_NO_CDIR" != 1 ]]; then
-workdir_arg="-w /var/www/$(get_current_relative_path)"
-fi
-
-# User to run commands as. npm and other userspace commands are only available to docker user
-local user_arg=$(docker inspect --format '{{ index .Config.Labels "io.docksal.user"}}' ${container_id} 2>/dev/null)
-if [[ "$user_arg" != "" ]]; then
-user_arg="-u ${user_arg}"
-elif [[ "$container_name" == "cli" ]]; then # only use docker user for cli by default, others wil use root
-user_arg="-u docker"
-fi
-# ------------------------------------------------ #
-
-# ------------------------------------------------ #
-# 2) convert array of parameters into escaped string
-# Add space if cmd is not empty
-
-# Escape spaces that are "spaces" and not parameter delimiters (i.e., param1 param2\ with\ spaces param3)
-local cmd
-if [[ $2 != "" ]]; then
-cmd=$(printf " %q" "$@")
-# Do not escape spaces if there is only one parameter (e.g., fin run "ls -la | grep txt")
-else
-cmd="${@}"
-fi
-
-if [[ "$cmd" == "" ]]; then
-cmd='vendor/phpro/grumphp/bin/grumphp git:pre-commit --skip-success-output'
-fi
-# ------------------------------------------------ #
-
-# ------------------------------------------------ #
-# 3) execute
-
-# Enter project containers
-# COLUMNS and LINES have to be passed to workaround a race condition in Docker. See https://github.com/moby/moby/pull/37172#issuecomment-406844485
-if is_tty && [[ "$no_tty" != true ]]; then
-# interactive
-# (exit \$?) is a hack to return correct exit codes when docker exec is run with tty (-t).
-${winpty} docker exec -e COLUMNS -e LINES -it ${user_arg} ${workdir_arg} ${container_id} ${shell_interactive} "$cmd; (exit \$?)"
-else
-# non-interactive
-docker exec -e COLUMNS -e LINES -t ${user_arg} ${workdir_arg} ${container_id} ${shell_noninteractive} "$cmd"
-fi
-# ------------------------------------------------ #
-}
-
-_code_sniff "$@"

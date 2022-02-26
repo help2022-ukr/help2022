@@ -34,7 +34,7 @@ jobs:
       - name: Install all the necesary things
         uses: php-actions/composer@v6
         with:
-          dev: no
+          dev: yes
           version: 2
           args: --profile --ignore-platform-reqs
 

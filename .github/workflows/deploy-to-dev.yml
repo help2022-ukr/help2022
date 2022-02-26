@@ -43,7 +43,7 @@ jobs:
         with:
           node-version: '14'
           cache: 'npm'
-          cache-dependency-path: subdir/package-lock.json
+          cache-dependency-path: ./web/themes/custom/h22_gin/package-lock.json
       - run: npm install
         working-directory: ./web/themes/custom/h22_gin
       - run: npm run build

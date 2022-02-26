@@ -127,7 +127,6 @@
         "drupal/console": "^1.9",
         "drupal/devel": "^4.1",
         "drupal/examples": "^3.0",
-        "drush/drush": "^10.6",
-        "vijaycs85/drupal-quality-checker": "^1.5"
+        "drush/drush": "^10.6"
     }
 }

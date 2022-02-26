@@ -19,9 +19,9 @@ RUN docker-php-ext-configure intl \
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
 
 # Install Drush
-RUN composer global require drush/drush && \
-    composer global update && \
-    echo 'export PATH="$PATH:$HOME/.composer/vendor/bin"' >> $HOME/.bashrc
+#RUN composer global require drush/drush && \
+#    composer global update && \
+#    echo 'export PATH="$PATH:$HOME/.composer/vendor/bin"' >> $HOME/.bashrc
 
 # Update the damn path.
 ENV PATH="$HOME/.composer/vendor/bin:${PATH}"

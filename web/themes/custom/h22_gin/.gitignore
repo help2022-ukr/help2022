@@ -21,4 +21,3 @@ domain.json
 # Ignore npm debugs
 npm-debug.log
 dist
-

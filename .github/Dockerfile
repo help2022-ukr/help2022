@@ -19,7 +19,9 @@ RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local
 
 # Install Drush
 RUN composer global require drush/drush && \
-    composer global update
+    composer global update && \
+    echo -e "\n"'export PATH="$PATH:$HOME/.composer/vendor/bin"' >> $HOME/.profile; && \
+    . $HOME/.profile;
 
 # Replace template Drupal with ours.
 WORKDIR /var/www/html

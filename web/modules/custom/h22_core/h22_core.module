@@ -59,4 +59,30 @@ function h22_core_form_node_host_location_form_alter(&$form, FormStateInterface 
     $form['meta']['changed']['#access'] = FALSE;
     $form['meta']['author']['#access'] = FALSE;
   }
+
+  // Add HTML help text field.
+  $form['meta']['host_location_help'] = [
+    '#type' => 'item',
+    '#markup' => t('If you are willing and capable to host refugees, please submit your details so refugees can contact you.'),
+    '#wrapper_attributes' => ['class' => ['host_location_help']],
+    '#weight' => '0',
+  ];
+
+  $form['meta']['host_location_warning'] = [
+    '#type' => 'item',
+    '#title' => t('Warning'),
+    '#wrapper_attributes' => ['class' => ['host_location_warning']],
+    '#markup' =>
+    t('As it is now wartime, please be wary of sabotage and Russian hacks.<br>
+      We are taking all the safety measures to protect your data and your identity.<br><br>
+
+      To help us take these measures:
+      <ul>
+        <li>Do not share your precise home address.</li>
+        <li>Talk to the person before accepting to host.</li>
+      </ul>
+      <br>
+      Follow the general safety measures to assure your and refugees safety.'),
+    '#weight' => '0',
+  ];
 }

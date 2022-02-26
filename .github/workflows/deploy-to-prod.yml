@@ -72,7 +72,7 @@ jobs:
         with:
           host: ${{ secrets.HOST }}
           username: ${{ secrets.USERNAME }}
-          password: ${{ secrets.PASSWORD }}
+          key: ${{ secrets.PKEY }}
           port: ${{ secrets.PORT }}
           script: |
             cd h22-deployment

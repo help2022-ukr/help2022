@@ -28,7 +28,7 @@ function h22_core_help($route_name, RouteMatchInterface $route_match) {
  */
 function h22_core_theme() {
   return [
-    'h22_core' => [
+    'h22_core_homepage' => [
       'render element' => 'children',
     ],
   ];

@@ -1,0 +1,7 @@
+h22_core.homepage:
+  path: '/home'
+  defaults:
+    _controller: '\Drupal\h22_core\Controller\Homepage::welcome'
+    _title: 'Welcome Ukrainian refugee support platform.'
+  requirements:
+    _permission: 'access content'

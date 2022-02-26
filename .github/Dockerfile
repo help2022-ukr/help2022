@@ -17,6 +17,10 @@ RUN docker-php-ext-configure intl \
 # Install composer - we want to have it because we have some dependencies on it.
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
 
+# Install Drush
+RUN composer global require drush/drush && \
+    composer global update
+
 # Replace template Drupal with ours.
 WORKDIR /var/www/html
 RUN rm -rf /var/www/html

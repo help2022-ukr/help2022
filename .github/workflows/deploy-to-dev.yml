@@ -77,7 +77,6 @@ jobs:
           script: |
             cd h22-deployment
             docker-compose pull
-            docker-compose stop drupal_app
-            docker-compose rm drupal_app
+            docker-compose rm -fs drupal_app web
             docker volume rm h22-deployment_drupal-code
             docker-compose up -d

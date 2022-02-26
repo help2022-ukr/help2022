@@ -21,7 +21,7 @@ RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local
 # Install Drush
 RUN composer global require drush/drush && \
     composer global update && \
-    echo -e '\n export PATH="$PATH:$HOME/.composer/vendor/bin"' >> $HOME/.bashrc
+    echo '\n export PATH="$PATH:$HOME/.composer/vendor/bin"' >> $HOME/.bashrc
 
 # Update the damn path.
 ENV PATH="$HOME/.composer/vendor/bin:${PATH}"

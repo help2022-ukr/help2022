@@ -11,7 +11,7 @@ RUN apt-get update \
 
 # This is required for backup & migrate (Drupal Contrib Module).
 RUN docker-php-ext-configure intl \
-    && docker-php-ext-install intl mysqli \
+    && docker-php-ext-install intl mysqli && docker-php-ext-enable mysqli \
     && apt-get remove libicu-dev icu-devtools -y
 
 # Install composer - we want to have it because we have some dependencies on it.
@@ -20,7 +20,7 @@ RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local
 # Install Drush
 RUN composer global require drush/drush && \
     composer global update && \
-    echo -e "\n"'export PATH="$PATH:$HOME/.composer/vendor/bin"' >> $HOME/.profile
+    echo "\n"'export PATH="$PATH:$HOME/.composer/vendor/bin"' >> $HOME/.profile
 
 # Replace template Drupal with ours.
 WORKDIR /var/www/html

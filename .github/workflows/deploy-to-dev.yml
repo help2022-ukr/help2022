@@ -71,9 +71,9 @@ jobs:
         uses: appleboy/ssh-action@master
         with:
           host: ${{ secrets.HOST }}
+          port: ${{ secrets.PORT }}
           username: ${{ secrets.USERNAME }}
           key: ${{ secrets.PKEY }}
-          port: ${{ secrets.PORT }}
           script: |
             cd h22-deployment
             docker-compose pull

@@ -72,8 +72,8 @@ jobs:
         with:
           host: ${{ secrets.HOST }}
           username: ${{ secrets.USERNAME }}
-          key: ${{ secrets.PKEY }}
           port: ${{ secrets.PORT }}
+          key: ${{ secrets.PKEY }}
           script: |
             cd h22-deployment
             docker-compose pull

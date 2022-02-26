@@ -66,3 +66,17 @@ jobs:
           file: ./.github/Dockerfile
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
+
+      - name: Force to update docker-compose image
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{ secrets.HOST }}
+          username: ${{ secrets.USERNAME }}
+          password: ${{ secrets.PASSWORD }}
+          port: ${{ secrets.PORT }}
+          script: |
+            cd h22-deployment
+            docker-compose pull
+            docker-compose down drupal_app
+            docker volume rm h22-deployment_drupal-code
+            docker-compose up -d

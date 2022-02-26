@@ -4,12 +4,17 @@ status: true
 dependencies:
   config:
     - field.field.node.host_location.body
+    - field.field.node.host_location.field_email
+    - field.field.node.host_location.field_facebook
     - field.field.node.host_location.field_host_adults
     - field.field.node.host_location.field_host_kids
     - field.field.node.host_location.field_location
+    - field.field.node.host_location.field_phone_number
+    - field.field.node.host_location.field_telegram
     - node.type.host_location
   module:
     - geofield
+    - link
     - text
     - user
 id: node.host_location.default
@@ -23,6 +28,25 @@ content:
     settings: {  }
     third_party_settings: {  }
     weight: 101
+    region: content
+  field_email:
+    type: basic_string
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 108
+    region: content
+  field_facebook:
+    type: link
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 107
     region: content
   field_host_adults:
     type: number_integer
@@ -50,6 +74,21 @@ content:
       output_escape: true
     third_party_settings: {  }
     weight: 104
+    region: content
+  field_phone_number:
+    type: basic_string
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 105
+    region: content
+  field_telegram:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 106
     region: content
   links:
     settings: {  }

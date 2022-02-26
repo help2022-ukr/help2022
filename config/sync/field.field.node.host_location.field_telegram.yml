@@ -1,0 +1,19 @@
+uuid: 50cc4fd7-b076-44cb-b8f0-c18ae70382b2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_telegram
+    - node.type.host_location
+id: node.host_location.field_telegram
+field_name: field_telegram
+entity_type: node
+bundle: host_location
+label: Telegram
+description: 'Your Telegram ID or phone number.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -7,6 +7,7 @@ dependencies:
     - field.field.node.host_location.body
     - field.field.node.host_location.field_host_adults
     - field.field.node.host_location.field_host_kids
+    - field.field.node.host_location.field_location
     - node.type.host_location
   module:
     - text
@@ -32,4 +33,5 @@ content:
 hidden:
   field_host_adults: true
   field_host_kids: true
+  field_location: true
   langcode: true

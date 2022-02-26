@@ -46,6 +46,7 @@ module:
   field_ui: 0
   file: 0
   filter: 0
+  geofield: 0
   gin_login: 0
   gin_toolbar: 0
   h22_core: 0
@@ -56,6 +57,8 @@ module:
   image: 0
   inline_form_errors: 0
   language: 0
+  leaflet: 0
+  leaflet_views: 0
   link: 0
   locale: 0
   mailsystem: 0

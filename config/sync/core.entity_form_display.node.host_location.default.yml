@@ -6,9 +6,11 @@ dependencies:
     - field.field.node.host_location.body
     - field.field.node.host_location.field_host_adults
     - field.field.node.host_location.field_host_kids
+    - field.field.node.host_location.field_location
     - node.type.host_location
   module:
     - field_group
+    - leaflet
     - path
     - text
 third_party_settings:
@@ -63,6 +65,60 @@ content:
     region: content
     settings:
       placeholder: ''
+    third_party_settings: {  }
+  field_location:
+    type: leaflet_widget_default
+    weight: 26
+    region: content
+    settings:
+      map:
+        leaflet_map: 'OSM Mapnik'
+        height: 400
+        locate: 1
+        auto_center: 1
+        map_position:
+          force: false
+          center:
+            lat: !!float 0
+            lon: !!float 0
+          zoom: 12
+          minZoom: 1
+          maxZoom: 18
+          zoomFiner: 0
+        scroll_zoom_enabled: 1
+      input:
+        show: false
+        readonly: false
+      toolbar:
+        position: topright
+        drawPolyline: false
+        drawRectangle: true
+        drawPolygon: false
+        drawCircle: false
+        editMode: false
+        dragMode: false
+        cutPolygon: false
+        removalMode: false
+        rotateMode: false
+        marker: defaultMarker
+      reset_map:
+        position: topright
+        control: false
+      fullscreen:
+        control: false
+        options: '{"position":"topleft","pseudoFullscreen":false}'
+      path: '{"color":"#3388ff","opacity":"1.0","stroke":true,"weight":3,"fill":"depends","fillColor":"*","fillOpacity":"0.2","radius":"6"}'
+      geocoder:
+        control: false
+        settings:
+          position: topright
+          input_size: 25
+          providers: {  }
+          min_terms: 4
+          delay: 800
+          zoom: 16
+          popup: false
+          options: ''
     third_party_settings: {  }
   langcode:
     type: language_select

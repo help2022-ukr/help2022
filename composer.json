@@ -35,6 +35,7 @@
         "drupal/gin": "^3.0@alpha",
         "drupal/gin_login": "^1.0",
         "drupal/honeypot": "^2.0",
+        "drupal/leaflet": "^2.1",
         "drupal/mailsystem": "^4.3",
         "drupal/module_filter": "^3.2",
         "drupal/pathauto": "^1.9",

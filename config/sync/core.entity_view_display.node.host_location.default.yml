@@ -6,8 +6,10 @@ dependencies:
     - field.field.node.host_location.body
     - field.field.node.host_location.field_host_adults
     - field.field.node.host_location.field_host_kids
+    - field.field.node.host_location.field_location
     - node.type.host_location
   module:
+    - geofield
     - text
     - user
 id: node.host_location.default
@@ -39,6 +41,15 @@ content:
       prefix_suffix: true
     third_party_settings: {  }
     weight: 103
+    region: content
+  field_location:
+    type: geofield_default
+    label: above
+    settings:
+      output_format: wkt
+      output_escape: true
+    third_party_settings: {  }
+    weight: 104
     region: content
   links:
     settings: {  }

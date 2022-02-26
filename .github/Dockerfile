@@ -4,6 +4,7 @@ FROM drupal:9-fpm-buster
 RUN apt-get update \
     && apt-get -y upgrade \
     && apt-get install -y libpq-dev \
+      mariadb-client \
       libmemcached-dev \
       libicu-dev \
       zlib1g-dev \
@@ -20,12 +21,16 @@ RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local
 # Install Drush
 RUN composer global require drush/drush && \
     composer global update && \
-    echo -e '\n export PATH="$PATH:$HOME/.composer/vendor/bin"' >> $HOME/.profile
+    echo -e '\n export PATH="$PATH:$HOME/.composer/vendor/bin"' >> $HOME/.bashrc
+
+# Update the damn path.
+ENV PATH="$HOME/.composer/vendor/bin:${PATH}"
 
 # Replace template Drupal with ours.
 WORKDIR /var/www/html
 RUN rm -rf /var/www/html
 COPY --chown=www-data:www-data . /var/www/html
+
 
 EXPOSE 9000
 CMD ["php-fpm"]

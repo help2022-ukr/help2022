@@ -4,14 +4,20 @@ status: true
 dependencies:
   config:
     - field.field.node.host_location.body
+    - field.field.node.host_location.field_email
+    - field.field.node.host_location.field_facebook
     - field.field.node.host_location.field_host_adults
     - field.field.node.host_location.field_host_kids
     - field.field.node.host_location.field_location
+    - field.field.node.host_location.field_phone_number
+    - field.field.node.host_location.field_telegram
     - node.type.host_location
   module:
     - field_group
     - leaflet
+    - link
     - path
+    - telephone
     - text
 third_party_settings:
   field_group:
@@ -22,7 +28,7 @@ third_party_settings:
       label: 'Can Host'
       region: content
       parent_name: ''
-      weight: 11
+      weight: 10
       format_type: details
       format_settings:
         classes: ''
@@ -31,6 +37,24 @@ third_party_settings:
         open: true
         description: 'How many people can you host here?'
         required_fields: true
+    group_contact_information:
+      children:
+        - field_phone_number
+        - field_telegram
+        - field_facebook
+        - field_email
+      label: 'Contact information'
+      region: content
+      parent_name: ''
+      weight: 11
+      format_type: details
+      format_settings:
+        classes: ''
+        show_empty_fields: true
+        id: ''
+        open: true
+        description: 'You contact information'
+        required_fields: true
 id: node.host_location.default
 targetEntityType: node
 bundle: host_location
@@ -38,7 +62,7 @@ mode: default
 content:
   body:
     type: text_textarea_with_summary
-    weight: 10
+    weight: 13
     region: content
     settings:
       rows: 9
@@ -51,6 +75,22 @@ content:
     weight: 3
     region: content
     settings: {  }
+    third_party_settings: {  }
+  field_email:
+    type: email_default
+    weight: 29
+    region: content
+    settings:
+      placeholder: ''
+      size: 60
+    third_party_settings: {  }
+  field_facebook:
+    type: link_default
+    weight: 28
+    region: content
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
     third_party_settings: {  }
   field_host_adults:
     type: number
@@ -68,7 +108,7 @@ content:
     third_party_settings: {  }
   field_location:
     type: leaflet_widget_default
-    weight: 26
+    weight: 12
     region: content
     settings:
       map:
@@ -119,6 +159,21 @@ content:
           zoom: 16
           popup: false
           options: ''
+    third_party_settings: {  }
+  field_phone_number:
+    type: telephone_default
+    weight: 26
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_telegram:
+    type: string_textfield
+    weight: 27
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
     third_party_settings: {  }
   langcode:
     type: language_select

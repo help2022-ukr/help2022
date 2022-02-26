@@ -5,6 +5,8 @@
  * Contains h22_core.module.
  */
 
+use Drupal\Core\Form\FormStateInterface;
+use Drupal\Core\Language\LanguageInterface;
 use Drupal\Core\Routing\RouteMatchInterface;
 
 /**
@@ -32,4 +34,29 @@ function h22_core_theme() {
       'render element' => 'children',
     ],
   ];
+}
+
+/**
+ * Implements hook_form_FORM_ID_alter().
+ */
+function h22_core_form_node_host_location_form_alter(&$form, FormStateInterface $form_state, $form_id) {
+  // Get only configurable languages in content language selector.
+  $new_language_options = [];
+  $languages = \Drupal::languageManager()->getLanguages();
+  foreach ($languages as $langcode => $language) {
+    /** @var \Drupal\Core\StringTranslation\TranslatableMarkup $language */
+    $new_language_options[$langcode] = $language->getName();
+  }
+  $form["langcode"]["widget"][0]["value"]["#options"] = $new_language_options;
+
+  // Hide author options if authenticated user.
+  $current_user = \Drupal::currentUser();
+  $user_roles = $current_user->getRoles();
+  if (in_array('authenticated', $user_roles) && !in_array('administrator', $user_roles)) {
+    $form['revision_log']['#access'] = FALSE;
+    $form['meta']['#access'] = FALSE;
+    $form['meta']['published']['#access'] = FALSE;
+    $form['meta']['changed']['#access'] = FALSE;
+    $form['meta']['author']['#access'] = FALSE;
+  }
 }

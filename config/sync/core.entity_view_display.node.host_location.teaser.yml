@@ -5,6 +5,7 @@ dependencies:
   config:
     - core.entity_view_mode.node.teaser
     - field.field.node.host_location.body
+    - field.field.node.host_location.field_address
     - field.field.node.host_location.field_email
     - field.field.node.host_location.field_facebook
     - field.field.node.host_location.field_host_adults
@@ -35,6 +36,7 @@ content:
     weight: 100
     region: content
 hidden:
+  field_address: true
   field_email: true
   field_facebook: true
   field_host_adults: true

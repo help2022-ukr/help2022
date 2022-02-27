@@ -37,9 +37,23 @@ function h22_core_theme() {
 }
 
 /**
+ * Implements hook_form_alter().
+ */
+function h22_core_form_node_host_location_edit_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id) {
+  _h22_core_adjust_edit_or_add_for($form, $form_state, $form_id);
+}
+
+/**
  * Implements hook_form_FORM_ID_alter().
  */
 function h22_core_form_node_host_location_form_alter(&$form, FormStateInterface $form_state, $form_id) {
+  _h22_core_adjust_edit_or_add_for($form, $form_state, $form_id);
+}
+
+/**
+ * That's where we implement our changes.
+ */
+function _h22_core_adjust_edit_or_add_for(&$form, FormStateInterface $form_state, $form_id) {
   // Get only configurable languages in content language selector.
   $new_language_options = [];
   $languages = \Drupal::languageManager()->getLanguages();
@@ -58,6 +72,9 @@ function h22_core_form_node_host_location_form_alter(&$form, FormStateInterface 
     $form['meta']['published']['#access'] = FALSE;
     $form['meta']['changed']['#access'] = FALSE;
     $form['meta']['author']['#access'] = FALSE;
+    if ($form["revision"]["#type"] == 'checkbox') {
+      $form["revision"]["#access"] = FALSE;
+    }
   }
 
   // Add HTML help text field.
@@ -73,7 +90,7 @@ function h22_core_form_node_host_location_form_alter(&$form, FormStateInterface 
     '#title' => t('Warning'),
     '#wrapper_attributes' => ['class' => ['host_location_warning']],
     '#markup' =>
-    t('As it is now wartime, please be wary of sabotage and Russian hacks.<br>
+      t('As it is now wartime, please be wary of sabotage and Russian hacks.<br>
       We are taking all the safety measures to protect your data and your identity.<br><br>
 
       To help us take these measures:

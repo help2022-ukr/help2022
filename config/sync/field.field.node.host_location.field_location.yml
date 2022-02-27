@@ -6,16 +6,44 @@ dependencies:
     - field.storage.node.field_location
     - node.type.host_location
   module:
+    - geocoder_field
     - geofield
+third_party_settings:
+  geocoder_field:
+    method: geocode
+    weight: 0
+    field: field_address
+    skip_not_empty_value: false
+    disabled: false
+    hidden: false
+    providers:
+      - googlemaps
+    dumper: wkt
+    delta_handling: default
+    failure:
+      handling: preserve
+      status_message: true
+      log: true
 id: node.host_location.field_location
 field_name: field_location
 entity_type: node
 bundle: host_location
 label: Location
 description: ''
-required: true
+required: false
 translatable: false
-default_value: {  }
+default_value:
+  -
+    value: 'POINT (28.849762998859 47.019721998136)'
+    geo_type: Point
+    lat: 47.019721998136
+    lon: 28.849762998859
+    left: 28.849762998859
+    top: 47.019721998136
+    right: 28.849762998859
+    bottom: 47.019721998136
+    geohash: u8ke2rxv8pqrnb2k
+    latlon: '47.019721998136,28.849762998859'
 default_value_callback: ''
 settings: {  }
 field_type: geofield

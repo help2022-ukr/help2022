@@ -15,33 +15,55 @@ dependencies:
     - field.field.node.host_location.field_telegram
     - node.type.host_location
   module:
-    - text
+    - link
     - user
 id: node.host_location.teaser
 targetEntityType: node
 bundle: host_location
 mode: teaser
 content:
-  body:
-    type: text_summary_or_trimmed
-    label: hidden
-    settings:
-      trim_length: 100
-    third_party_settings: {  }
-    weight: 101
-    region: content
-  links:
+  field_email:
+    type: basic_string
+    label: inline
     settings: {  }
     third_party_settings: {  }
-    weight: 100
+    weight: 3
+    region: content
+  field_facebook:
+    type: link
+    label: inline
+    settings:
+      trim_length: 80
+      url_only: true
+      url_plain: true
+      rel: '0'
+      target: '0'
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_phone_number:
+    type: string
+    label: inline
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_telegram:
+    type: string
+    label: inline
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 1
     region: content
 hidden:
+  body: true
+  content_moderation_control: true
   field_address: true
-  field_email: true
-  field_facebook: true
   field_host_adults: true
   field_host_kids: true
   field_location: true
-  field_phone_number: true
-  field_telegram: true
   langcode: true
+  links: true
+  view_contacts_info: true

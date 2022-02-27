@@ -10,7 +10,7 @@ field_name: field_telegram
 entity_type: node
 bundle: host_location
 label: Telegram
-description: 'Your Telegram ID or phone number.'
+description: 'Your Telegram ID or phone number (not the link).'
 required: false
 translatable: false
 default_value: {  }

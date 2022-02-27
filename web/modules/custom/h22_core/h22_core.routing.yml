@@ -5,3 +5,10 @@ h22_core.homepage:
     _title: 'Welcome Ukrainian refugee support platform.'
   requirements:
     _permission: 'access content'
+h22_core.view_contact_information:
+  path: '/h22_core/form/view_contact_information'
+  defaults:
+    _form: '\Drupal\h22_core\Form\ViewContactInformation'
+    _title: 'ViewContactInformation'
+  requirements:
+    _access: 'TRUE'

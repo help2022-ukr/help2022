@@ -5,9 +5,12 @@
  * Contains h22_core.module.
  */
 
+use Drupal\Core\Entity\Display\EntityViewDisplayInterface;
+use Drupal\Core\Entity\EntityInterface;
 use Drupal\Core\Form\FormStateInterface;
 use Drupal\Core\Language\LanguageInterface;
 use Drupal\Core\Routing\RouteMatchInterface;
+use Drupal\node\Entity\NodeType;
 
 /**
  * Implements hook_help().
@@ -102,4 +105,32 @@ function _h22_core_adjust_edit_or_add_for(&$form, FormStateInterface $form_state
       Follow the general safety measures to assure your and refugees safety.'),
     '#weight' => '0',
   ];
+}
+
+
+/**
+ * Implements hook_entity_extra_field_info().
+ */
+function h22_core_entity_extra_field_info() {
+  $extra = array();
+
+  $extra['node']['host_location']['display']['view_contacts_info'] = array(
+    'label' => t('View GetContact Form'),
+    'description' => t('Pseudo-field that renders a button'),
+    'weight' => 100,
+    'visible' => TRUE,
+  );
+
+  return $extra;
+}
+
+/**
+ * Implements hook_ENTITY_TYPE_view().
+ */
+function h22_core_node_view(array &$build, EntityInterface $entity, EntityViewDisplayInterface $display, $view_mode) {
+  if ($display->getComponent('view_contacts_info')) {
+    $form = \Drupal::formBuilder()->getForm('Drupal\h22_core\Form\ViewContactInformation', $entity);
+    $build['form'] = $form;
+    $build['form']['#weight'] = 6;
+  }
 }

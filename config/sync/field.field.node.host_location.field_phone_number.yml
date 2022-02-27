@@ -12,7 +12,7 @@ field_name: field_phone_number
 entity_type: node
 bundle: host_location
 label: 'Phone number'
-description: ''
+description: 'Please enter full phone-number, international format.'
 required: true
 translatable: false
 default_value: {  }

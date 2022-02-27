@@ -10,6 +10,7 @@ dependencies:
     - comment
     - content_moderation
     - filter
+    - google_analytics
     - media
     - node
     - search
@@ -28,6 +29,7 @@ permissions:
   - 'access toolbar'
   - 'create host_location content'
   - 'edit own host_location content'
+  - 'opt-in or out of google analytics tracking'
   - 'post comments'
   - 'search content'
   - 'skip comment approval'

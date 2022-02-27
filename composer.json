@@ -39,6 +39,7 @@
         "drupal/geocoder": "^3.25",
         "drupal/gin": "^3.0@alpha",
         "drupal/gin_login": "^1.0",
+        "drupal/google_analytics": "^4.0",
         "drupal/honeypot": "^2.0",
         "drupal/leaflet": "^2.1",
         "drupal/mail_debugger": "^1.3",

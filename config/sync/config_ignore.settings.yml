@@ -4,3 +4,4 @@ ignored_config_entities:
   - phpmailer_smtp.settings
   - recaptcha.settings
   - geocoder.geocoder_provider.googlemaps
+  - google_analytics.settings

@@ -52,6 +52,7 @@ module:
   geofield: 0
   gin_login: 0
   gin_toolbar: 0
+  google_analytics: 0
   h22_core: 0
   h22_login: 0
   help: 0

@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "6950a6bf1af2068ed486ae66c6e949b4",
+    "content-hash": "cc2c34713a39ceb2172b39937c1c8511",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -2916,6 +2916,77 @@
                     "url": "https://paypal.me/saschaeggi"
                 }
             ]
+        },
+        {
+            "name": "drupal/google_analytics",
+            "version": "4.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/google_analytics.git",
+                "reference": "4.0.0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/google_analytics-4.0.0.zip",
+                "reference": "4.0.0",
+                "shasum": "4f761d4c852d11966f7289b0eb6431cc8db27240"
+            },
+            "require": {
+                "drupal/core": "^8.9|^9.0"
+            },
+            "require-dev": {
+                "drupal/token": "^1.7"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "4.0.0",
+                    "datestamp": "1634230238",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                },
+                "branch-alias": {
+                    "dev-4.x": "4.x-dev"
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "See contributors",
+                    "homepage": "https://www.drupal.org/node/49388/committers"
+                },
+                {
+                    "name": "budda",
+                    "homepage": "https://www.drupal.org/user/13164"
+                },
+                {
+                    "name": "ixismark",
+                    "homepage": "https://www.drupal.org/user/3632333"
+                },
+                {
+                    "name": "japerry",
+                    "homepage": "https://www.drupal.org/user/45640"
+                },
+                {
+                    "name": "pfaocle",
+                    "homepage": "https://www.drupal.org/user/9740"
+                },
+                {
+                    "name": "roberto.rivera.ixis",
+                    "homepage": "https://www.drupal.org/user/3632325"
+                }
+            ],
+            "description": "Allows your site to be tracked by Google Analytics by adding a Javascript tracking code to every page.",
+            "homepage": "https://www.drupal.org/project/google_analytics",
+            "support": {
+                "source": "https://git.drupalcode.org/project/google_analytics",
+                "issues": "https://www.drupal.org/project/issues/google_analytics"
+            }
         },
         {
             "name": "drupal/honeypot",

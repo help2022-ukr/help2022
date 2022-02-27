@@ -2,6 +2,8 @@ uuid: 84fecb31-1781-4d08-9ae7-245d992aae4a
 langcode: en
 status: true
 dependencies:
+  config:
+    - node.type.host_location
   module:
     - content_moderation
 _core:
@@ -59,5 +61,7 @@ type_settings:
         - published
       to: published
       weight: 1
-  entity_types: {  }
+  entity_types:
+    node:
+      - host_location
   default_moderation_state: draft

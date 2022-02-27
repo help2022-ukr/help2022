@@ -1,5 +1,5 @@
 status: 1
-pattern: 'Host for [node:field_host_adults] & [node:field_host_kids] in {location}'
+pattern: 'Host for [node:field_host_adults] & [node:field_host_kids] in [node:field_address:country_code] - [node:field_address:locality]'
 escape: true
 preserve_titles: false
 dependencies:

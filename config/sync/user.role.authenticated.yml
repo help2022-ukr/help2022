@@ -5,9 +5,11 @@ dependencies:
   config:
     - filter.format.basic_html
     - node.type.host_location
+    - workflows.workflow.editorial
   module:
     - comment
     - contact
+    - content_moderation
     - filter
     - media
     - node
@@ -31,7 +33,11 @@ permissions:
   - 'post comments'
   - 'search content'
   - 'skip comment approval'
+  - 'use editorial transition archive'
+  - 'use editorial transition archived_published'
+  - 'use editorial transition create_new_draft'
   - 'use text format basic_html'
   - 'use toolbar_language_switcher'
   - 'view media'
+  - 'view own unpublished content'
   - 'view the administration theme'

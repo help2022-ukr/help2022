@@ -2,6 +2,9 @@ uuid: 23961a4a-2372-49d2-81e6-ffa731f2faad
 langcode: en
 status: true
 dependencies:
+  config:
+    - system.menu.admin
+    - user.role.authenticated
   module:
     - node
     - user
@@ -257,9 +260,10 @@ display:
           sort_asc_label: Asc
           sort_desc_label: Desc
       access:
-        type: perm
+        type: role
         options:
-          perm: 'access content overview'
+          role:
+            authenticated: authenticated
       cache:
         type: tag
       empty:
@@ -597,7 +601,7 @@ display:
         - url.query_args
         - user
         - 'user.node_grants:view'
-        - user.permissions
+        - user.roles
       tags: {  }
   page_1:
     id: page_1
@@ -629,7 +633,7 @@ display:
         - url.query_args
         - user
         - 'user.node_grants:view'
-        - user.permissions
+        - user.roles
       tags: {  }
   page_personal:
     id: page_personal
@@ -812,12 +816,14 @@ display:
       display_extenders: {  }
       path: my-content
       menu:
-        type: 'default tab'
-        title: Content
+        type: normal
+        title: 'My Locations'
         description: ''
         weight: -10
+        expanded: false
         menu_name: admin
-        context: ''
+        parent: ''
+        context: '0'
       tab_options:
         type: normal
         title: Content
@@ -833,5 +839,5 @@ display:
         - url.query_args
         - user
         - 'user.node_grants:view'
-        - user.permissions
+        - user.roles
       tags: {  }

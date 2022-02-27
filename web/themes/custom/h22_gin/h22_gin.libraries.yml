@@ -2,3 +2,5 @@ global-styling:
   css:
     component:
       dist/css/styles.css: {}
+  js:
+    dist/js/main.js: { minified: false }

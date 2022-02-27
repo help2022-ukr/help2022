@@ -37,6 +37,7 @@ module:
   devel_generate: 0
   dynamic_page_cache: 0
   editor: 0
+  email_registration: 0
   embed: 0
   entity: 0
   entity_usage: 0

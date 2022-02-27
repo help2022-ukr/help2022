@@ -29,6 +29,7 @@
         "drupal/ctools": "^3.7",
         "drupal/date_popup": "^1.1",
         "drupal/dropzonejs": "^2.5",
+        "drupal/email_registration": "^1.1",
         "drupal/embed": "^1.4",
         "drupal/entity": "^1.2",
         "drupal/entity_usage": "^2.0@beta",

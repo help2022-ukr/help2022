@@ -3,7 +3,6 @@ langcode: en
 status: true
 dependencies:
   module:
-    - path
     - user
 _core:
   default_config_hash: FaQ9Ptcpxpg30AtiqRDtl_8zbJArHP1LPfug_s59TOA
@@ -22,13 +21,8 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
-  path:
-    type: path
-    weight: 2
-    region: content
-    settings: {  }
-    third_party_settings: {  }
 hidden:
   contact: true
   langcode: true
+  path: true
   timezone: true

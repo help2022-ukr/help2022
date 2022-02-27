@@ -25,7 +25,6 @@ module:
   config_ignore: 0
   config_split: 0
   config_translation: 0
-  contact: 0
   content_moderation: 0
   contextual: 0
   ctools: 0
@@ -42,8 +41,6 @@ module:
   embed: 0
   entity: 0
   entity_usage: 0
-  environment_indicator: 0
-  environment_indicator_ui: 0
   field: 0
   field_group: 0
   field_ui: 0

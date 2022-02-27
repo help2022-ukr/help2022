@@ -3,18 +3,26 @@ langcode: en
 status: true
 dependencies:
   config:
+    - filter.format.full_html
+    - filter.format.restricted_html
+    - node.type.host_location
     - node.type.page
     - taxonomy.vocabulary.tags
+    - workflows.workflow.editorial
   module:
+    - ban
     - comment
+    - config_translation
+    - content_moderation
+    - content_translation
     - contextual
     - file
+    - filter
     - node
     - path
     - system
     - taxonomy
     - toolbar
-    - tour
 _core:
   default_config_hash: Wur9kcEOwY1Jal81NssKnz3RhVJxAvBwyWQBGcA_1Go
 id: content_editor
@@ -26,18 +34,47 @@ permissions:
   - 'access content overview'
   - 'access contextual links'
   - 'access files overview'
+  - 'access taxonomy overview'
   - 'access toolbar'
-  - 'access tour'
+  - 'administer content translation'
   - 'administer url aliases'
+  - 'ban IP addresses'
+  - 'create content translations'
   - 'create page content'
   - 'create terms in tags'
   - 'create url aliases'
+  - 'delete all revisions'
+  - 'delete any host_location content'
+  - 'delete any page content'
+  - 'delete content translations'
+  - 'delete host_location revisions'
+  - 'delete own host_location content'
   - 'delete own page content'
   - 'delete page revisions'
+  - 'delete terms in tags'
+  - 'edit any host_location content'
+  - 'edit any page content'
   - 'edit own comments'
   - 'edit own page content'
   - 'edit terms in tags'
+  - 'link to any page'
   - 'revert all revisions'
+  - 'revert host_location revisions'
+  - 'revert page revisions'
+  - 'translate any entity'
+  - 'translate configuration'
+  - 'translate editable entities'
+  - 'translate host_location node'
+  - 'translate page node'
+  - 'update content translations'
+  - 'use editorial transition archived_draft'
+  - 'use editorial transition publish'
+  - 'use text format full_html'
+  - 'use text format restricted_html'
   - 'view all revisions'
+  - 'view any unpublished content'
+  - 'view host_location revisions'
+  - 'view latest version'
   - 'view own unpublished content'
+  - 'view page revisions'
   - 'view the administration theme'

@@ -25,3 +25,8 @@
 
 # Ignore ddev files.
 /.ddev
+
+
+# CUSTOM CONFIGS
+config/sync/phpmailer_smtp.settings*
+config/sync/recaptcha.settings*

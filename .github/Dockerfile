@@ -26,6 +26,9 @@ RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local
 # Update the damn path.
 ENV PATH="$HOME/.composer/vendor/bin:${PATH}"
 
+# Project-specific ini settings
+COPY .github/z-php-overrides /usr/local/etc/php/conf.d
+
 # Replace template Drupal with ours.
 WORKDIR /var/www/html
 RUN rm -rf /var/www/html

@@ -21,5 +21,5 @@ settings:
   min: 1
   max: 20
   prefix: ''
-  suffix: ''
+  suffix: 'Kid| Kids'
 field_type: integer

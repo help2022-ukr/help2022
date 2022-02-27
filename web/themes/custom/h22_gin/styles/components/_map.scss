@@ -1,0 +1,14 @@
+.leaflet-popup-content {
+  .counter-wrapper {
+    display: flex;
+    margin: 10px 0 0;
+    font-size: 1.5em;
+
+    .counter {
+      width: 50%;
+    }
+  }
+  .actions {
+    text-align: center;
+  }
+}

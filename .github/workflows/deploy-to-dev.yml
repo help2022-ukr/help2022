@@ -80,5 +80,6 @@ jobs:
             docker-compose rm -fs drupal_app web
             docker volume rm h22-deployment_drupal-code
             docker-compose up -d
+            docker-compose exec -T drupal_app bash -c "chown www-data:www-data /var/www/html/web/sites/default/settings.php"
             docker-compose exec -T drupal_app bash -c "chown www-data /var/www/html/web/sites/default/files -R"
             docker-compose exec -T drupal_app bash -c "/var/www/html/vendor/bin/drush deploy"

@@ -16,6 +16,7 @@
     "require": {
         "ext-gd": "*",
         "composer/installers": "^1.9",
+        "drupal/address": "^1.10",
         "drupal/admin_toolbar": "^3.1",
         "drupal/auto_entitylabel": "^3.0@beta",
         "drupal/captcha": "^1.2",
@@ -35,6 +36,7 @@
         "drupal/entity_usage": "^2.0@beta",
         "drupal/environment_indicator": "^4.0",
         "drupal/field_group": "^3.2",
+        "drupal/geocoder": "^3.25",
         "drupal/gin": "^3.0@alpha",
         "drupal/gin_login": "^1.0",
         "drupal/honeypot": "^2.0",
@@ -58,6 +60,7 @@
         "drupal/toolbar_language_switcher": "^2.0@alpha",
         "drupal/twig_field_value": "^2.0",
         "drupal/twig_tweak": "^3.1",
+        "geocoder-php/google-maps-provider": "^4.6",
         "harvesthq/chosen": "^1.8",
         "vlucas/phpdotenv": "^5.4"
     },

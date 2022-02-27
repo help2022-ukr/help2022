@@ -13,6 +13,11 @@
             mask-image: icon('location');
           }
         }
+        &.toolbar-help.toolbar-icon {
+          &:before {
+            mask-image: icon('help');
+          }
+        }
       }
     }
 

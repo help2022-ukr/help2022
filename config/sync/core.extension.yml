@@ -8,6 +8,7 @@ module:
   admin_toolbar_tools: 0
   auto_entitylabel: 0
   automated_cron: 0
+  backup_migrate: 0
   ban: 0
   block: 0
   block_content: 0
@@ -40,12 +41,14 @@ module:
   email_registration: 0
   embed: 0
   entity: 0
+  entity_limit: 0
   entity_usage: 0
   field: 0
   field_group: 0
   field_ui: 0
   file: 0
   filter: 0
+  flood_control: 0
   geocoder: 0
   geocoder_address: 0
   geocoder_field: 0

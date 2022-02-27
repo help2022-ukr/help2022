@@ -457,6 +457,7 @@ display:
     display_plugin: page
     position: 1
     display_options:
+      rendering_language: '***LANGUAGE_entity_translation***'
       display_extenders: {  }
       path: dashboards
       menu:

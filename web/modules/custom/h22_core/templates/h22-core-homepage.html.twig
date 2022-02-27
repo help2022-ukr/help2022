@@ -1,10 +1,10 @@
 <!-- Add you custom twig html here -->
 <h3>{{ 'Fellow neighbors, we urge you to support Ukrainian citizens by providing shelter and provisions if necessary.'|t }}</h3>
-<a href="{{ path('view.map_listings.page_map') }}" class="button button--primary">{{ "I am a refugee looking for shelter" }}</a>
+<a href="{{ path('view.map_listings.page_map') }}" class="button button--primary">{{ "I am a refugee looking for shelter"|t }}</a>
 {% if logged_in %}
-  <a href="{{ path('node.add', {'node_type' : 'host_location'}) }}" class="button button--action">{{ "Add Location to the Map" }}</a>
+  <a href="{{ path('node.add', {'node_type' : 'host_location'}) }}" class="button button--action">{{ "Add Location to the Map"|t }}</a>
 {% else %}
-  <a href="{{ path('user.login', {}, {'query': {'destination': path('entity.node.canonical', {'node': 2}) }}) }}" class="button button--action">{{ "I am a volunteer willing to host" }}</a>
+  <a href="{{ path('user.login', {}, {'query': {'destination': path('entity.node.canonical', {'node': 2}) }}) }}" class="button button--action">{{ "I am a volunteer willing to host"|t }}</a>
 {% endif %}
 
 <div class="call-to-volunteer">

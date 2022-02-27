@@ -1,0 +1,10 @@
+description: 'Мой список'
+display:
+  default:
+    display_options:
+      title: 'Мой список'
+  page_locations:
+    display_options:
+      menu:
+        title: 'Мой список'
+label: 'Мой список'

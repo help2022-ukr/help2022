@@ -1,0 +1,16 @@
+uuid: 1ea417cc-f02e-46b9-aaf6-d1f92fee1683
+langcode: en
+status: true
+dependencies: {  }
+id: limit_for_nodes_10_
+label: 'Limit for Nodes (10)'
+weight: 0
+plugin: role_limit
+entity_type: node
+entity_bundles:
+  host_location: host_location
+  page: '0'
+limits:
+  -
+    id: authenticated
+    limit: 10

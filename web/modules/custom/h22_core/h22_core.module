@@ -53,6 +53,10 @@ function h22_core_form_node_host_location_form_alter(&$form, FormStateInterface 
   _h22_core_adjust_edit_or_add_for($form, $form_state, $form_id);
 }
 
+function h22_core_form_user_login_form_alter(&$form, FormStateInterface $form_state, $form_id) {
+  $form['captcha']['#weight'] = $form['actions']['#weight'] - 1;
+}
+
 /**
  * That's where we implement our changes.
  */

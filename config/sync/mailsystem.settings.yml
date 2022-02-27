@@ -3,4 +3,4 @@ _core:
 theme: current
 defaults:
   sender: phpmailer_smtp
-  formatter: mime_mail
+  formatter: phpmailer_smtp

@@ -8,6 +8,11 @@
             background: halfs(#005bbc, #ffd600);
           }
         }
+        &.toolbar-map.toolbar-icon {
+          &:before {
+            mask-image: icon('location');
+          }
+        }
       }
     }
 

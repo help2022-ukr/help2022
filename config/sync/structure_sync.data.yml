@@ -1,0 +1,25 @@
+menus:
+  -
+    menu_name: admin
+    title: Map
+    parent: system.admin
+    uri: 'internal:/listings'
+    link_title: ''
+    description: null
+    enabled: '1'
+    expanded: '0'
+    weight: '2'
+    langcode: en
+    uuid: 896dfda8-e4e7-4cbd-98fa-f715dc62b928
+  -
+    menu_name: admin
+    title: 'Location List'
+    parent: 'menu_link_content:896dfda8-e4e7-4cbd-98fa-f715dc62b928'
+    uri: 'internal:/listings-simple'
+    link_title: ''
+    description: null
+    enabled: '1'
+    expanded: '0'
+    weight: '0'
+    langcode: en
+    uuid: d7a9baf8-b489-4c15-9e1d-8d7bcdfd7413

@@ -31,4 +31,3 @@
 config/sync/phpmailer_smtp.settings.yml
 config/sync/recaptcha.settings.yml
 config/sync/geocoder.geocoder_provider.googlemaps.yml
-config/sync/google_analytics.settings.yml

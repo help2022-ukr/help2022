@@ -4,3 +4,10 @@
 .path-frontpage .page-title {
   white-space: normal;
 }
+.node--view-mode-full {
+  .field--name-field-host-kids,
+  .field--name-field-host-adults {
+    font-size: 1.5em;
+    margin: 1rem 0;
+  }
+}

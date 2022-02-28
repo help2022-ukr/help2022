@@ -1,0 +1,15 @@
+uuid: 26f94b8b-f429-4680-aa7b-aa4aeae33daf
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: sL588ui1E_8-2c_UupwyYxcqX2OVyMFp3HTLbbFqvPc
+id: global
+label: Global
+tags:
+  image_src: 'https://help2022.com/themes/custom/h22_gin/og.png'
+  description: 'Welcome Ukrainian refugee support platform - support Ukrainian citizens by providing shelter and provisions if necessary.'
+  canonical_url: '[current-page:url]'
+  title: '[current-page:title] | [site:name]'
+  og_site_name: Help2022.com
+  og_image: 'https://help2022.com/themes/custom/h22_gin/og.png'

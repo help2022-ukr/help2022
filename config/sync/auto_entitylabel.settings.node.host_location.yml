@@ -6,4 +6,4 @@ dependencies:
   config:
     - node.type.host_location
 save: 1
-chunk: '50'
+chunk: '1'

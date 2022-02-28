@@ -1,2 +1,19 @@
 description: Объявления
 label: Объявления
+display:
+  default:
+    display_options:
+      filters:
+        field_type_value:
+          expose:
+            label: 'Тип приюта'
+        field_host_adults_value:
+          expose:
+            label: Взрослых
+          group_info:
+            label: Взрослых
+        field_host_kids_value:
+          expose:
+            label: Детей
+          group_info:
+            label: Детей

@@ -10,7 +10,7 @@ display:
       filters:
         field_type_value:
           expose:
-            label: Тип
+            label: 'Тип укриття'
         field_host_adults_value:
           expose:
             label: Дорослі

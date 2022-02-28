@@ -26,6 +26,7 @@ module:
   config_ignore: 0
   config_split: 0
   config_translation: 0
+  contact: 0
   content_moderation: 0
   contextual: 0
   ctools: 0
@@ -75,6 +76,8 @@ module:
   menu_link_attributes: 0
   menu_link_content: 0
   menu_ui: 0
+  metatag: 0
+  metatag_open_graph: 0
   mimemail: 0
   module_filter: 0
   node: 0

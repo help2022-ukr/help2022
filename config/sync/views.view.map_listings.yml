@@ -848,7 +848,7 @@ display:
           exposed: true
           expose:
             operator_id: field_type_value_op
-            label: Type
+            label: 'Shelter Type'
             description: ''
             use_operator: false
             operator: field_type_value_op

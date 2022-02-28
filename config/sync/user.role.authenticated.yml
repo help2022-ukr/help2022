@@ -8,6 +8,7 @@ dependencies:
     - workflows.workflow.editorial
   module:
     - comment
+    - contact
     - content_moderation
     - filter
     - google_analytics
@@ -26,6 +27,7 @@ is_admin: false
 permissions:
   - 'access comments'
   - 'access content'
+  - 'access site-wide contact form'
   - 'access toolbar'
   - 'create host_location content'
   - 'edit own host_location content'

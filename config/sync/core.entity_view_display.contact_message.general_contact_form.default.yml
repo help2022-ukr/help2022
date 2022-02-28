@@ -1,0 +1,21 @@
+uuid: 61c29f1a-5452-4645-939b-a9901f36650c
+langcode: en
+status: true
+dependencies:
+  config:
+    - contact.form.general_contact_form
+id: contact_message.general_contact_form.default
+targetEntityType: contact_message
+bundle: general_contact_form
+mode: default
+content:
+  message:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  langcode: true

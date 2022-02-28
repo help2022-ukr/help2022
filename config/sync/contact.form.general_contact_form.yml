@@ -1,0 +1,13 @@
+uuid: 23a9941a-0a70-4f6e-b9d4-8340fcdf5bc6
+langcode: en
+status: true
+dependencies: {  }
+id: general_contact_form
+label: 'General Contact Form'
+recipients:
+  - travelfrogmd@gmail.com
+  - nikro.md@gmail.com
+reply: ''
+weight: 0
+message: 'Thank you for contacting us - we will get in touch soon.'
+redirect: ''

@@ -6,8 +6,10 @@
 }
 .node--view-mode-full {
   .field--name-field-host-kids,
-  .field--name-field-host-adults {
+  .field--name-field-host-adults,
+  .field--name-field-type,
+  .field--name-field-organization-name {
     font-size: 1.5em;
-    margin: 1rem 0;
+    margin: 0.5rem 0;
   }
 }

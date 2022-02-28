@@ -1,6 +1,6 @@
 status: 1
-pattern: 'Host for [node:field_host_adults] & [node:field_host_kids] in [node:field_address:country_code] - [node:field_address:locality]'
-escape: true
+pattern: 'Host in [node:field_address:country_code], [node:field_address:locality] ([node:field_host_adults] + [node:field_host_kids])'
+escape: false
 preserve_titles: false
 dependencies:
   config:

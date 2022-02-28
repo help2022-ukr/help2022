@@ -7,9 +7,11 @@ _core:
 id: global
 label: Global
 tags:
-  image_src: 'https://help2022.com/themes/custom/h22_gin/og.png'
+  image_src: 'https://help2022.com/themes/custom/h22_gin/og-big.png'
   description: 'Welcome Ukrainian refugee support platform - support Ukrainian citizens by providing shelter and provisions if necessary.'
   canonical_url: '[current-page:url]'
   title: '[current-page:title] | [site:name]'
+  og_image_url: 'https://help2022.com/themes/custom/h22_gin/og-big.png'
   og_site_name: Help2022.com
-  og_image: 'https://help2022.com/themes/custom/h22_gin/og.png'
+  og_image: 'https://help2022.com/themes/custom/h22_gin/og-big.png'
+  og_image_secure_url: 'https://help2022.com/themes/custom/h22_gin/og-big.png'

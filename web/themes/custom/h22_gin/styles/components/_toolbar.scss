@@ -18,6 +18,11 @@
             mask-image: icon('help');
           }
         }
+        &.toolbar-contact.toolbar-icon {
+          &:before {
+            mask-image: icon('webform');
+          }
+        }
         &.toolbar-icon-views-viewviews-dashboards-page-locations.toolbar-icon {
           &:before {
             mask-image: icon('list');

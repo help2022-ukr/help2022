@@ -93,20 +93,20 @@ function _h22_core_adjust_edit_or_add_for(&$form, FormStateInterface $form_state
   ];
 
   $form['meta']['host_location_warning'] = [
-    '#type' => 'item',
-    '#title' => t('Warning'),
-    '#wrapper_attributes' => ['class' => ['host_location_warning']],
-    '#markup' =>
-      t('As it is now wartime, please be wary of sabotage and Russian hacks.<br>
-      We are taking all the safety measures to protect your data and your identity.<br><br>
+    '#type' => 'inline_template',
+    '#template' =>
+      "<div class='host_location_warning'>
+    {{ 'As it is now wartime, please be wary of sabotage and Russian hacks.'|t }}<br>
+    {{ 'We are taking all the safety measures to protect your data and your identity.'|t }}<br><br>
 
-      To help us take these measures:
-      <ul>
-        <li>Do not share your precise home address.</li>
-        <li>Talk to the person before accepting to host.</li>
-      </ul>
-      <br>
-      Follow the general safety measures to assure your and refugees safety.'),
+    {{ 'To help us take these measures:'|t }}<br>
+    <ul>
+        <li>{{ 'Do not share your precise home address.'|t }}</li>
+        <li>{{ 'Talk to the person before accepting to host.'|t }}</li>
+    </ul>
+
+    {{ 'Follow the general safety measures to assure your and refugees safety.'|t }}
+    </div>",
     '#weight' => '0',
   ];
 }

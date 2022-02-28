@@ -12,8 +12,8 @@
     attach: function attach(context) {
       // Toolbar toggle
       $('.page-wrapper', context).on('click', function (e) {
-        if (window.matchMedia("(max-width: 767px)").matches && $('body').hasClass('toolbar-tray-open')) {
-          $('.toolbar-icon-menu').trigger('click');
+        if (window.matchMedia("(max-width: 767px)").matches && $('body', context).hasClass('toolbar-tray-open')) {
+          $('#toolbar-bar > .toolbar-tab > .toolbar-icon.is-active', context).trigger('click');
         }
       });
     }

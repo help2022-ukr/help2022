@@ -1,0 +1,9 @@
+label: 'Інформаційні панелі'
+display:
+  default:
+    display_options:
+      title: 'Мої місцезнаходження'
+  page_locations:
+    display_options:
+      menu:
+        title: 'Мої місцезнаходження'

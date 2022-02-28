@@ -1,0 +1,30 @@
+label: Списки
+display:
+  default:
+    display_options:
+      title: Списки
+      exposed_form:
+        options:
+          submit_button: Застосувати
+          reset_button_label: Скинути
+      filters:
+        field_type_value:
+          expose:
+            label: Тип
+        field_host_adults_value:
+          expose:
+            label: Дорослі
+          group_info:
+            label: Дорослі
+        field_host_kids_value:
+          expose:
+            label: Діти
+          group_info:
+            label: Діти
+  page_2:
+    display_options:
+      fields:
+        field_host_adults:
+          label: Дорослі
+        field_host_kids:
+          label: Діти

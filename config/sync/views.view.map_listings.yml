@@ -8,9 +8,11 @@ dependencies:
     - field.storage.node.field_host_adults
     - field.storage.node.field_host_kids
     - field.storage.node.field_location
+    - field.storage.node.field_organization_name
     - field.storage.node.field_type
     - node.type.host_location
   module:
+    - address
     - geofield
     - leaflet_views
     - node
@@ -529,6 +531,168 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
+        field_organization_name:
+          id: field_organization_name
+          table: node__field_organization_name
+          field: field_organization_name
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: field
+          label: ''
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: string
+          settings:
+            link_to_entity: false
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+        field_address_country_code:
+          id: field_address_country_code
+          table: node__field_address
+          field: field_address_country_code
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: country
+          label: ''
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          display_name: true
+        nothing_1:
+          id: nothing_1
+          table: views
+          field: nothing
+          relationship: none
+          group_type: group
+          admin_label: 'Custom Title'
+          plugin_id: custom
+          label: ''
+          exclude: false
+          alter:
+            alter_text: true
+            text: "{% if field_type == 'person' %}\r\n <a href=\"{{ path('entity.node.canonical', {'node': nid }) }}\">\r\n   {% trans %}\r\n      Host for {{ field_host_adults }} & {{ field_host_kids }} in {{ field_address_country_code }}\r\n   {% endtrans %}\r\n  </a>\r\n{% else %}\r\n <a href=\"{{ path('entity.node.canonical', {'node': nid }) }}\">\r\n   {% trans %}\r\n      Organization - {{ field_organization_name }} for {{ field_host_adults }} & {{ field_host_kids }} in {{ field_address_country_code }}\r\n   {% endtrans %}\r\n  </a>\r\n{% endif %}"
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: false
         nothing:
           id: nothing
           table: views
@@ -541,7 +705,7 @@ display:
           exclude: false
           alter:
             alter_text: true
-            text: "<h5>{{ title}} </h5>\r\n<div class=\"location-auth-meta host-location-{{ field_type }}\">\r\n  <div class=\"unique-id\">ID: {{ nid }}</di>\r\n  <div><em>{{ created }} </em></div>\r\n</div>\r\n<div class=\"counter-wrapper\">\r\n  <div class=\"adults-counter counter\">{{ field_host_adults }} </div>\r\n  <div class=\"kids-counter counter\">{{ field_host_kids }} </div>\r\n</div>\r\n<div class=\"actions\">\r\n<a class=\"button button--primary\" href={{ path('entity.node.canonical', {'node': nid }) }}>{{ 'View Details'|t }}</a>\r\n</div>"
+            text: "<h5>{{ nothing_1 }} </h5>\r\n<div class=\"location-auth-meta host-location-{{ field_type }}\">\r\n  <div class=\"unique-id\">ID: {{ nid }}</di>\r\n  <div><em>{{ created }} </em></div>\r\n</div>\r\n<div class=\"counter-wrapper\">\r\n  <div class=\"adults-counter counter\">{{ field_host_adults }} </div>\r\n  <div class=\"kids-counter counter\">{{ field_host_kids }} </div>\r\n</div>\r\n<div class=\"actions\">\r\n<a class=\"button button--primary\" href={{ path('entity.node.canonical', {'node': nid }) }}>{{ 'View Details'|t }}</a>\r\n</div>"
             make_link: false
             path: ''
             absolute: false
@@ -877,6 +1041,46 @@ display:
                   min: ''
                   max: ''
                   value: 5+
+        default_langcode:
+          id: default_langcode
+          table: node_field_data
+          field: default_langcode
+          relationship: none
+          group_type: group
+          admin_label: ''
+          entity_type: node
+          entity_field: default_langcode
+          plugin_id: boolean
+          operator: '='
+          value: '1'
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
       filter_groups:
         operator: AND
         groups:
@@ -887,13 +1091,13 @@ display:
           grouping: {  }
           data_source: field_location
           entity_source: __base_table
-          name_field: title
+          name_field: nothing_1
           description_field: nothing
           view_mode: full
           leaflet_map: 'OSM Mapnik'
           height: '400'
           height_unit: px
-          hide_empty_map: false
+          hide_empty_map: true
           disable_wheel: false
           gesture_handling: false
           reset_map:
@@ -936,6 +1140,20 @@ display:
             control: true
             options: '{"position":"topleft","pseudoFullscreen":false}'
           path: '{"color":"#3388ff","opacity":"1.0","stroke":true,"weight":3,"fill":"depends","fillColor":"*","fillOpacity":"0.2","radius":"6"}'
+          geocoder:
+            control: false
+            settings:
+              position: topright
+              input_size: 25
+              providers:
+                googlemaps:
+                  weight: '0'
+                  checked: 0
+              min_terms: 4
+              delay: 800
+              zoom: 16
+              popup: false
+              options: ''
       row:
         type: 'entity:node'
         options:
@@ -966,6 +1184,7 @@ display:
         - 'config:field.storage.node.field_host_adults'
         - 'config:field.storage.node.field_host_kids'
         - 'config:field.storage.node.field_location'
+        - 'config:field.storage.node.field_organization_name'
         - 'config:field.storage.node.field_type'
   page_2:
     id: page_2
@@ -974,6 +1193,119 @@ display:
     position: 2
     display_options:
       fields:
+        field_organization_name:
+          id: field_organization_name
+          table: node__field_organization_name
+          field: field_organization_name
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: field
+          label: ''
+          exclude: true
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: string
+          settings:
+            link_to_entity: false
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+        field_address_country_code:
+          id: field_address_country_code
+          table: node__field_address
+          field: field_address_country_code
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: country
+          label: ''
+          exclude: true
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          display_name: true
         nid:
           id: nid
           table: node_field_data
@@ -1040,21 +1372,19 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-        title:
-          id: title
-          table: node_field_data
-          field: title
+        nothing_1:
+          id: nothing_1
+          table: views
+          field: nothing
           relationship: none
           group_type: group
           admin_label: ''
-          entity_type: node
-          entity_field: title
-          plugin_id: field
+          plugin_id: custom
           label: What
           exclude: false
           alter:
-            alter_text: false
-            text: ''
+            alter_text: true
+            text: "{% if field_type == 'person' %}\r\n <a href=\"{{ path('entity.node.canonical', {'node': nid }) }}\">\r\n   {% trans %}\r\n      Host for {{ field_host_adults }} & {{ field_host_kids }} in {{ field_address_country_code }}\r\n   {% endtrans %}\r\n  </a>\r\n{% else %}\r\n <a href=\"{{ path('entity.node.canonical', {'node': nid }) }}\">\r\n   {% trans %}\r\n      Organization - {{ field_organization_name }} for {{ field_host_adults }} & {{ field_host_kids }} in {{ field_address_country_code }}\r\n   {% endtrans %}\r\n  </a>\r\n{% endif %}"
             make_link: false
             path: ''
             absolute: false
@@ -1070,8 +1400,8 @@ display:
             target: ''
             nl2br: false
             max_length: 0
-            word_boundary: false
-            ellipsis: false
+            word_boundary: true
+            ellipsis: true
             more_link: false
             more_link_text: ''
             more_link_path: ''
@@ -1090,21 +1420,7 @@ display:
           empty: ''
           hide_empty: false
           empty_zero: false
-          hide_alter_empty: true
-          click_sort_column: value
-          type: string
-          settings:
-            link_to_entity: true
-          group_column: value
-          group_columns: {  }
-          group_rows: true
-          delta_limit: 0
-          delta_offset: 0
-          delta_reversed: false
-          delta_first_last: false
-          multi_type: separator
-          separator: ', '
-          field_api_classes: false
+          hide_alter_empty: false
         field_host_adults:
           id: field_host_adults
           table: node__field_host_adults
@@ -1397,12 +1713,12 @@ display:
         row: false
         fields: false
       display_description: ''
+      rendering_language: '***LANGUAGE_language_interface***'
       display_extenders: {  }
       path: listings-simple
     cache_metadata:
       max-age: -1
       contexts:
-        - 'languages:language_content'
         - 'languages:language_interface'
         - url
         - url.query_args
@@ -1411,6 +1727,7 @@ display:
       tags:
         - 'config:field.storage.node.field_host_adults'
         - 'config:field.storage.node.field_host_kids'
+        - 'config:field.storage.node.field_organization_name'
   page_map:
     id: page_map
     display_title: 'Page Map'
@@ -1418,12 +1735,12 @@ display:
     position: 1
     display_options:
       display_description: ''
+      rendering_language: '***LANGUAGE_language_interface***'
       display_extenders: {  }
       path: listings
     cache_metadata:
       max-age: -1
       contexts:
-        - 'languages:language_content'
         - 'languages:language_interface'
         - url
         - url.query_args
@@ -1434,4 +1751,5 @@ display:
         - 'config:field.storage.node.field_host_adults'
         - 'config:field.storage.node.field_host_kids'
         - 'config:field.storage.node.field_location'
+        - 'config:field.storage.node.field_organization_name'
         - 'config:field.storage.node.field_type'

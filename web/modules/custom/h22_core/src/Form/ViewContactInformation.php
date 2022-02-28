@@ -2,16 +2,48 @@
 
 namespace Drupal\h22_core\Form;
 
+use Drupal\Core\Flood\FloodInterface;
 use Drupal\Core\Form\FormBase;
 use Drupal\Core\Form\FormStateInterface;
 use Drupal\Core\Link;
 use Drupal\node\Entity\Node;
+use Symfony\Component\DependencyInjection\ContainerInterface;
+use Symfony\Component\HttpFoundation\RequestStack;
 
 /**
  * Class ViewContactInformation.
  */
 class ViewContactInformation extends FormBase {
   private Node $node;
+
+  /**
+   * The flood service.
+   *
+   * @var \Drupal\Core\Flood\FloodInterface
+   */
+  protected $flood;
+
+  /**
+   * The request stack.
+   *
+   * @var \Symfony\Component\HttpFoundation\RequestStack
+   */
+  protected $requestStack;
+
+  public function __construct(FloodInterface $flood, RequestStack $requestStack) {
+    $this->flood = $flood;
+    $this->requestStack = $requestStack->getCurrentRequest();
+  }
+
+  /**
+   * {@inheritdoc}
+   */
+  public static function create(ContainerInterface $container) {
+    return new static(
+      $container->get('flood'),
+      $container->get('request_stack')
+    );
+  }
 
   /**
    * {@inheritdoc}
@@ -61,6 +93,10 @@ class ViewContactInformation extends FormBase {
     foreach ($form_state->getValues() as $key => $value) {
       \Drupal::messenger()->addMessage($key . ': ' . ($key === 'text_format'?$value['value']:$value));
     }
+
+    // User flood control.
+    $flood_identifier = $this->requestStack->getClientIp();
+    $this->flood->register('h22_core.view_contact_information', 3600, $flood_identifier);
   }
 
   /**
@@ -75,14 +111,27 @@ class ViewContactInformation extends FormBase {
   public function promptCallback(array &$form, FormStateInterface $form_state) {
     $element['container'] = [
       '#type' => 'container',
-        '#attributes' => [
-          'class' => 'contacts-wrapper'
+      '#attributes' => [
+        'class' => 'contacts-wrapper'
       ]
     ];
-    $element['container']['tel'] = $this->node->field_phone_number->view('teaser');
-    $element['container']['telegram'] = $this->node->field_telegram->view('teaser');
-    $element['container']['email'] = $this->node->field_email->view('teaser');
-    $element['container']['fb'] = $this->node->field_facebook->view('teaser');
+
+    // User flood control validation.
+    $flood_identifier = $this->requestStack->getClientIp();
+    if (!$this->flood->isAllowed('h22_core.view_contact_information', 200, 7200, $flood_identifier)) {
+      $element['container']['message'] = [
+        '#type' => 'item',
+        '#markup' => $this->t("You have viewed too many contacts. There's a protection against hackers - please try again later."),
+        '#wrapper_attributes' => ['class' => ['messages-list__item messages messages--error']],
+        '#weight' => '0',
+      ];
+    }
+    else {
+      $element['container']['tel'] = $this->node->field_phone_number->view('teaser');
+      $element['container']['telegram'] = $this->node->field_telegram->view('teaser');
+      $element['container']['email'] = $this->node->field_email->view('teaser');
+      $element['container']['fb'] = $this->node->field_facebook->view('teaser');
+    }
     return $element;
   }
 

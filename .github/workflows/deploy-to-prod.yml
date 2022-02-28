@@ -71,8 +71,8 @@ jobs:
         uses: appleboy/ssh-action@master
         with:
           host: ${{ secrets.HOST }}
-          username: ${{ secrets.USERNAME }}
           port: ${{ secrets.PORT }}
+          username: ${{ secrets.USERNAME }}
           key: ${{ secrets.PKEY }}
           script: |
             cd h22-deployment
@@ -80,5 +80,13 @@ jobs:
             docker-compose rm -fs drupal_app web
             docker volume rm h22-deployment_drupal-code
             docker-compose up -d
+            docker-compose exec -T drupal_app bash -c "chown www-data:www-data /var/www/html/web/sites/default/settings.php"
             docker-compose exec -T drupal_app bash -c "chown www-data /var/www/html/web/sites/default/files -R"
             docker-compose exec -T drupal_app bash -c "/var/www/html/vendor/bin/drush deploy"
+
+      - name: Clean-up images - leave only latest 5
+        uses: actions/delete-package-versions@v2
+        with:
+          package-name: 'help2022'
+          min-versions-to-keep: 5
+          ignore-versions: '^(0|[1-9]\\d*)\\.0\\.0$'

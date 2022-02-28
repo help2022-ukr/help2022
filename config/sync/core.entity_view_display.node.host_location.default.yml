@@ -5,17 +5,21 @@ dependencies:
   config:
     - field.field.node.host_location.body
     - field.field.node.host_location.field_address
+    - field.field.node.host_location.field_contact_person
     - field.field.node.host_location.field_email
     - field.field.node.host_location.field_facebook
     - field.field.node.host_location.field_host_adults
     - field.field.node.host_location.field_host_kids
     - field.field.node.host_location.field_location
+    - field.field.node.host_location.field_organization_name
     - field.field.node.host_location.field_phone_number
     - field.field.node.host_location.field_telegram
+    - field.field.node.host_location.field_type
     - node.type.host_location
   module:
     - address
     - leaflet
+    - options
     - text
     - user
 id: node.host_location.default
@@ -40,7 +44,15 @@ content:
     label: above
     settings: {  }
     third_party_settings: {  }
-    weight: 5
+    weight: 9
+    region: content
+  field_contact_person:
+    type: string
+    label: inline
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 7
     region: content
   field_host_adults:
     type: number_integer
@@ -132,7 +144,22 @@ content:
           popup: false
           options: ''
     third_party_settings: {  }
-    weight: 7
+    weight: 10
+    region: content
+  field_organization_name:
+    type: string
+    label: inline
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 6
+    region: content
+  field_type:
+    type: list_default
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
+    weight: 5
     region: content
   links:
     settings: {  }
@@ -142,7 +169,7 @@ content:
   view_contacts_info:
     settings: {  }
     third_party_settings: {  }
-    weight: 6
+    weight: 8
     region: content
 hidden:
   field_email: true

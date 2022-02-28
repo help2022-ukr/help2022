@@ -84,6 +84,11 @@ function _h22_core_adjust_edit_or_add_for(&$form, FormStateInterface $form_state
     }
   }
 
+  // Conditional field.
+  $form['field_organization_name']['#states']['visible'] = [
+    ':input[name="field_type"]' => ['value' => 'organization']
+  ];
+
   // Add HTML help text field.
   $form['meta']['host_location_help'] = [
     '#type' => 'item',
@@ -135,6 +140,6 @@ function h22_core_node_view(array &$build, EntityInterface $entity, EntityViewDi
   if ($display->getComponent('view_contacts_info')) {
     $form = \Drupal::formBuilder()->getForm('Drupal\h22_core\Form\ViewContactInformation', $entity);
     $build['form'] = $form;
-    $build['form']['#weight'] = 6;
+    $build['form']['#weight'] = 9;
   }
 }

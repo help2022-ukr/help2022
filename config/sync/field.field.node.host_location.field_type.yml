@@ -1,0 +1,23 @@
+uuid: f848cd6d-b405-4529-8c7b-a076fe294f56
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_type
+    - node.type.host_location
+  module:
+    - options
+id: node.host_location.field_type
+field_name: field_type
+entity_type: node
+bundle: host_location
+label: Type
+description: 'Who are you representing?'
+required: true
+translatable: false
+default_value:
+  -
+    value: person
+default_value_callback: ''
+settings: {  }
+field_type: list_string

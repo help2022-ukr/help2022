@@ -19,7 +19,7 @@ default_value:
 default_value_callback: ''
 settings:
   min: 0
-  max: 20
+  max: 300
   prefix: ''
   suffix: ' Adult| Adults'
 field_type: integer

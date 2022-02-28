@@ -8,7 +8,35 @@
       width: 50%;
     }
   }
+
   .actions {
     text-align: center;
+  }
+
+  .location-auth-meta {
+    &:before {
+      background-image: none;
+      background-color: var(--colorGinTextLight);
+      mask-repeat: no-repeat;
+      mask-position: center center;
+      mask-size: 32px 32px;
+      display: inline-block;
+      width: 32px;
+      height: 32px;
+      content: '';
+      float: left;
+      margin-right: 10px;
+    }
+
+    &.host-location-person {
+      &:before {
+        mask-image: icon('person');
+      }
+    }
+    &.host-location-organization {
+      &:before {
+        mask-image: icon('location_city');
+      }
+    }
   }
 }

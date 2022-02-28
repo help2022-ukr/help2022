@@ -1,0 +1,19 @@
+uuid: c1968948-b81e-4a8b-8341-ad9d079424b5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_organization_name
+    - node.type.host_location
+id: node.host_location.field_organization_name
+field_name: field_organization_name
+entity_type: node
+bundle: host_location
+label: 'Organization Name'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

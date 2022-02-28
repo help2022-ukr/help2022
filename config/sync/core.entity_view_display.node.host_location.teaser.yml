@@ -6,13 +6,16 @@ dependencies:
     - core.entity_view_mode.node.teaser
     - field.field.node.host_location.body
     - field.field.node.host_location.field_address
+    - field.field.node.host_location.field_contact_person
     - field.field.node.host_location.field_email
     - field.field.node.host_location.field_facebook
     - field.field.node.host_location.field_host_adults
     - field.field.node.host_location.field_host_kids
     - field.field.node.host_location.field_location
+    - field.field.node.host_location.field_organization_name
     - field.field.node.host_location.field_phone_number
     - field.field.node.host_location.field_telegram
+    - field.field.node.host_location.field_type
     - node.type.host_location
   module:
     - link
@@ -61,9 +64,12 @@ hidden:
   body: true
   content_moderation_control: true
   field_address: true
+  field_contact_person: true
   field_host_adults: true
   field_host_kids: true
   field_location: true
+  field_organization_name: true
+  field_type: true
   langcode: true
   links: true
   view_contacts_info: true

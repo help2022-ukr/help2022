@@ -19,7 +19,7 @@ default_value:
 default_value_callback: ''
 settings:
   min: 1
-  max: 20
+  max: 300
   prefix: ''
   suffix: ' Kid| Kids'
 field_type: integer

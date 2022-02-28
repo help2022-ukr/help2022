@@ -8,11 +8,13 @@ dependencies:
     - field.storage.node.field_host_adults
     - field.storage.node.field_host_kids
     - field.storage.node.field_location
+    - field.storage.node.field_type
     - node.type.host_location
   module:
     - geofield
     - leaflet_views
     - node
+    - options
     - text
     - user
 id: map_listings
@@ -465,6 +467,68 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
+        field_type:
+          id: field_type
+          table: node__field_type
+          field: field_type
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: field
+          label: ''
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: list_key
+          settings: {  }
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
         nothing:
           id: nothing
           table: views
@@ -477,7 +541,7 @@ display:
           exclude: false
           alter:
             alter_text: true
-            text: "<h5>{{ title}} </h5>\r\n<div class=\"unique-id\">ID: {{ nid }}</di>\r\n<div><em>{{ created }} </em></div>\r\n<div class=\"counter-wrapper\">\r\n  <div class=\"adults-counter counter\">{{ field_host_adults }} </div>\r\n  <div class=\"kids-counter counter\">{{ field_host_kids }} </div>\r\n</div>\r\n<div class=\"actions\">\r\n<a class=\"button button--primary\" href={{ path('entity.node.canonical', {'node': nid }) }}>{{ 'View Details'|t }}</a>\r\n</div>"
+            text: "<h5>{{ title}} </h5>\r\n<div class=\"location-auth-meta host-location-{{ field_type }}\">\r\n  <div class=\"unique-id\">ID: {{ nid }}</di>\r\n  <div><em>{{ created }} </em></div>\r\n</div>\r\n<div class=\"counter-wrapper\">\r\n  <div class=\"adults-counter counter\">{{ field_host_adults }} </div>\r\n  <div class=\"kids-counter counter\">{{ field_host_kids }} </div>\r\n</div>\r\n<div class=\"actions\">\r\n<a class=\"button button--primary\" href={{ path('entity.node.canonical', {'node': nid }) }}>{{ 'View Details'|t }}</a>\r\n</div>"
             make_link: false
             path: ''
             absolute: false
@@ -602,9 +666,53 @@ display:
           plugin_id: bundle
           value:
             host_location: host_location
+          group: 1
           expose:
             operator_limit_selection: false
             operator_list: {  }
+        field_type_value:
+          id: field_type_value
+          table: node__field_type
+          field: field_type_value
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: list_field
+          operator: or
+          value: {  }
+          group: 1
+          exposed: true
+          expose:
+            operator_id: field_type_value_op
+            label: Type
+            description: ''
+            use_operator: false
+            operator: field_type_value_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: field_type_value
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              content_editor: '0'
+              administrator: '0'
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          reduce_duplicates: false
         field_host_adults_value:
           id: field_host_adults_value
           table: node__field_host_adults
@@ -769,6 +877,10 @@ display:
                   min: ''
                   max: ''
                   value: 5+
+      filter_groups:
+        operator: AND
+        groups:
+          1: AND
       style:
         type: leaflet_map
         options:
@@ -854,6 +966,7 @@ display:
         - 'config:field.storage.node.field_host_adults'
         - 'config:field.storage.node.field_host_kids'
         - 'config:field.storage.node.field_location'
+        - 'config:field.storage.node.field_type'
   page_2:
     id: page_2
     display_title: 'Page List'
@@ -1321,3 +1434,4 @@ display:
         - 'config:field.storage.node.field_host_adults'
         - 'config:field.storage.node.field_host_kids'
         - 'config:field.storage.node.field_location'
+        - 'config:field.storage.node.field_type'

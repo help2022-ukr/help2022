@@ -1732,28 +1732,72 @@ display:
           row_class: ''
           default_row_class: true
           columns:
-            title: title
-            field_location: field_location
-            body: body
+            nid: nid
+            field_organization_name: field_organization_name
+            field_type: field_type
+            field_address_country_code: field_address_country_code
+            nothing_1: nothing_1
+            field_host_adults: field_host_adults
+            field_host_kids: field_host_kids
+            created: created
+            nothing: nothing
           default: '-1'
           info:
-            title:
+            nid:
               sortable: false
               default_sort_order: asc
               align: ''
               separator: ''
               empty_column: false
               responsive: ''
-            field_location:
+            field_organization_name:
               sortable: false
               default_sort_order: asc
               align: ''
               separator: ''
               empty_column: false
               responsive: ''
-            body:
+            field_type:
               sortable: false
               default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
+            field_address_country_code:
+              sortable: false
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
+            nothing_1:
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
+            field_host_adults:
+              sortable: true
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
+            field_host_kids:
+              sortable: true
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
+            created:
+              sortable: true
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
+            nothing:
               align: ''
               separator: ''
               empty_column: false

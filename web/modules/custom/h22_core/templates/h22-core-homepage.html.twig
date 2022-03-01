@@ -4,7 +4,7 @@
 {% if logged_in %}
   <a href="{{ path('node.add', {'node_type' : 'host_location'}) }}" class="button button--action">{{ "Add Location to the Map"|t }}</a>
 {% else %}
-  <a href="{{ path('user.login', {}, {'query': {'destination': path('entity.node.canonical', {'node': 2}) }}) }}" class="button button--action">{{ "I am a volunteer willing to host"|t }}</a>
+  <a href="{{ path('user.register', {}, {'query': {'destination': path('entity.node.canonical', {'node': 2}) }}) }}" class="button button--action">{{ "I am a volunteer willing to host"|t }}</a>
 {% endif %}
 
 <div class="call-to-volunteer">

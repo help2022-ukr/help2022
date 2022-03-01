@@ -54,8 +54,13 @@ function h22_core_form_node_host_location_form_alter(&$form, FormStateInterface 
   _h22_core_adjust_edit_or_add_for($form, $form_state, $form_id);
 }
 
+/**
+ * Implements hook_form_FORM_ID_alter().
+ */
 function h22_core_form_user_login_form_alter(&$form, FormStateInterface $form_state, $form_id) {
+  // Make sure captcha is at the right place.
   $form['captcha']['#weight'] = $form['actions']['#weight'] - 1;
+  // Make a redirect on-submit.
   $form['#submit'][] = 'h22_core_user_login_redirect_form_submit';
 }
 

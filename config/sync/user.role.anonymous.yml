@@ -8,6 +8,7 @@ dependencies:
     - comment
     - contact
     - filter
+    - flag
     - media
     - search
     - system
@@ -24,6 +25,7 @@ permissions:
   - 'access content'
   - 'access site-wide contact form'
   - 'access toolbar'
+  - 'flag host_location_report_flag'
   - 'search content'
   - 'use text format restricted_html'
   - 'use toolbar_language_switcher'

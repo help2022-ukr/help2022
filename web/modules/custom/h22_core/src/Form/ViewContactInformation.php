@@ -6,6 +6,7 @@ use Drupal\Core\Flood\FloodInterface;
 use Drupal\Core\Form\FormBase;
 use Drupal\Core\Form\FormStateInterface;
 use Drupal\Core\Link;
+use Drupal\flag\FlagLinkBuilderInterface;
 use Drupal\node\Entity\Node;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 use Symfony\Component\HttpFoundation\RequestStack;
@@ -30,9 +31,17 @@ class ViewContactInformation extends FormBase {
    */
   protected $requestStack;
 
-  public function __construct(FloodInterface $flood, RequestStack $requestStack) {
+  /**
+   * The flag builder service.
+   *
+   * @var \Drupal\flag\FlagLinkBuilderInterface
+   */
+  protected $flagService;
+
+  public function __construct(FloodInterface $flood, RequestStack $requestStack, FlagLinkBuilderInterface $flagLinkBuilder) {
     $this->flood = $flood;
     $this->requestStack = $requestStack->getCurrentRequest();
+    $this->flagService = $flagLinkBuilder;
   }
 
   /**
@@ -41,7 +50,8 @@ class ViewContactInformation extends FormBase {
   public static function create(ContainerInterface $container) {
     return new static(
       $container->get('flood'),
-      $container->get('request_stack')
+      $container->get('request_stack'),
+      $container->get('flag.link_builder')
     );
   }
 
@@ -56,6 +66,8 @@ class ViewContactInformation extends FormBase {
    * {@inheritdoc}
    */
   public function buildForm(array $form, FormStateInterface $form_state, Node $node = NULL) {
+    $form['#attached']['library'][] = 'h22_core/contact_details';
+
     $form['submit'] = [
       '#type' => 'submit',
       '#attributes' => [
@@ -118,7 +130,7 @@ class ViewContactInformation extends FormBase {
 
     // User flood control validation.
     $flood_identifier = $this->requestStack->getClientIp();
-    if (!$this->flood->isAllowed('h22_core.view_contact_information', 200, 7200, $flood_identifier)) {
+    if (!$this->flood->isAllowed('h22_core.view_contact_information', 30, 1800, $flood_identifier)) {
       $element['container']['message'] = [
         '#type' => 'item',
         '#markup' => $this->t("You have viewed too many contacts. There's a protection against hackers - please try again later."),
@@ -126,11 +138,17 @@ class ViewContactInformation extends FormBase {
         '#weight' => '0',
       ];
     }
-    else {
-      $element['container']['tel'] = $this->node->field_phone_number->view('teaser');
-      $element['container']['telegram'] = $this->node->field_telegram->view('teaser');
-      $element['container']['email'] = $this->node->field_email->view('teaser');
-      $element['container']['fb'] = $this->node->field_facebook->view('teaser');
+  else {
+    $element['container']['tel'] = $this->node->field_phone_number->view('teaser');
+    $element['container']['telegram'] = $this->node->field_telegram->view('teaser');
+    $element['container']['email'] = $this->node->field_email->view('teaser');
+    $element['container']['fb'] = $this->node->field_facebook->view('teaser');
+
+    $flag = $this->flagService->build('node', $this->node->id(), 'host_location_report_flag');
+
+    $element['container']['flag'] = $flag;
+    $element['container']['flag']['#attributes']['class'][] = 'button button--danger';
+    $element['container']['flag']['#weight'] = 9;
     }
     return $element;
   }

@@ -161,6 +161,11 @@ content:
     third_party_settings: {  }
     weight: 5
     region: content
+  flag_host_location_report_flag:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 11
+    region: content
   links:
     settings: {  }
     third_party_settings: {  }

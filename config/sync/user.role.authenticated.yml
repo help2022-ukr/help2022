@@ -11,6 +11,7 @@ dependencies:
     - contact
     - content_moderation
     - filter
+    - flag
     - google_analytics
     - media
     - node
@@ -31,6 +32,7 @@ permissions:
   - 'access toolbar'
   - 'create host_location content'
   - 'edit own host_location content'
+  - 'flag host_location_report_flag'
   - 'opt-in or out of google analytics tracking'
   - 'post comments'
   - 'search content'

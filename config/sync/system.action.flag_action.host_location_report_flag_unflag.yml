@@ -1,0 +1,15 @@
+uuid: 66343b4e-d925-4e7a-8a99-6650c7f64c11
+langcode: en
+status: true
+dependencies:
+  config:
+    - flag.flag.host_location_report_flag
+  module:
+    - flag
+id: flag_action.host_location_report_flag_unflag
+label: 'Unflag this location'
+type: node
+plugin: 'flag_action:host_location_report_flag_unflag'
+configuration:
+  flag_id: host_location_report_flag
+  flag_action: unflag

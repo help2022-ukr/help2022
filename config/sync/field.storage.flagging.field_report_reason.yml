@@ -1,0 +1,36 @@
+uuid: e06161af-5894-42b1-b785-894038e9dd27
+langcode: en
+status: true
+dependencies:
+  module:
+    - flag
+    - options
+id: flagging.field_report_reason
+field_name: field_report_reason
+entity_type: flagging
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: '1'
+      label: Fraud
+    -
+      value: '2'
+      label: 'The description is not true'
+    -
+      value: '3'
+      label: 'The owner does not get in touch'
+    -
+      value: '4'
+      label: 'Rent is required for housing'
+    -
+      value: '5'
+      label: 'Less room than announced'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,22 @@
+uuid: 2717790d-c348-45bc-8bd0-882c15cec819
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.flagging.host_location_report_flag.field_report_reason
+    - flag.flag.host_location_report_flag
+  module:
+    - options
+id: flagging.host_location_report_flag.default
+targetEntityType: flagging
+bundle: host_location_report_flag
+mode: default
+content:
+  field_report_reason:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden: {  }

@@ -1,0 +1,37 @@
+uuid: 73464e78-d10d-41fb-ac4c-46c79a913f4f
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: host_location_report_flag
+label: 'Host location report flag'
+bundles:
+  - host_location
+entity_type: node
+global: false
+flag_short: 'Report location'
+flag_long: ''
+flag_message: ''
+unflag_short: 'Unflag this location'
+unflag_long: ''
+unflag_message: ''
+unflag_denied_text: ''
+weight: 0
+flag_type: 'entity:node'
+link_type: field_entry
+flagTypeConfig:
+  show_in_links: {  }
+  show_as_field: false
+  show_on_form: false
+  show_contextual_link: false
+  extra_permissions:
+    owner: '0'
+linkTypeConfig:
+  flag_confirmation: 'Report location'
+  edit_flagging: 'Edit flagging details'
+  unflag_confirmation: 'Unflag this location?'
+  flag_create_button: Report
+  flag_delete_button: 'Delete report'
+  flag_update_button: 'Update flagging'
+  form_behavior: modal

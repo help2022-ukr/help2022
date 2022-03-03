@@ -2,7 +2,11 @@ uuid: ec9b7a66-6ef7-47cb-a794-67b6f3de56df
 langcode: en
 status: true
 dependencies:
+  config:
+    - flag.flag.host_location_report_flag
+    - system.menu.admin
   module:
+    - flag
     - node
     - user
     - views_field_view
@@ -264,23 +268,9 @@ display:
           output_url_as_text: false
           absolute: false
       pager:
-        type: mini
+        type: none
         options:
           offset: 0
-          items_per_page: 10
-          total_pages: null
-          id: 0
-          tags:
-            next: ››
-            previous: ‹‹
-          expose:
-            items_per_page: false
-            items_per_page_label: 'Items per page'
-            items_per_page_options: '5, 10, 25, 50'
-            items_per_page_options_all: false
-            items_per_page_options_all_label: '- All -'
-            offset: false
-            offset_label: Offset
       exposed_form:
         type: basic
         options:
@@ -294,7 +284,7 @@ display:
       access:
         type: perm
         options:
-          perm: 'access content'
+          perm: 'access content overview'
       cache:
         type: tag
         options: {  }
@@ -392,7 +382,19 @@ display:
           distinct: true
           replica: false
           query_tags: {  }
-      relationships: {  }
+      relationships:
+        flag_relationship:
+          id: flag_relationship
+          table: node_field_data
+          field: flag_relationship
+          relationship: none
+          group_type: group
+          admin_label: Flags
+          entity_type: node
+          plugin_id: flag_relationship
+          required: true
+          flag: host_location_report_flag
+          user_scope: any
       group_by: false
       header: {  }
       footer: {  }
@@ -402,7 +404,6 @@ display:
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
-        - url.query_args
         - 'user.node_grants:view'
         - user.permissions
       tags: {  }
@@ -413,13 +414,21 @@ display:
     position: 1
     display_options:
       display_extenders: {  }
-      path: admin/reported-locations
+      path: admin/content/reported-locations
+      menu:
+        type: normal
+        title: Reports
+        description: ''
+        weight: 10
+        expanded: false
+        menu_name: admin
+        parent: system.admin_content
+        context: '0'
     cache_metadata:
       max-age: -1
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
-        - url.query_args
         - 'user.node_grants:view'
         - user.permissions
       tags: {  }

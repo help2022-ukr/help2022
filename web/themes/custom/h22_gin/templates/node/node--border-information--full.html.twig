@@ -99,7 +99,7 @@
 
   <div{{ content_attributes.addClass('node__content') }}>
     <div>
-      <a href="{{ path('view.border_crossing_points.page_map') ~ '/' ~ view.args.0 }}" class="button button--flat">{{ 'View Border Crossing Points'|t }}</a>
+      <a href="{{ path('view.border_crossing_points.page_map') ~ '/' ~ node.id }}" class="button button--flat">{{ 'View Border Crossing Points'|t }}</a>
       <a style="float: right" href="{{ path('view.map_listings.page_map') }}" class="button button--flat button--icon--point">{{ 'See Shelters'|t }}</a>
     </div>
     {{ content }}

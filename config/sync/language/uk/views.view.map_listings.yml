@@ -21,6 +21,9 @@ display:
             label: Діти
           group_info:
             label: Діти
+      header:
+        result:
+          content: 'Відображається з @start - @end розташування з @total розташування.'
   page_2:
     display_options:
       fields:
@@ -28,3 +31,5 @@ display:
           label: Дорослі
         field_host_kids:
           label: Діти
+        nothing_1:
+          label: 'Розташування / Притулок'

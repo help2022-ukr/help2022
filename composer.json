@@ -17,6 +17,7 @@
         "ext-gd": "*",
         "composer/installers": "^1.9",
         "drupal/address": "^1.10",
+        "drupal/address_map_link": "^1.2",
         "drupal/admin_toolbar": "^3.1",
         "drupal/auto_entitylabel": "^3.0@beta",
         "drupal/backup_migrate": "^5.0",

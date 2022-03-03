@@ -23,14 +23,14 @@ content:
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    weight: 101
+    weight: 1
     region: content
   field_address:
     type: address_default
     label: above
     settings: {  }
     third_party_settings: {  }
-    weight: 103
+    weight: 3
     region: content
   field_country_information:
     type: entity_reference_label
@@ -38,7 +38,7 @@ content:
     settings:
       link: true
     third_party_settings: {  }
-    weight: 104
+    weight: 2
     region: content
   field_location:
     type: leaflet_formatter_default
@@ -52,12 +52,12 @@ content:
       disable_wheel: false
       gesture_handling: false
       reset_map:
-        control: true
+        control: false
         position: topright
       popup: false
       popup_content: ''
       map_position:
-        force: true
+        force: false
         center:
           lat: !!float 0
           lon: !!float 0
@@ -112,12 +112,12 @@ content:
           popup: false
           options: ''
     third_party_settings: {  }
-    weight: 102
+    weight: 4
     region: content
   links:
     settings: {  }
     third_party_settings: {  }
-    weight: 100
+    weight: 0
     region: content
 hidden:
   langcode: true

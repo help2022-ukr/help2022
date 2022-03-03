@@ -17,3 +17,6 @@ display:
             label: Детей
           group_info:
             label: Детей
+      header:
+        result:
+          content: 'Отображается с @start - @end местоположений из @total местоположений.'

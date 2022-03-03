@@ -1,5 +1,6 @@
 .button--icon {
   &--point,
+  &--map,
   &--status {
     &:before {
       content: "";
@@ -25,10 +26,16 @@
       mask-image: icon('status');
     }
   }
+  &--map {
+    &:before {
+      mask-image: icon('map2');
+    }
+  }
 }
 
 .button--primary {
   &.button--icon--point,
+  &.button--icon--map,
   &.button--icon--status {
     &:before {
       background-color: var(--colorGinAppBackground);
@@ -37,6 +44,7 @@
 }
 .button--flat {
   &.button--icon--point,
+  &.button--icon--map,
   &.button--icon--status {
     &:before {
       background-color: var(--colorGinPrimary);

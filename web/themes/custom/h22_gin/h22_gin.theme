@@ -67,6 +67,40 @@ function h22_gin_preprocess_html(&$variables) {
 }
 
 /**
+ * Implements hook_preprocess_HOOK() for the view field.
+ */
+function h22_gin_preprocess_views_view_field(&$variables) {
+  $view = $variables['view'];
+  $field = $variables['field'];
+  $row = $variables['row'];
+
+  if ($view->id() == 'border_crossing_points') {
+    switch($field->field) {
+      case 'field_address':
+        /** @var \Drupal\node\Entity\Node $entity */
+        $entity = $row->_entity;
+        $field_item = $entity->get('field_address')->first();
+        $mapLinkManager = \Drupal::service('plugin.manager.map_link');
+        $mapLinkType = $mapLinkManager->createInstance('google_h22');
+        $url = $mapLinkType->getAddressUrl($field_item)->toString();
+        $variables['output'] =  Drupal\Core\Render\Markup::create('<a href="' . $url .'" class="button button--primary button--icon--map">' . t('Get Directions') . '</a>');
+        break;
+      case 'nothing':
+        /** @var \Drupal\node\Entity\Node $entity */
+        $entity = $row->_entity;
+        $field_item = $entity->get('field_address')->first();
+        $mapLinkManager = \Drupal::service('plugin.manager.map_link');
+        $mapLinkType = $mapLinkManager->createInstance('google_h22');
+        $url = $mapLinkType->getAddressUrl($field_item)->toString();
+        $original_string = $variables['output']->__toString();
+        $updated_string = str_replace('GMAP_URL', $url, $original_string);
+        $variables['output'] = Drupal\Core\Render\Markup::create($updated_string);
+        break;
+    }
+  }
+}
+
+/**
  * Implements hook_preprocess_HOOK() for html__entity_browser__modal.
  */
 function h22_gin_preprocess_html__entity_browser__modal(&$variables) {

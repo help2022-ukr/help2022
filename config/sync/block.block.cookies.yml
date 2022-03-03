@@ -1,22 +1,22 @@
-uuid: cdb29458-b892-4a06-82e1-3be0dfa3125b
+uuid: 390380cf-5b7e-4822-b7f3-ae275df07980
 langcode: en
 status: true
 dependencies:
   content:
-    - 'block_content:basic:b36a0f11-9381-4b5f-91a0-f33f015871cc'
+    - 'block_content:basic:522b1e54-58c0-4482-9291-5fe53c4bbdf6'
   module:
     - block_content
   theme:
     - h22_gin
-id: cookie
+id: cookies
 theme: h22_gin
 region: content
 weight: -2
 provider: null
-plugin: 'block_content:b36a0f11-9381-4b5f-91a0-f33f015871cc'
+plugin: 'block_content:522b1e54-58c0-4482-9291-5fe53c4bbdf6'
 settings:
-  id: 'block_content:b36a0f11-9381-4b5f-91a0-f33f015871cc'
-  label: Cookie
+  id: 'block_content:522b1e54-58c0-4482-9291-5fe53c4bbdf6'
+  label: Cookies
   label_display: '0'
   provider: block_content
   status: true

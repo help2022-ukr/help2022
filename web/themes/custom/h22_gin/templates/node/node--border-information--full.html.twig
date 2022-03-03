@@ -87,21 +87,23 @@
   {% endif %}
   {{ title_suffix }}
 
-  {% if display_submitted %}
-    <footer class="node__meta">
-      {{ author_picture }}
-      <div{{ author_attributes.addClass('node__submitted') }}>
-        {% trans %}Updated on {{ node.values.changed|date('M') }}{% endtrans %}
-        {{ metadata }}
-      </div>
-    </footer>
-  {% endif %}
-
   <div{{ content_attributes.addClass('node__content') }}>
-    <div>
+    <div class="flexy-buttons">
       <a href="{{ path('view.border_crossing_points.page_map') ~ '/' ~ node.id }}" class="button button--flat">{{ 'View Border Crossing Points'|t }}</a>
-      <a style="float: right" href="{{ path('view.map_listings.page_map') }}" class="button button--flat button--icon--point">{{ 'See Shelters'|t }}</a>
+      <a href="{{ path('view.map_listings.page_map') }}" class="button button--flat button--icon--point push-right">{{ 'See Shelters'|t }}</a>
     </div>
+
+    {% if display_submitted %}
+      <footer class="node__meta">
+        {{ author_picture }}
+        <div{{ author_attributes.addClass('node__changed') }}>
+          <em>{% trans %}Updated on {% endtrans %} {{ node.values.changed|date }}</em>
+          {{ metadata }}
+        </div>
+      </footer>
+    {% endif %}
+
+
     {{ content }}
     <div>
       <a style="margin-top: 2rem;" href="{{ path('view.border_information_countries.page_main') }}" class="button button--flat button--icon--status">{{ 'Check other Borders'|t }}</a>

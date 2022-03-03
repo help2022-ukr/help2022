@@ -1,0 +1,10 @@
+display:
+  page_list:
+    display_options:
+      fields:
+        title:
+          label: 'Назва точки перетину'
+        field_cross_point_status:
+          label: Статус
+        field_hotlines:
+          label: 'Гарячі лінії'

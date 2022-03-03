@@ -36,6 +36,68 @@ display:
     display_options:
       title: 'Border Crossing Points'
       fields:
+        field_cross_point_status_1:
+          id: field_cross_point_status_1
+          table: node__field_cross_point_status
+          field: field_cross_point_status
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: field
+          label: ''
+          exclude: true
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: list_key
+          settings: {  }
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
         title:
           id: title
           table: node_field_data
@@ -426,7 +488,7 @@ display:
           exclude: false
           alter:
             alter_text: true
-            text: "<h3>{{ title }}</h3>\r\n<div>\r\n {{ body }}\r\n</div>\r\n<div class=\"border-status\">\r\n <strong>{{ 'Status:'|t }}</strong> {{ field_cross_point_status }}\r\n</div>\r\n<div class=\"border-hotlines\">{{ field_hotlines }}</div>\r\n<div class=\"border-address\"><a href=\"GMAP_URL\" class=\"button button--primary button--icon--map\">{{ 'Get Directions'|t }}</a></div>"
+            text: "<h3>{{ title }}</h3>\r\n<div>\r\n {{ body }}\r\n</div>\r\n<div class=\"border-status status--{{ field_cross_point_status_1 }}\">\r\n <strong>{{ 'Status:'|t }}</strong> {{ field_cross_point_status }}\r\n</div>\r\n<div class=\"border-hotlines\">{{ field_hotlines }}</div>\r\n<div class=\"border-address\"><a href=\"GMAP_URL\" class=\"button button--primary button--icon--map\">{{ 'Get Directions'|t }}</a></div>"
             make_link: false
             path: ''
             absolute: false
@@ -707,18 +769,16 @@ display:
     position: 1
     display_options:
       fields:
-        title:
-          id: title
-          table: node_field_data
-          field: title
+        field_cross_point_status_1:
+          id: field_cross_point_status_1
+          table: node__field_cross_point_status
+          field: field_cross_point_status
           relationship: none
           group_type: group
           admin_label: ''
-          entity_type: node
-          entity_field: title
           plugin_id: field
-          label: 'Crossing Point Name'
-          exclude: false
+          label: ''
+          exclude: true
           alter:
             alter_text: false
             text: ''
@@ -737,8 +797,8 @@ display:
             target: ''
             nl2br: false
             max_length: 0
-            word_boundary: false
-            ellipsis: false
+            word_boundary: true
+            ellipsis: true
             more_link: false
             more_link_text: ''
             more_link_path: ''
@@ -759,9 +819,8 @@ display:
           empty_zero: false
           hide_alter_empty: true
           click_sort_column: value
-          type: string
-          settings:
-            link_to_entity: false
+          type: list_key
+          settings: {  }
           group_column: value
           group_columns: {  }
           group_rows: true
@@ -781,7 +840,7 @@ display:
           admin_label: ''
           plugin_id: field
           label: Status
-          exclude: false
+          exclude: true
           alter:
             alter_text: false
             text: ''
@@ -843,7 +902,7 @@ display:
           admin_label: ''
           plugin_id: field
           label: Hotlines
-          exclude: false
+          exclude: true
           alter:
             alter_text: false
             text: ''
@@ -894,22 +953,87 @@ display:
           delta_offset: 0
           delta_reversed: false
           delta_first_last: false
-          multi_type: ul
+          multi_type: separator
           separator: ', '
           field_api_classes: false
-        field_address:
-          id: field_address
-          table: node__field_address
-          field: field_address
+        title:
+          id: title
+          table: node_field_data
+          field: title
+          relationship: none
+          group_type: group
+          admin_label: ''
+          entity_type: node
+          entity_field: title
+          plugin_id: field
+          label: 'Crossing Point Name'
+          exclude: false
+          alter:
+            alter_text: true
+            text: "{{ title }} \r\n<div class=\"status--{{field_cross_point_status_1}}\">\r\n<strong>{{ 'Status: '|t}}</strong> {{ field_cross_point_status }}\r\n</div>"
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: false
+            ellipsis: false
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: string
+          settings:
+            link_to_entity: false
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+        field_location:
+          id: field_location
+          table: node__field_location
+          field: field_location
           relationship: none
           group_type: group
           admin_label: ''
           plugin_id: field
-          label: Map
+          label: Location
           exclude: false
           alter:
-            alter_text: false
-            text: ''
+            alter_text: true
+            text: "<div class=\"phone-list-wrapper\">\r\n{{ field_hotlines }}\r\n</div>\r\n<div>\r\n<a class=\"button button--primary button--icon--map\" href=\"https://www.google.com/maps/dir/?api=1&destination={{ field_location__lat }},{{ field_location__lon }}\">\r\n  {{ 'Get Directions'|t }}\r\n</a>\r\n</div>"
             make_link: false
             path: ''
             absolute: false
@@ -946,10 +1070,11 @@ display:
           hide_empty: false
           empty_zero: false
           hide_alter_empty: true
-          click_sort_column: locality
-          type: address_default
-          settings: {  }
-          group_column: ''
+          click_sort_column: value
+          type: geofield_latlon
+          settings:
+            output_format: decimal
+          group_column: value
           group_columns: {  }
           group_rows: true
           delta_limit: 0
@@ -1010,9 +1135,9 @@ display:
         - 'user.node_grants:view'
         - user.permissions
       tags:
-        - 'config:field.storage.node.field_address'
         - 'config:field.storage.node.field_cross_point_status'
         - 'config:field.storage.node.field_hotlines'
+        - 'config:field.storage.node.field_location'
   page_map:
     id: page_map
     display_title: 'Page Map'

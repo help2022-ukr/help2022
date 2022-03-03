@@ -50,9 +50,10 @@
       {{ header }}
     </div>
   {% endif %}
-  <div style="margin: 0 0 0.5rem 0;">
+  <div style="margin: 0 0 0.5rem 0;" class="flexy-buttons">
     <a href="{{ path('view.border_crossing_points.page_list') ~ '/' ~ view.args.0 }}" class="button button--flat">{{ 'View List'|t }}</a>
-    <a style="float: right" href="{{ path('view.map_listings.page_map') }}" class="button button--flat button--icon--point">{{ 'See Shelters'|t }}</a>
+    <a style="float: right" href="{{ path('view.map_listings.page_map') }}" class="button button--flat button--icon--point push-right">{{ 'See Shelters'|t }}</a>
+    <a href="{{ path('entity.node.canonical', {'node': view.args.0}) }}" class="button button--primary">{{ 'Read about the Necessary Documentation'|t }}</a>
   </div>
   {% if exposed %}
     <div class="view-filters">
@@ -86,9 +87,6 @@
   {% if more %}
     {{ more }}
   {% endif %}
-  <div style="margin: 2rem 0 0.5rem 0; text-align: center;">
-    <a href="{{ path('entity.node.canonical', {'node': view.args.0}) }}" class="button button--primary">{{ 'Read about the Necessary Documentation'|t }}</a>
-  </div>
   {% if footer %}
     <div class="view-footer">
       {{ footer }}

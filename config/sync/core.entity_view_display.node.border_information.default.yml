@@ -7,7 +7,6 @@ dependencies:
     - field.field.node.border_information.field_faq
     - node.type.border_information
   module:
-    - entity_reference_revisions
     - text
     - user
 id: node.border_information.default
@@ -22,19 +21,11 @@ content:
     third_party_settings: {  }
     weight: 1
     region: content
-  field_faq:
-    type: entity_reference_revisions_entity_view
-    label: above
-    settings:
-      view_mode: default
-      link: ''
-    third_party_settings: {  }
-    weight: 3
-    region: content
   links:
     settings: {  }
     third_party_settings: {  }
     weight: 0
     region: content
 hidden:
+  field_faq: true
   langcode: true

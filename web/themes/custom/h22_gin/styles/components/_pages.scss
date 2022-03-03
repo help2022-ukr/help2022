@@ -33,3 +33,29 @@
     }
   }
 }
+
+.views-table {
+  .view-field-location-table-column {
+    .phone-list-wrapper {
+      margin: 0.5rem 0;
+    }
+  }
+}
+
+.status {
+  &--low {
+    color: var(--colorGinGreen);
+  }
+  &--average {
+    color: var(--colorGinWarning);
+  }
+  &--avg {
+    color: var(--colorGinWarning);
+  }
+  &--high {
+    color: var(--colorGinWarning);
+  }
+  &--busy {
+    color: var(--colorGinDanger);
+  }
+}

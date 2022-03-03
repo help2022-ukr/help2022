@@ -56,3 +56,18 @@
     }
   }
 }
+
+.flexy-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  .push-right {
+    margin-left: inherit;
+  }
+
+  @include mq($breakpointSmall) {
+    .push-right {
+      margin-left: auto;
+    }
+  }
+}

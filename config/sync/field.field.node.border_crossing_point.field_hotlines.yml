@@ -1,0 +1,21 @@
+uuid: 7e66a3a7-6c5c-4804-a27f-a7ccc0af6c86
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_hotlines
+    - node.type.border_crossing_point
+  module:
+    - telephone
+id: node.border_crossing_point.field_hotlines
+field_name: field_hotlines
+entity_type: node
+bundle: border_crossing_point
+label: Hotlines
+description: 'Hotlines related to the border-control checkpoint.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: telephone

@@ -6,11 +6,16 @@ dependencies:
     - field.field.node.border_crossing_point.body
     - field.field.node.border_crossing_point.field_address
     - field.field.node.border_crossing_point.field_country_information
+    - field.field.node.border_crossing_point.field_cross_point_status
+    - field.field.node.border_crossing_point.field_hotlines
     - field.field.node.border_crossing_point.field_location
     - node.type.border_crossing_point
   module:
     - address
+    - address_map_link
     - leaflet
+    - options
+    - telephone
     - text
     - user
 id: node.border_crossing_point.default
@@ -29,7 +34,13 @@ content:
     type: address_default
     label: above
     settings: {  }
-    third_party_settings: {  }
+    third_party_settings:
+      address_map_link:
+        link_address: '1'
+        map_link_type: google_h22
+        map_link_position: address
+        map_link_text: Directions
+        map_link_new_window: '1'
     weight: 3
     region: content
   field_country_information:
@@ -39,6 +50,21 @@ content:
       link: true
     third_party_settings: {  }
     weight: 2
+    region: content
+  field_cross_point_status:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 6
+    region: content
+  field_hotlines:
+    type: telephone_link
+    label: above
+    settings:
+      title: ''
+    third_party_settings: {  }
+    weight: 5
     region: content
   field_location:
     type: leaflet_formatter_default

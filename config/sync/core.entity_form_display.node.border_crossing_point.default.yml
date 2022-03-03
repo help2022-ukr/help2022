@@ -6,12 +6,15 @@ dependencies:
     - field.field.node.border_crossing_point.body
     - field.field.node.border_crossing_point.field_address
     - field.field.node.border_crossing_point.field_country_information
+    - field.field.node.border_crossing_point.field_cross_point_status
+    - field.field.node.border_crossing_point.field_hotlines
     - field.field.node.border_crossing_point.field_location
     - node.type.border_crossing_point
   module:
     - address
     - content_moderation
     - path
+    - telephone
     - text
 id: node.border_crossing_point.default
 targetEntityType: node
@@ -36,7 +39,7 @@ content:
     third_party_settings: {  }
   field_address:
     type: address_default
-    weight: 13
+    weight: 14
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -45,6 +48,19 @@ content:
     weight: 12
     region: content
     settings: {  }
+    third_party_settings: {  }
+  field_cross_point_status:
+    type: options_select
+    weight: 26
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_hotlines:
+    type: telephone_default
+    weight: 13
+    region: content
+    settings:
+      placeholder: ''
     third_party_settings: {  }
   langcode:
     type: language_select

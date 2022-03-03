@@ -1,0 +1,23 @@
+uuid: 0521aa1a-d4ac-4b0c-8b6f-9fe770a0832c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_cross_point_status
+    - node.type.border_crossing_point
+  module:
+    - options
+id: node.border_crossing_point.field_cross_point_status
+field_name: field_cross_point_status
+entity_type: node
+bundle: border_crossing_point
+label: 'Cross-Point Status'
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: unknown
+default_value_callback: ''
+settings: {  }
+field_type: list_string

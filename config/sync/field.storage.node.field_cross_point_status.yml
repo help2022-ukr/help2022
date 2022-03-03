@@ -1,0 +1,36 @@
+uuid: f6dab5d6-1ed4-439e-ba6a-cc97507142a7
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_cross_point_status
+field_name: field_cross_point_status
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: unknown
+      label: Unknown
+    -
+      value: low
+      label: 'No or Low traffic'
+    -
+      value: avg
+      label: 'Average traffic'
+    -
+      value: high
+      label: 'High traffic'
+    -
+      value: busy
+      label: 'Very Busy - very high traffic'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

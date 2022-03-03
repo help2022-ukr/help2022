@@ -1,0 +1,15 @@
+label: 'Comentarii recente'
+description: 'Comentarii recente.'
+display:
+  default:
+    display_title: Implicit
+    display_options:
+      title: 'Comentarii recente'
+      empty:
+        area_text_custom:
+          content: 'Nu sunt comentarii disponibile.'
+  block_1:
+    display_title: Bloc
+    display_options:
+      block_description: 'Comentarii recente'
+      block_category: 'Liste (Vizualizări)'

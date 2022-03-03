@@ -1,0 +1,32 @@
+label: 'Nézet szerkesztési oldal'
+tips:
+  views-main:
+    label: 'Nézetbeállítások kezelése.'
+    body: 'Beállítások áttekintése vagy szerkesztése.'
+  views-ui-displays:
+    label: 'Megjelenítések ebben a nézetben'
+    body: 'A megjelenítés az eredmények kiírásának egy módja, pl. oldal vagy blokk. Egy nézet több megjelenítést tartalmazhat, amik itt vannak felsorolva. Az aktív megjelenítés kiemelve látható.'
+  views-ui-view-admin:
+    label: 'Nézet adminisztráció'
+    body: 'Olyan adminisztrációs feladatok végrehajtása mint például leírás hozzáadása a nézethez, vagy annak leklónozása. A legnyíló gombra kattintva lehet megnézni a rendelkezésre álló lehetőségeket.'
+  views-ui-format:
+    label: 'Kimenet formája'
+    body: 'Kiválasztható az eredmények kiírási módja. Pl. a <em>Tartalom</em> lehetőség kiválasztásával minden elem teljesen kiíratható a megadott megjelenítési beállításokkal. A <em>Mezők</em> lehetőség kiválasztásával minden eredményhez csak bizonyos mezők lesznek kiírva. További formátumok is felvehetők a Drupal alapfunkcióinak modulok telepítésével történő <em>bővítésével</em>.'
+  views-ui-fields:
+    label: Mezők
+    body: 'Ha a nézet használ mezőket, itt kerülnek listázásra. A mezőre kattintva konfigurálható.'
+  views-ui-filter:
+    label: 'A nézet szűrése'
+    body: 'Szűrők hozzáadásával szűkíthetők a kimenet eredményei. Pl. csak a <em>közzétett</em> tartalom megjelenítéséhez <em>Közzétett</em> szűrőt kell felvenni, és az <em>Igen</em> lehetőséget kell kiválasztani.'
+  views-ui-filter-operations:
+    label: Szűrőműveletek
+    body: 'Szűrők hozzáadása, átrendezése vagy törlése.'
+  views-ui-sorts:
+    label: 'Rendezési jellemzők'
+    body: 'Az eredmények megjelenítési sorrendjének kezelése. Egy aktív sorbarendezési szabályra kattintva szerkeszthető.'
+  views-ui-sorts-operations:
+    label: 'Sorbarendezési műveletek'
+    body: 'Rendezési szabályok hozzáadása, átrendezése vagy eltávolítása.'
+  views-ui-preview:
+    label: Előnézet
+    body: 'Előnézet mutatása a nézet kimenetéről.'

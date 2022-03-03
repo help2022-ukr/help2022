@@ -1,0 +1,20 @@
+label: 'Új felhasználók'
+description: 'Egy listát jelenít meg a webhely legfrissebb felhasználói fiókjairól.'
+display:
+  default:
+    display_title: Alapértelmezés
+    display_options:
+      title: 'Új felhasználók'
+      exposed_form:
+        options:
+          submit_button: Alkalmaz
+          reset_button_label: Alaphelyzet
+          exposed_sorts_label: Rendezés
+          sort_asc_label: Növ
+          sort_desc_label: Csökk
+  block_1:
+    display_title: 'Új felhasználók'
+    display_options:
+      display_description: 'Új felhasználók egy listája'
+      block_description: 'Új felhasználók'
+      block_category: Felhasználó

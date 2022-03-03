@@ -1,0 +1,61 @@
+label: 'Moderálandó tartalmak'
+description: 'Tartalom keresése és moderálása.'
+display:
+  default:
+    display_title: Alapértelmezés
+    display_options:
+      title: 'Moderálandó tartalmak'
+      fields:
+        title:
+          label: Cím
+          separator: ', '
+        type:
+          label: Tartalomtípus
+          separator: ', '
+        name:
+          label: Szerző
+          separator: ', '
+        moderation_state:
+          label: 'Moderációs állapot'
+          separator: ', '
+        changed:
+          label: Frissítve
+          separator: ', '
+        operations:
+          label: Műveletek
+      pager:
+        options:
+          tags:
+            next: 'Következő ›'
+            previous: '‹ Előző'
+            first: '« Első'
+            last: 'Utolsó »'
+          expose:
+            items_per_page_label: 'Elemek száma oldalanként'
+            items_per_page_options_all_label: '– Mind –'
+            offset_label: Eltolás
+      exposed_form:
+        options:
+          submit_button: Szűrő
+          reset_button_label: Alaphelyzet
+          exposed_sorts_label: Rendezés
+          sort_asc_label: Növ
+          sort_desc_label: Csökk
+      empty:
+        area_text_custom:
+          content: 'Jelenleg nincs moderálandó tartalom: itt csak a várakozó állapotúak (például vázlatok) jelennek meg.'
+      filters:
+        title:
+          expose:
+            label: Cím
+        type:
+          expose:
+            label: Tartalomtípus
+        moderation_state:
+          expose:
+            label: 'Moderációs állapot'
+        langcode:
+          expose:
+            label: Nyelv
+  moderated_content:
+    display_title: 'Moderálandó tartalmak'

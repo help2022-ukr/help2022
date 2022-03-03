@@ -1,0 +1,56 @@
+label: Eseménynapló
+description: 'Legutóbbi naplóüzenetek'
+display:
+  default:
+    display_title: Alapértelmezés
+    display_options:
+      title: 'Legutóbbi naplóüzenetek'
+      fields:
+        nothing:
+          admin_label: Ikon
+        wid:
+          label: WID
+        severity:
+          label: Szint
+        type:
+          label: Típus
+        timestamp:
+          label: Dátum
+        message:
+          label: Üzenet
+          alter:
+            alt: '{{ message }}'
+        name:
+          label: Felhasználó
+          separator: ', '
+        link:
+          label: Műveletek
+      pager:
+        options:
+          tags:
+            next: ››
+            previous: ‹‹
+          expose:
+            items_per_page_label: 'Elemek száma oldalanként'
+            items_per_page_options_all_label: '– Mind –'
+            offset_label: Eltolás
+      exposed_form:
+        options:
+          submit_button: Szűrő
+          reset_button_label: Alaphelyzet
+          exposed_sorts_label: Rendezés
+          sort_asc_label: Növ
+          sort_desc_label: Csökk
+      empty:
+        area:
+          admin_label: 'Nincs egyetlen rögzített esemény sem.'
+          content: 'Nincs egyetlen rögzített esemény sem.'
+      filters:
+        type:
+          expose:
+            label: Típus
+        severity:
+          expose:
+            label: Szint
+  page:
+    display_title: Oldal

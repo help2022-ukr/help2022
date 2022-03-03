@@ -9,8 +9,12 @@ url:
     ru: ru
     '': null
     uk: uk
+    ro: ro
+    hu: hu
   domains:
     en: ''
     ru: ''
     uk: ''
+    ro: ''
+    hu: ''
 selected_langcode: site_default

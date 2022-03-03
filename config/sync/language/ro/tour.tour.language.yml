@@ -1,0 +1,20 @@
+label: Limba
+tips:
+  language-overview:
+    label: Limbi
+    body: '<p>Pagina "Limbi" vă permite să adăugați, să editați, să ștergeți, și să reordonați limbile pentru sit.</p>'
+  language-add:
+    label: 'Adăugare limbi'
+    body: '<p>Pentru a adăuga mai multe limbi pe situl dumneavoastră, faceți clic pe butonul "Adăugați o limbă".</p><p>Limbile adăugate vor fi afișate în lista de limbi și prin urmare pot fi editate sau șterse.</p>'
+  language-reorder:
+    label: 'Reordonarea limbilor'
+    body: '<p>Pentru a reordona limbile pe situl dumneavoastră, folosiți pictogramele de tras de lângă fiecare limbă.</p><p>Ordinea indicată aici este ordinea de afișare pentru listele de limbă de pe site, cum ar fi în blocurile de schimbare a limbii furnizate de modulele Traducerea Interfeței și Traducerea Conținutului.</p> <p>Când ați terminat cu reordonarea limbilor, faceți clic pe butonul "Salvează configurația " pentru ca modificările să aibă efect.</p>'
+  language-default:
+    label: 'Setați o limbă ca implicită'
+    body: '<p>Puteți schimba limba implicită a sitului prin alegerea uneia dintre limbile dumneavoastră configurate ca implicite. Situl va folosi limba implicită în situațiile în care nici o alegere nu este facută dar o limbă ar trebui să fi setată, de exemplu, limba interfeței de afișare.</p>'
+  language-operations:
+    label: 'Modificarea limbilor'
+    body: '<p>Operațiunile sunt prevăzute pentru editarea și ștergerea limbii dumneavoastră.</p><p>Puteți edita denumirea și direcția limbii.</p><p>Limbile șterse pot fi adăugate înapoi ulterior. Ștergerea unei limbi va elimina toate traducerile de interfață asociate cu ea, iar conținutul în această limbă va fi setat pentru a fi într-o limbă neutră. Rețineți că nu puteți șterge limba implicită a site-ului.</p>'
+  language-continue:
+    label: 'Continuarea pe'
+    body: '<p>Acum, că aveți o privire de ansamblu asupra paginii de "Limbi", puteți continua cu:<ul><li><a href="[site:url]admin/config/regional/language/add">Adăugarea unei limbi</a></li><li>Reordonarea limbilor</li><li>Editarea unei limbi</li><li>Ștergerea unei limbi</li></ul></p>'

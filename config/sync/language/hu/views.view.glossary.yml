@@ -1,0 +1,36 @@
+label: Szójegyzék
+description: 'Minden tartalom, kezdőbetűk szerint csoportosítva.'
+display:
+  default:
+    display_title: Alapértelmezés
+    display_options:
+      fields:
+        title:
+          label: Cím
+        name:
+          label: Szerző
+        changed:
+          label: 'Legutóbbi frissítés'
+      pager:
+        options:
+          tags:
+            next: ››
+            previous: ‹‹
+          expose:
+            items_per_page_label: 'Elemek száma oldalanként'
+            items_per_page_options_all_label: '– Mind –'
+            offset_label: Eltolás
+      exposed_form:
+        options:
+          submit_button: Alkalmaz
+          reset_button_label: Alaphelyzet
+          exposed_sorts_label: Rendezés
+          sort_asc_label: Növ
+          sort_desc_label: Csökk
+  attachment_1:
+    display_title: Csatolmány
+  page_1:
+    display_title: Oldal
+    display_options:
+      menu:
+        title: Szójegyzék

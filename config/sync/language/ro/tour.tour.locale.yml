@@ -1,0 +1,26 @@
+label: Traducere
+tips:
+  locale-overview:
+    label: 'Traducerea interfeței utilizatorului'
+    body: 'Această pagină vă permite să traduceți interfața de utilizator sau să editați traduceri existente. Dacă inițial ați instalat site-ul în limba engleză, în scopul de a utiliza această pagină, mai întâi trebuie să adăugați altă limbă pe <a href="[site:url]admin/config/regional/language">pagina de limbi</a>.'
+  locale-language:
+    label: 'Limba de traducere'
+    body: 'Alegeți limba în care doriți să traduceți.'
+  locale-search:
+    label: Căutare
+    body: 'Introduceți cuvântul sau propoziția pe care doriți să o traduceți, puteți scrie, de asemenea, doar o parte dintr-un cuvânt.'
+  locale-filter:
+    label: 'Filtrează căutarea'
+    body: 'Puteți căuta după șiruri netraduse dacă doriți să traduceți ceva care nu este tradus încă. Dacă doriți să modificați o traducere existentă, s-ar putea să doriți să căutați doar după siruri traduse.'
+  locale-submit:
+    label: 'Aplicați criteriile dumneavoastră de căutare'
+    body: 'Pentru a aplica criteriile de căutare, faceți clic pe butonul <em>Filtru</em>.'
+  locale-translate:
+    label: Traduce
+    body: 'Puteți scrie propria dumneavoastră traducere în câmpurile text ale coloanei din dreapta. Încercați să vă dați seama în ce context va fi utilizat textul în scopul de a fi tradus în mod adecvat.'
+  locale-validate:
+    label: 'Validați traducerea'
+    body: 'După ce ați terminat traducerile, faceți clic pe butonul <em>Salvează traducerile</em>. Trebuie să salvați traducerile de fiecare dată înainte de a schimba pagina sau de a face o căutare nouă.'
+  locale-continue:
+    label: 'Continuarea pe'
+    body: 'Traducerile pe care le-ați făcut aici vor fi folosite pe interfața de utilizator a site-ului dumneavoastră. Dacă doriți să le utilizați pe alt site sau să le editați pe un editor de traducere extern, puteți <a href="[site:url]admin/config/regional/translate/export">să le exportați</a> într-un fișier cu extensia .po și <a href="[site:url]admin/config/regional/translate/import">să le importați</a> ulterior.'

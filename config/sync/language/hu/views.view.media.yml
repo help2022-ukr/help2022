@@ -1,0 +1,79 @@
+label: Média
+description: 'Média keresés és kezelés.'
+display:
+  default:
+    display_title: Alapértelmezés
+    display_options:
+      title: Média
+      fields:
+        media_bulk_form:
+          action_title: Művelet
+        thumbnail__target_id:
+          label: Bélyegkép
+          separator: ', '
+        name:
+          label: 'Média neve'
+          separator: ', '
+        bundle:
+          label: Típus
+          separator: ', '
+        uid:
+          label: Szerző
+          separator: ', '
+        status:
+          label: Állapot
+          settings:
+            format_custom_false: Rejtett
+            format_custom_true: Közzétéve
+          separator: ', '
+        changed:
+          label: Frissítve
+          separator: ', '
+        operations:
+          label: Műveletek
+      pager:
+        options:
+          tags:
+            next: 'Következő ›'
+            previous: '‹ Előző'
+            first: '« Első'
+            last: 'Utolsó »'
+          expose:
+            items_per_page_label: 'Elemek száma oldalanként'
+            items_per_page_options_all_label: '– Mind –'
+            offset_label: Eltolás
+      exposed_form:
+        options:
+          submit_button: Szűrő
+          reset_button_label: Alaphelyzet
+          exposed_sorts_label: Rendezés
+          sort_asc_label: Növ
+          sort_desc_label: Csökk
+      empty:
+        area_text_custom:
+          content: 'Nincs elérhető média.'
+      filters:
+        name:
+          expose:
+            label: 'Média neve'
+        bundle:
+          expose:
+            label: Típus
+        status:
+          expose:
+            label: Igaz
+          group_info:
+            label: 'Közzététel állapota'
+            group_items:
+              1:
+                title: Közzétéve
+              2:
+                title: Rejtett
+        langcode:
+          expose:
+            label: Nyelv
+  media_page_list:
+    display_title: Média
+    display_options:
+      menu:
+        title: Média

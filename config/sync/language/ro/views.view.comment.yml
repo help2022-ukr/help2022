@@ -1,0 +1,97 @@
+label: Comentarii
+display:
+  default:
+    display_title: Implicit
+    display_options:
+      title: Comentarii
+      fields:
+        comment_bulk_form:
+          action_title: Acțiune
+        subject:
+          label: Subiect
+          separator: ', '
+        uid:
+          separator: ', '
+        name:
+          label: Autor
+          separator: ', '
+        entity_id:
+          label: 'Publicat în'
+          separator: ', '
+        changed:
+          label: Actualizat
+          separator: ', '
+        operations:
+          label: Operaţii
+        name_1:
+          separator: ', '
+      pager:
+        options:
+          tags:
+            next: 'următor ›'
+            previous: '‹ anterior'
+            first: '« primul'
+            last: 'ultima »'
+          expose:
+            items_per_page_label: 'Elemente pe pagină'
+            items_per_page_options_all_label: '- Toate -'
+            offset_label: Decalaj
+      exposed_form:
+        options:
+          submit_button: Filtru
+          reset_button_label: Resetează
+          exposed_sorts_label: 'Sortare după'
+          sort_asc_label: Ascendent
+          sort_desc_label: Desc
+      empty:
+        area_text_custom:
+          content: 'Nu sunt comentarii disponibile.'
+      filters:
+        subject:
+          expose:
+            label: Subiect
+        combine:
+          expose:
+            label: 'Nume autor'
+        langcode:
+          expose:
+            label: Limba
+      use_more_text: 'mai multe'
+  page_published:
+    display_title: 'Comentarii publicate'
+    display_options:
+      menu:
+        title: Comentarii
+  page_unapproved:
+    display_title: 'Comentarii neaprobate'
+    display_options:
+      fields:
+        comment_bulk_form:
+          action_title: Acțiune
+        subject:
+          label: Subiect
+          separator: ', '
+        uid:
+          separator: ', '
+        name:
+          label: Autor
+          separator: ', '
+        entity_id:
+          label: 'Publicat în'
+          separator: ', '
+        changed:
+          label: Actualizat
+          separator: ', '
+        operations:
+          label: Operaţii
+        name_1:
+          separator: ', '
+      filters:
+        subject:
+          expose:
+            label: Subiect
+        langcode:
+          expose:
+            label: Limba
+      menu:
+        title: 'Comentarii neaprobate'

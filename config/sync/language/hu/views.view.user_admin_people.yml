@@ -1,0 +1,79 @@
+label: Emberek
+description: 'A webhellyel kapcsolatban álló emberek keresése és adminisztrációja.'
+display:
+  default:
+    display_title: Alapértelmezés
+    display_options:
+      title: Emberek
+      fields:
+        user_bulk_form:
+          label: 'Tömeges frissítés'
+        name:
+          label: Felhasználónév
+        status:
+          label: Állapot
+          settings:
+            format_custom_false: Zárolt
+            format_custom_true: Aktív
+        roles_target_id:
+          label: Szerepkörök
+        created:
+          label: 'Ennyi ideje tag'
+        access:
+          label: 'Utolsó tevékenység'
+          settings:
+            future_format: '@interval múlva'
+            past_format: '@interval ideje'
+        operations:
+          label: Műveletek
+        mail:
+          separator: ', '
+      pager:
+        options:
+          tags:
+            next: 'Következő ›'
+            previous: '‹ Előző'
+            first: '« Első'
+            last: 'Utolsó »'
+          expose:
+            items_per_page_label: 'Elemek száma oldalanként'
+            items_per_page_options_all_label: '– Mind –'
+            offset_label: Eltolás
+      exposed_form:
+        options:
+          submit_button: Szűrő
+          reset_button_label: Alaphelyzet
+          exposed_sorts_label: Rendezés
+          sort_asc_label: Növ
+          sort_desc_label: Csökk
+      empty:
+        area_text_custom:
+          content: 'Nincsenek a webhellyel kapcsolatban álló emberek.'
+      filters:
+        combine:
+          expose:
+            label: 'Név vagy e-mail tartalmazza'
+        status:
+          group_info:
+            label: Állapot
+            group_items:
+              1:
+                title: Aktív
+              2:
+                title: Zárolt
+        roles_target_id:
+          expose:
+            label: Szerepkör
+        permission:
+          expose:
+            label: Jogosultság
+      use_more_text: tovább
+  page_1:
+    display_title: Oldal
+    display_options:
+      menu:
+        title: Lista
+        description: 'A webhellyel kapcsolatban álló emberek keresése és adminisztrációja.'
+      tab_options:
+        title: Emberek
+        description: 'Felhasználói fiókok kezelése, szerepkörök és jogosultságok.'

@@ -1,0 +1,120 @@
+label: Médiakönyvtár
+description: 'Média keresés és kezelés.'
+display:
+  default:
+    display_title: Alapértelmezés
+    display_options:
+      title: Média
+      fields:
+        media_bulk_form:
+          action_title: Művelet
+      pager:
+        options:
+          tags:
+            next: ››
+            previous: ‹‹
+          expose:
+            items_per_page_label: 'Elemek száma oldalanként'
+            items_per_page_options_all_label: '– Mind –'
+            offset_label: Eltolás
+      exposed_form:
+        options:
+          submit_button: 'Szűrők alkalmazása'
+          reset_button_label: Alaphelyzet
+          exposed_sorts_label: Rendezés
+          sort_asc_label: Növ
+          sort_desc_label: Csökk
+      empty:
+        area_text_custom:
+          content: 'Nincs elérhető média.'
+      sorts:
+        created:
+          expose:
+            label: 'Legújabb elöl'
+        name:
+          expose:
+            label: 'Név (A-Z)'
+        name_1:
+          expose:
+            label: 'Név (Z-A)'
+      filters:
+        status:
+          expose:
+            label: 'Közzététel állapota'
+          group_info:
+            label: Közzétéve
+            group_items:
+              1:
+                title: Közzétéve
+              2:
+                title: Rejtett
+        name:
+          expose:
+            label: Név
+        bundle:
+          expose:
+            label: Médiatípus
+          group_info:
+            label: Médiatípus
+        langcode:
+          expose:
+            label: Nyelv
+  page:
+    display_title: Oldal
+    display_options:
+      fields:
+        media_bulk_form:
+          action_title: Művelet
+        name:
+          separator: ', '
+        edit_media:
+          alter:
+            text: '{{ name }} szerkesztése'
+            alt: '{{ name }} szerkesztése'
+          text: Szerkesztés
+        delete_media:
+          alter:
+            text: '{{ name }} törlése'
+            alt: '{{ name }} törlése'
+          text: Törlés
+  widget:
+    display_title: 'Felületi elem'
+    display_options:
+      arguments:
+        bundle:
+          exception:
+            title: Mind
+      filters:
+        name:
+          expose:
+            label: Név
+      header:
+        display_link_grid:
+          label: Rács
+        display_link_table:
+          label: Táblázat
+  widget_table:
+    display_title: 'Felületi elem (táblázat)'
+    display_options:
+      fields:
+        thumbnail__target_id:
+          label: Bélyegkép
+        name:
+          label: Név
+        uid:
+          label: Szerző
+        changed:
+          label: Frissítve
+      arguments:
+        bundle:
+          exception:
+            title: Mind
+      filters:
+        name:
+          expose:
+            label: Név
+      header:
+        display_link_grid:
+          label: Rács
+        display_link_table:
+          label: Táblázat

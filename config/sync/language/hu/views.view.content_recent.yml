@@ -1,0 +1,23 @@
+label: 'Friss tartalom'
+description: 'Friss tartalom.'
+display:
+  default:
+    display_title: Alapértelmezés
+    display_options:
+      title: 'Friss tartalom'
+      fields:
+        changed:
+          separator: ', '
+      exposed_form:
+        options:
+          submit_button: Alkalmaz
+          reset_button_label: Alaphelyzet
+          exposed_sorts_label: Rendezés
+          sort_asc_label: Növ
+          sort_desc_label: Csökk
+      empty:
+        area_text_custom:
+          content: 'Nincs elérhető tartalom.'
+      use_more_text: Több
+  block_1:
+    display_title: Blokk

@@ -1,0 +1,31 @@
+label: Taxonómiakifejezés
+description: 'Egy bizonyos taxonómiakifejezéshez tartozó tartalom.'
+display:
+  default:
+    display_title: Alapértelmezés
+    display_options:
+      pager:
+        options:
+          tags:
+            next: ››
+            previous: ‹‹
+          expose:
+            items_per_page_label: 'Elemek száma oldalanként'
+            items_per_page_options_all_label: '– Mind –'
+            offset_label: Eltolás
+      exposed_form:
+        options:
+          submit_button: Alkalmaz
+          reset_button_label: Alaphelyzet
+          exposed_sorts_label: Rendezés
+          sort_asc_label: Növ
+          sort_desc_label: Csökk
+      arguments:
+        tid:
+          exception:
+            title: Mind
+          title: '{{ arguments.tid }}'
+  feed_1:
+    display_title: Hírcsatorna
+  page_1:
+    display_title: Oldal

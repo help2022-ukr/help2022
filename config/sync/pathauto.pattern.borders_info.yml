@@ -3,31 +3,20 @@ langcode: en
 status: true
 dependencies:
   module:
-    - language
     - node
 id: borders_info
 label: 'Borders Info'
 type: 'canonical_entities:node'
-pattern: 'borders/information/[node:title]'
+pattern: '/borders/information/[node:title]'
 selection_criteria:
-  bfb73dfe-cabb-4085-8d39-19aa774c544b:
+  01198344-3f94-4a95-b429-c2249771c7d4:
     id: node_type
     negate: false
-    uuid: bfb73dfe-cabb-4085-8d39-19aa774c544b
+    uuid: 01198344-3f94-4a95-b429-c2249771c7d4
     context_mapping:
       node: node
     bundles:
       border_information: border_information
-  15690176-13fb-4e0a-b854-dbf3bad7f1fd:
-    id: language
-    negate: false
-    uuid: 15690176-13fb-4e0a-b854-dbf3bad7f1fd
-    context_mapping:
-      language: 'node:langcode:language'
-    langcodes:
-      en: en
-      ru: ru
-      uk: uk
 selection_logic: and
 weight: -8
 relationships:

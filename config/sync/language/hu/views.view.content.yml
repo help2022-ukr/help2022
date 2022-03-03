@@ -1,0 +1,69 @@
+label: Tartalom
+description: 'Tartalmakat keres és kezel.'
+display:
+  default:
+    display_title: Alapértelmezés
+    display_options:
+      title: Tartalom
+      fields:
+        title:
+          label: Cím
+        type:
+          label: Tartalomtípus
+          separator: ', '
+        name:
+          label: Szerző
+        status:
+          label: Állapot
+          settings:
+            format_custom_false: Rejtett
+            format_custom_true: Közzétéve
+        changed:
+          label: Frissítve
+        operations:
+          label: Műveletek
+      pager:
+        options:
+          tags:
+            next: 'Következő ›'
+            previous: '‹ Előző'
+            first: '« Első'
+            last: 'Utolsó »'
+      exposed_form:
+        options:
+          submit_button: Szűrő
+          reset_button_label: Alaphelyzet
+          exposed_sorts_label: Rendezés
+          sort_asc_label: Növ
+          sort_desc_label: Csökk
+      empty:
+        area_text_custom:
+          content: 'Nincs elérhető tartalom.'
+      filters:
+        title:
+          expose:
+            label: Cím
+        type:
+          expose:
+            label: Tartalomtípus
+        status:
+          expose:
+            label: Állapot
+          group_info:
+            label: 'Közzététel állapota'
+            group_items:
+              1:
+                title: Közzétéve
+              2:
+                title: Rejtett
+        langcode:
+          expose:
+            label: Nyelv
+  page_1:
+    display_title: Oldal
+    display_options:
+      menu:
+        title: Tartalom
+      tab_options:
+        title: Tartalom
+        description: 'Tartalom keresése és kezelése'

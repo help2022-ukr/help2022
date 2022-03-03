@@ -3,31 +3,20 @@ langcode: en
 status: true
 dependencies:
   module:
-    - language
     - node
 id: host_location
 label: 'Host Locations'
 type: 'canonical_entities:node'
-pattern: 'host-location/[node:title]'
+pattern: '/host-location/[node:title]'
 selection_criteria:
-  500bf9c7-8f50-4238-a7c4-a1e20a6cd479:
+  532eb2da-b3bd-4260-8bbb-912aa6b41ea0:
     id: node_type
     negate: false
-    uuid: 500bf9c7-8f50-4238-a7c4-a1e20a6cd479
+    uuid: 532eb2da-b3bd-4260-8bbb-912aa6b41ea0
     context_mapping:
       node: node
     bundles:
       host_location: host_location
-  1f406e1b-409f-41a8-8400-968beb388eb5:
-    id: language
-    negate: false
-    uuid: 1f406e1b-409f-41a8-8400-968beb388eb5
-    context_mapping:
-      language: 'node:langcode:language'
-    langcodes:
-      en: en
-      ru: ru
-      uk: uk
 selection_logic: and
 weight: -10
 relationships:

@@ -1,0 +1,90 @@
+label: Fájlok
+description: 'Fájlok keresése és kezelése.'
+display:
+  default:
+    display_title: Alapértelmezés
+    display_options:
+      title: Fájlok
+      fields:
+        fid:
+          label: Fid
+        filename:
+          label: Név
+          separator: ', '
+        filemime:
+          label: 'MIME típus'
+        filesize:
+          label: Méret
+        status:
+          label: Állapot
+          settings:
+            format_custom_false: Ideiglenes
+            format_custom_true: Állandó
+        created:
+          label: 'Feltöltés dátuma'
+        changed:
+          label: 'Módosítás dátuma'
+        count:
+          label: 'Ez használja'
+      pager:
+        options:
+          tags:
+            next: 'Következő ›'
+            previous: '‹ Előző'
+          expose:
+            items_per_page_label: 'Elemek száma oldalanként'
+            items_per_page_options_all_label: '– Mind –'
+            offset_label: Eltolás
+      exposed_form:
+        options:
+          submit_button: Szűrő
+          reset_button_label: Alaphelyzet
+          exposed_sorts_label: Rendezés
+          sort_asc_label: Növ
+          sort_desc_label: Csökk
+      empty:
+        area_text_custom:
+          content: 'Nincsenek elérhető fájlok.'
+      filters:
+        filename:
+          expose:
+            label: Fájlnév
+        filemime:
+          expose:
+            label: 'MIME típus'
+        status:
+          expose:
+            label: Állapot
+  page_1:
+    display_title: 'Fájlok áttekintése'
+    display_options:
+      menu:
+        title: Fájlok
+  page_2:
+    display_title: 'Fájl használata'
+    display_options:
+      title: 'Fájl használata'
+      fields:
+        entity_label:
+          label: Entitás
+        type:
+          label: Entitástípus
+        module:
+          label: 'Használó modul'
+        count:
+          label: 'Használatok száma'
+          format_plural_string: !!binary MQNAY291bnQ=
+      pager:
+        options:
+          tags:
+            next: 'Következő ›'
+            previous: '‹ Előző'
+          expose:
+            items_per_page_label: 'Elemek száma oldalanként'
+            items_per_page_options_all_label: '– Mind –'
+            offset_label: Eltolás
+      arguments:
+        fid:
+          exception:
+            title: Mind
+          title: '{{ arguments.fid }} fájlhasználati információi'

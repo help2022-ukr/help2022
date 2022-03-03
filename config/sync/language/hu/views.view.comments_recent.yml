@@ -1,0 +1,20 @@
+label: 'Friss hozzászólások'
+description: 'Legújabb hozzászólások.'
+display:
+  default:
+    display_title: Alapértelmezés
+    display_options:
+      title: 'Friss hozzászólások'
+      fields:
+        changed:
+          settings:
+            future_format: '@interval múlva'
+            past_format: '@interval ideje'
+      empty:
+        area_text_custom:
+          content: 'Nincs megjeleníthető hozzászólás.'
+  block_1:
+    display_title: Blokk
+    display_options:
+      block_description: 'Friss hozzászólások'
+      block_category: 'Listák (Nézetek)'

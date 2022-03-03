@@ -1,0 +1,105 @@
+label: Hozzászólások
+description: 'Hozzászólások keresése és kezelése.'
+display:
+  default:
+    display_title: Alapértelmezés
+    display_options:
+      title: Hozzászólások
+      fields:
+        comment_bulk_form:
+          action_title: Művelet
+        subject:
+          label: Tárgy
+          separator: ', '
+        uid:
+          separator: ', '
+        name:
+          label: Szerző
+          separator: ', '
+        entity_id:
+          label: 'Hozzászólás ehhez'
+          separator: ', '
+        changed:
+          label: Frissítve
+          separator: ', '
+        operations:
+          label: Műveletek
+        name_1:
+          separator: ', '
+      pager:
+        options:
+          tags:
+            next: 'következő ›'
+            previous: '‹ előző'
+            first: '« első'
+            last: 'utolsó »'
+          expose:
+            items_per_page_label: 'Elemek száma oldalanként'
+            items_per_page_options_all_label: '– Mind –'
+            offset_label: Eltolás
+      exposed_form:
+        options:
+          submit_button: Szűrő
+          reset_button_label: Alaphelyzet
+          exposed_sorts_label: Rendezés
+          sort_asc_label: Növ
+          sort_desc_label: Csökk
+      empty:
+        area_text_custom:
+          content: 'Nincs megjeleníthető hozzászólás.'
+      filters:
+        subject:
+          expose:
+            label: Tárgy
+        combine:
+          expose:
+            label: 'Szerző neve'
+        langcode:
+          expose:
+            label: Nyelv
+      use_more_text: tovább
+  page_published:
+    display_title: 'Közzétett hozzászólások'
+    display_options:
+      display_description: 'Az elfogadott hozzászólások listája.'
+      menu:
+        title: Hozzászólások
+        description: 'Közzétett hozzászólások'
+  page_unapproved:
+    display_title: 'Nem elfogadott hozzászólások'
+    display_options:
+      fields:
+        comment_bulk_form:
+          action_title: Művelet
+        subject:
+          label: Tárgy
+          separator: ', '
+        uid:
+          separator: ', '
+        name:
+          label: Szerző
+          separator: ', '
+        entity_id:
+          label: 'Hozzászólás ehhez'
+          separator: ', '
+        changed:
+          label: Frissítve
+          separator: ', '
+        operations:
+          label: Műveletek
+        name_1:
+          separator: ', '
+      filters:
+        subject:
+          expose:
+            label: Tárgy
+        combine:
+          expose:
+            label: 'Szerző neve'
+        langcode:
+          expose:
+            label: Nyelv
+      display_description: 'A még el nem bírált hozzászólások listája.'
+      menu:
+        title: 'Nem elfogadott hozzászólások'
+        description: 'El nem bírált hozzászólások'

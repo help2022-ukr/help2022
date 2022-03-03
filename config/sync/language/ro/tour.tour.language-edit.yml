@@ -1,0 +1,17 @@
+label: 'Editarea limbilor'
+tips:
+  language-edit-overview:
+    label: 'Editarea limbilor'
+    body: '<p>Această pagină oferă posibilitatea de a edita o limbă pe situl dumneavoastră, inclusiv limbile personalizate.</p>'
+  language-edit-langcode:
+    label: 'Codul limbii'
+    body: '<p>Nu puteți schimba codul unei limbi pe site, cât acesta este folosit în sistemul de urmărire a limbii.</p>'
+  language-edit-label:
+    label: 'Numele limbii'
+    body: '<p>Numele limbii este folosit peste tot în sit pentru toți utilizatorii și este scris în limba engleză. Numele limbilor de bază poate fi tradus cu ajutorul modulului Traducerea Interfeței, și numele atât cele de bază cât si cele personalizate poate fi tradus cu ajutorul modulului Configurarea traducerii.</p>'
+  language-edit-direction:
+    label: 'Direcția limbii'
+    body: '<p>Alegeți dacă limba este o limbă "de la stânga la dreapta" sau "de la dreapta la stânga".</p><p>Rețineți că nu toate temele suportă formatul "de la dreapta la stânga", prin urmare  testați-vă tema dacă utilizați formatul "de la dreapta la stânga".</p>'
+  language-edit-continue:
+    label: 'Continuarea pe'
+    body: '<p>Acum, că aveți o privire de ansamblu asupra caracteristicii "Editare limbă", puteți continua cu:<ul><li>Editarea unei limbi</li><li><a href="[site:url]admin/config/regional/language">Vizualizarea limbilor configurate</a></li></ul></p>'

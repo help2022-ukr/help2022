@@ -1,0 +1,26 @@
+label: Fordítás
+tips:
+  locale-overview:
+    label: 'Felhasználói felület fordítása'
+    body: 'Itt fordítható le a felhasználói felület és módosíthatók a meglevő fordítások. Ha a webhely eredetileg angolul lett telepítve, először egy másikat kell hozzáadni a <a href="[site:url]admin/config/regional/language">Nyelvek oldalon</a>.'
+  locale-language:
+    label: 'Fordítás nyelve'
+    body: 'A fordítani kívánt nyelv kiválasztása'
+  locale-search:
+    label: Keresés
+    body: 'Meg kell adni egy szórészletet, a fordítani kívánt szót vagy teljes mondatot a kereséshez.'
+  locale-filter:
+    label: 'A keresés szűrése'
+    body: 'Új fordítás beküldéséhez a még nem lefordított, meglevő fordítások módosításához pedig a már lefordított karaktersorozatokban kell keresni.'
+  locale-submit:
+    label: 'Keresési feltételek alkalmazása'
+    body: 'A keresési feltételek alkalmazása a <em>Szűrő</em> gombra kattintással lehetséges.'
+  locale-translate:
+    label: Fordítás
+    body: 'A jobb oszlopban található szövegmezőkbe írhatók a saját fordítások. A megfelelő fordítás eléréséhez érdemes átgondolni, milyen környezetben lesznek használva.'
+  locale-validate:
+    label: 'Fordítás érvényesítése'
+    body: 'A fordítás befejezése után a <em>Fordítások mentése</em> gombra kell kattintani. Oldalváltás vagy új keresés előtt a változtatásokat el kell menteni.'
+  locale-continue:
+    label: Folytatás
+    body: 'A lefordított kifejezések ennek a webhelynek a felhasználói felületén lesznek használva. Másik webhelyen, vagy külső fordítóprogramban való használathoz <a href="[site:url]admin/config/regional/translate/export">exportálhatók</a> egy .po fájlba és később vissza is <a href="[site:url]admin/config/regional/translate/import">importálhatók</a>.'

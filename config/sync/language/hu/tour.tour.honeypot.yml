@@ -1,0 +1,15 @@
+label: Honeypot
+tips:
+  honeypot-configuration:
+    label: Honeypot
+    body: "A <em>Honeypot</em> modul telepítése a webhelyen megtörtént. Így már pár kattintással bekapcsolható a védelem a kéretlen robotokkal szemben.\r\n\r\nA „Következő” gombra kattintva megismerhetőek a beállítási lehetőségek ezen az oldalon."
+  protect-all-forms:
+    label: 'Az összes űrlap védelme'
+  log-blocked-form-submissions:
+    label: 'Blokkolt űrlapbeküldések naplózása'
+  honeypot-element-name:
+    label: '<em>Honeypot</em> elem név'
+  honeypot-time-limit:
+    label: '<em>Honeypot</em> időkorlát'
+  honeypot-form-specific-settings:
+    label: '<em>Honeypot</em> űrlapspecifikus beállítás'

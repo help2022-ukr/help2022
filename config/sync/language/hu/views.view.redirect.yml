@@ -1,0 +1,68 @@
+label: Átirányítás
+description: 'Átirányítások listája'
+display:
+  default:
+    display_title: Mester
+    display_options:
+      exposed_form:
+        options:
+          submit_button: Szűrő
+          reset_button_label: Alaphelyzet
+          exposed_sorts_label: Rendezés
+          sort_asc_label: Növ
+          sort_desc_label: Csökk
+      pager:
+        options:
+          tags:
+            previous: '‹ előző'
+            next: 'következő ›'
+            first: '« első'
+            last: 'utolsó »'
+          expose:
+            items_per_page_label: 'Elemek száma oldalanként'
+            items_per_page_options_all_label: '– Mind –'
+            offset_label: Eltolás
+      fields:
+        redirect_bulk_form:
+          action_title: 'A kiválasztottakkal'
+        redirect_source__path:
+          label: Honnan
+          separator: ', '
+        created:
+          label: Létrehozva
+      filters:
+        redirect_source__path:
+          expose:
+            label: Honnan
+        redirect_redirect__uri:
+          expose:
+            label: Hova
+        status_code:
+          expose:
+            label: Állapotkód
+          group_info:
+            label: Állapotkód
+            group_items:
+              1:
+                title: '300 Többszörös választás'
+              2:
+                title: '301 Véglegesen áthelyezve'
+              3:
+                title: '302 Találat'
+              4:
+                title: '303 Lásd máshol'
+              5:
+                title: '304 Nem módosult'
+              6:
+                title: '305 Proxy használat'
+              7:
+                title: '307 Ideiglenes átirányítás'
+        language:
+          expose:
+            label: 'Eredeti nyelv'
+      title: Átirányítás
+      empty:
+        area_text_custom:
+          content: 'Még nincsenek átirányítások.'
+  page_1:
+    display_title: Oldal

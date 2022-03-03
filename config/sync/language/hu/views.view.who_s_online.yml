@@ -1,0 +1,30 @@
+label: 'Jelenlévő felhasználók blokk'
+description: 'Megmutatja a legutóbb aktív felhasználókat és az aktív felhasználók számát.'
+display:
+  default:
+    display_title: Alapértelmezés
+    display_options:
+      title: 'Jelenlévő felhasználók'
+      exposed_form:
+        options:
+          submit_button: Alkalmaz
+          reset_button_label: Alaphelyzet
+          exposed_sorts_label: Rendezés
+          sort_asc_label: Növ
+          sort_desc_label: Csökk
+      empty:
+        area_text_custom:
+          content: 'Jelenleg 0 felhasználó van bejelentkezve.'
+      filters:
+        access:
+          expose:
+            label: 'Utolsó tevékenység'
+            description: 'Meghatározza, hogy mennyi ideig kell egy felhasználót a webhelyen lévőnek tekinteni, miután egy oldalt megtekintett.'
+      header:
+        result:
+          content: 'Jelenleg @total felhasználó van online.'
+  who_s_online_block:
+    display_title: 'Jelenlévő felhasználók'
+    display_options:
+      display_description: 'Egy lista a jelenleg bejelentkezett felhasználókról.'
+      block_description: 'Jelenlévő felhasználók'

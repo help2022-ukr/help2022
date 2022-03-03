@@ -1,0 +1,11 @@
+label: 'Adăugare limbi'
+tips:
+  language-add-overview:
+    label: 'Adăugare limbi'
+    body: '<p>Această pagină oferă posibilitatea de a adăuga limbi comune sitului dumneavoastră.</p><p>Dacă limba dorită nu este disponibilă, puteți adăuga o limbă personalizată.</p>'
+  language-add-choose:
+    label: 'Selectaţi limba'
+    body: '<p>Alegeți o limbă din listă, sau alegeți "Limbă personalizată ..." de la sfârșitul listei.</p><p>Faceți clic pe butonul "Adaugă o limbă", atunci când ați terminat alegerea limbii.</p><p>Când adăugați o limbă personalizată, veți primi un formular suplimentar în care se pot furniza: numele, codul și direcția limbii.</p>'
+  language-add-continue:
+    label: 'Continuarea pe'
+    body: '<p>Acum, că aveți o privire de ansamblu asupra caracteristicii "Adaugă limbi", puteți continua cu:<ul><li>Adăugarea unei limbi</li><li>Adăugarea unei limbi personalizate</li><li><a href="[site:url]admin/config/regional/language">Vizualizarea limbilor configurate</a></li></ul></p>'

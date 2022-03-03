@@ -1,0 +1,11 @@
+label: 'Nyelvek hozzáadása'
+tips:
+  language-add-overview:
+    label: 'Nyelvek hozzáadása'
+    body: '<p>Ez az oldal lehetőséget nyújt, hogy gyakori nyelveket lehessen hozzáadni a webhelyhez.</p><p>Ha a kívánt nyelv nem áll rendelkezésre, akkor felvehető egyéni nyelv.</p>'
+  language-add-choose:
+    label: 'Nyelv kiválasztása'
+    body: '<p>Lehet választani egy nyelvet a listából vagy a lista alján lévő „Egyéni nyelv...”-et.</p><p>A nyelv kiválasztása után a „Nyelv hozzáadása” gombra kell kattintani.</p><p>Egyéni nyelv hozzáadásakor egy további űrlapon lehet megadni a nyelv nevét, kódját és irányát.'
+  language-add-continue:
+    label: Folytatás
+    body: '<p>Most, a „Nyelv hozzáadása” oldal áttekintése után a következőkkel lehet folytatni:<ul><li>Egy nyelv hozzáadása</li><li>Egy egyéni nyelv hozzáadása</li><li><a href="[site:url]admin/config/regional/language">Beállított nyelvek áttekintése</a></li></ul></p>'

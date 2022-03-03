@@ -1,0 +1,49 @@
+label: 'Egyéni blokkok könyvtára'
+description: 'Egyéni blokkok keresése és kezelése.'
+display:
+  default:
+    display_title: Alapértelmezés
+    display_options:
+      title: 'Egyéni blokkok könyvtára'
+      fields:
+        info:
+          label: 'Blokk leírása'
+          separator: ', '
+        type:
+          label: Blokktípus
+          separator: ', '
+        changed:
+          label: Frissítve
+        operations:
+          label: Műveletek
+      pager:
+        options:
+          tags:
+            next: 'Következő ›'
+            previous: '‹ Előző'
+          expose:
+            items_per_page_label: 'Elemek száma oldalanként'
+            items_per_page_options_all_label: '– Mind –'
+            offset_label: Eltolás
+      exposed_form:
+        options:
+          submit_button: Alkalmaz
+          reset_button_label: Alaphelyzet
+          exposed_sorts_label: Rendezés
+          sort_asc_label: Növ
+          sort_desc_label: Csökk
+      empty:
+        area_text_custom:
+          content: 'Nem érhetőek el egyéni blokkok.'
+      filters:
+        info:
+          expose:
+            label: 'Blokk leírása'
+        type:
+          expose:
+            label: Blokktípus
+  page_1:
+    display_title: Oldal
+    display_options:
+      menu:
+        title: 'Egyéni blokkok könyvtára'

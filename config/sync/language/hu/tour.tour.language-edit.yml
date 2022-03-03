@@ -1,0 +1,17 @@
+label: 'Nyelvek szerkesztése'
+tips:
+  language-edit-overview:
+    label: 'Nyelvek szerkesztése'
+    body: '<p>Ez az oldal lehetővé teszi a webhely egy nyelvének szerkesztését, beleértve az egyéni nyelveket is.</p>'
+  language-edit-langcode:
+    label: Nyelvkód
+    body: '<p>Nem módosítható a webhelyen a nyelv kódja, mivel azt a rendszer a nyelv nyomonkövetésére használja.</p>'
+  language-edit-label:
+    label: 'Nyelv neve'
+    body: '<p>A nyelv neve több helyen megjelenik a webhelyen és angolul írandó. Az <em>Interface Translation</em> modul segítségével csak a beépített nyelvek nevei, a <em>Configuration Translation</em> modullal pedig mind a beépített, mind az egyedi nyelvek nevei lefordíthatók.</p>'
+  language-edit-direction:
+    label: 'Nyelv iránya'
+    body: '<p>Ki lehet választani, hogy a nyelv „Balról jobbra” vagy „Jobbról balra” szövegirányú.</p><p>Nem minden smink támogatja azonban a „Jobbról balra” szövegirányt, ezt a beállítás előtt érdemes ellenőrizni.</p>'
+  language-edit-continue:
+    label: Folytatás
+    body: '<p>Most, a „Nyelv szerkesztése” oldal áttekintése után a következőkkel lehet folytatni:<ul><li>Egy nyelv szerkesztése</li><li><a href="[site:url]admin/config/regional/language">Beállított nyelvek megtekintése</a></li></ul></p>'

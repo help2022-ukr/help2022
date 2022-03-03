@@ -1,0 +1,9 @@
+tips:
+  block-layout:
+    label: Blokkelrendezés
+  place-block:
+    label: 'Blokkok elhelyezése'
+  block-region:
+    label: Blokkrégió
+  configure-block:
+    label: 'Blokk beállítása'

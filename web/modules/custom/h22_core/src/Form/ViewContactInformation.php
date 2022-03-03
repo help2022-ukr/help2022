@@ -77,7 +77,7 @@ class ViewContactInformation extends FormBase {
         'callback' => '::promptCallback',
         'wrapper' => 'box-container',
       ],
-      '#value' => $this->t('View Content Details'),
+      '#value' => $this->t('View Contact Details'),
       '#prefix' => '<div id="box-container">',
       '#suffix' => '</div>'
     ];

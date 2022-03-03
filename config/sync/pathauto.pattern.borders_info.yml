@@ -1,0 +1,35 @@
+uuid: 5401a5dd-53a0-40eb-b4d2-2985243b4650
+langcode: en
+status: true
+dependencies:
+  module:
+    - language
+    - node
+id: borders_info
+label: 'Borders Info'
+type: 'canonical_entities:node'
+pattern: 'borders/information/[node:title]'
+selection_criteria:
+  bfb73dfe-cabb-4085-8d39-19aa774c544b:
+    id: node_type
+    negate: false
+    uuid: bfb73dfe-cabb-4085-8d39-19aa774c544b
+    context_mapping:
+      node: node
+    bundles:
+      border_information: border_information
+  15690176-13fb-4e0a-b854-dbf3bad7f1fd:
+    id: language
+    negate: false
+    uuid: 15690176-13fb-4e0a-b854-dbf3bad7f1fd
+    context_mapping:
+      language: 'node:langcode:language'
+    langcodes:
+      en: en
+      ru: ru
+      uk: uk
+selection_logic: and
+weight: -8
+relationships:
+  'node:langcode:language':
+    label: Language

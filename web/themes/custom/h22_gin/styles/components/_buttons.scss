@@ -1,0 +1,50 @@
+.button--icon {
+  &--point,
+  &--status {
+    &:before {
+      content: "";
+      display: inline-block;
+      width: 14px;
+      height: 14px;
+      mask-size: 14px 14px;
+      margin-right: 7px;
+      position: relative;
+      top: 1px;
+      mask-position: center center;
+      mask-repeat: no-repeat;
+    }
+  }
+
+  &--point {
+    &:before {
+      mask-image: icon('pin');
+    }
+  }
+  &--status {
+    &:before {
+      mask-image: icon('status');
+    }
+  }
+}
+
+.button--primary {
+  &.button--icon--point,
+  &.button--icon--status {
+    &:before {
+      background-color: var(--colorGinAppBackground);
+    }
+  }
+}
+.button--flat {
+  &.button--icon--point,
+  &.button--icon--status {
+    &:before {
+      background-color: var(--colorGinPrimary);
+    }
+    &:hover, &:active {
+      &:before {
+        background-color: var(--colorGinAppBackground);
+      }
+    }
+  }
+}

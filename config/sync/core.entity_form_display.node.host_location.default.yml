@@ -21,6 +21,7 @@ dependencies:
     - address
     - content_moderation
     - field_group
+    - geofield
     - link
     - path
     - telephone
@@ -127,6 +128,13 @@ content:
     settings:
       placeholder: ''
     third_party_settings: {  }
+  field_location:
+    type: geofield_latlon
+    weight: 17
+    region: content
+    settings:
+      html5_geolocation: false
+    third_party_settings: {  }
   field_organization_name:
     type: string_textfield
     weight: 10
@@ -224,5 +232,4 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
-hidden:
-  field_location: true
+hidden: {  }

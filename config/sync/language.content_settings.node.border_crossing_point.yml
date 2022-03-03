@@ -1,0 +1,18 @@
+uuid: 82a2e114-2a38-4b11-bf66-498a3521d51f
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.border_crossing_point
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+    bundle_settings:
+      untranslatable_fields_hide: '0'
+id: node.border_crossing_point
+target_entity_type_id: node
+target_bundle: border_crossing_point
+default_langcode: site_default
+language_alterable: true

@@ -1,0 +1,175 @@
+uuid: f2144b16-8dfb-4f45-93e9-3a683dd74997
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.border_crossing_point.body
+    - field.field.node.border_crossing_point.field_address
+    - field.field.node.border_crossing_point.field_country_information
+    - field.field.node.border_crossing_point.field_location
+    - node.type.border_crossing_point
+  module:
+    - address
+    - content_moderation
+    - leaflet
+    - path
+    - text
+id: node.border_crossing_point.default
+targetEntityType: node
+bundle: border_crossing_point
+mode: default
+content:
+  body:
+    type: text_textarea_with_summary
+    weight: 11
+    region: content
+    settings:
+      rows: 9
+      summary_rows: 3
+      placeholder: ''
+      show_summary: false
+    third_party_settings: {  }
+  created:
+    type: datetime_timestamp
+    weight: 3
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_address:
+    type: address_default
+    weight: 13
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_country_information:
+    type: options_buttons
+    weight: 12
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_location:
+    type: leaflet_widget_default
+    weight: 14
+    region: content
+    settings:
+      map:
+        leaflet_map: 'OSM Mapnik'
+        height: 400
+        locate: 1
+        auto_center: 1
+        map_position:
+          force: false
+          center:
+            lat: !!float 0
+            lon: !!float 0
+          zoom: 12
+          minZoom: 1
+          maxZoom: 18
+          zoomFiner: 0
+        scroll_zoom_enabled: 1
+      input:
+        show: true
+        readonly: false
+      toolbar:
+        position: topright
+        drawPolyline: true
+        drawRectangle: true
+        drawPolygon: true
+        drawCircle: false
+        editMode: true
+        dragMode: true
+        cutPolygon: false
+        removalMode: true
+        rotateMode: false
+        marker: defaultMarker
+      reset_map:
+        position: topright
+        control: false
+      fullscreen:
+        control: false
+        options: '{"position":"topleft","pseudoFullscreen":false}'
+      path: '{"color":"#3388ff","opacity":"1.0","stroke":true,"weight":3,"fill":"depends","fillColor":"*","fillOpacity":"0.2","radius":"6"}'
+      geocoder:
+        control: false
+        settings:
+          position: topright
+          input_size: 25
+          providers:
+            googlemaps:
+              weight: 0
+              checked: false
+          min_terms: 4
+          delay: 800
+          zoom: 16
+          popup: false
+          options: ''
+    third_party_settings: {  }
+  langcode:
+    type: language_select
+    weight: 1
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+  moderation_state:
+    type: moderation_state_default
+    weight: 9
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 7
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  promote:
+    type: boolean_checkbox
+    weight: 5
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    weight: 10
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  sticky:
+    type: boolean_checkbox
+    weight: 6
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  translation:
+    weight: 4
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  uid:
+    type: entity_reference_autocomplete
+    weight: 2
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  url_redirects:
+    weight: 8
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden: {  }

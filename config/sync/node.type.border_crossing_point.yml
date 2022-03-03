@@ -1,0 +1,17 @@
+uuid: d367befb-45f4-4ac9-b167-ca6da47feeb6
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: 'Border Crossing Point'
+type: border_crossing_point
+description: 'Add a border crossing point - to a specific country.'
+help: ''
+new_revision: true
+preview_mode: 0
+display_submitted: false

@@ -9,7 +9,7 @@ _core:
 id: h22_gin_local_actions
 theme: h22_gin
 region: content
-weight: -10
+weight: -4
 provider: null
 plugin: local_actions_block
 settings:

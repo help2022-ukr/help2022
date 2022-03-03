@@ -1,0 +1,31 @@
+uuid: fd4a2aa8-9dca-4c08-9685-1441cbcaa2ff
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.question.field_para_answer
+    - field.field.paragraph.question.field_para_question
+    - paragraphs.paragraphs_type.question
+  module:
+    - text
+id: paragraph.question.default
+targetEntityType: paragraph
+bundle: question
+mode: default
+content:
+  field_para_answer:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_para_question:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden: {  }

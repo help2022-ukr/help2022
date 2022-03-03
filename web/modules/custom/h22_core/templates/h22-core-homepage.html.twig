@@ -1,15 +1,15 @@
 <!-- Add you custom twig html here -->
 <h3>{{ 'Fellow neighbors, we urge you to support Ukrainian citizens by providing shelter and provisions if necessary.'|t }}</h3>
-<a href="{{ path('view.map_listings.page_map') }}" class="button button--primary">{{ "I am a refugee looking for shelter"|t }}</a>
-{% if logged_in %}
-  <a href="{{ path('node.add', {'node_type' : 'host_location'}) }}" class="button button--action">{{ "Add Location to the Map"|t }}</a>
-{% else %}
-  <a href="{{ path('user.register', {}, {'query': {'destination': path('entity.node.canonical', {'node': 2}) }}) }}" class="button button--action">{{ "I am a volunteer willing to host"|t }}</a>
-{% endif %}
+<a href="{{ path('view.map_listings.page_map') }}" class="button button--primary button--icon--point">{{ "I am a refugee looking for shelter"|t }}</a>
+{#<a href="{{ path('view.border_information_countries.page_main') }}" class="button button--primary button--icon--status">{{ 'Border Crossing Information'|t }}</a>#}
 
 <div class="call-to-volunteer">
-  {{ 'If you want to help - consider joining our volunteering team:'|t }}
-  <div>
-    <a href="https://forms.gle/oXX3AZ5t9t4URMxZ8" class="button button--flat">{{ 'Join Help2022.com Volunteers'|t }}</a>
+  {{ 'If you want to help - consider contributing a shelter:'|t }}
+  <div style="margin-top: 1rem;">
+    {% if logged_in %}
+      <a href="{{ path('node.add', {'node_type' : 'host_location'}) }}" class="button button--action">{{ "Add Location to the Map"|t }}</a>
+    {% else %}
+      <a href="{{ path('user.register', {}, {'query': {'destination': path('entity.node.canonical', {'node': 2}) }}) }}" class="button button--action">{{ "I am a volunteer willing to host"|t }}</a>
+    {% endif %}
   </div>
 </div>

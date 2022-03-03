@@ -1,0 +1,18 @@
+uuid: d06f043d-9f5a-402e-97d7-1b494f4107b7
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.border_information
+id: node.border_information.title
+field_name: title
+entity_type: node
+bundle: border_information
+label: Country
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

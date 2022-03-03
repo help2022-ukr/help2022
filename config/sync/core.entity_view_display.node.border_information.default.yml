@@ -1,0 +1,40 @@
+uuid: 49e028a3-16c9-45ce-a839-729d88e5b97b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.border_information.body
+    - field.field.node.border_information.field_faq
+    - node.type.border_information
+  module:
+    - entity_reference_revisions
+    - text
+    - user
+id: node.border_information.default
+targetEntityType: node
+bundle: border_information
+mode: default
+content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_faq:
+    type: entity_reference_revisions_entity_view
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  langcode: true

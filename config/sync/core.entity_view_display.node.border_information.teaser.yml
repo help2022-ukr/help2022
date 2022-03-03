@@ -1,0 +1,33 @@
+uuid: 0541a3d2-ed3c-42da-8620-7069dfdd5182
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.border_information.body
+    - field.field.node.border_information.field_faq
+    - node.type.border_information
+  module:
+    - text
+    - user
+id: node.border_information.teaser
+targetEntityType: node
+bundle: border_information
+mode: teaser
+content:
+  body:
+    type: text_summary_or_trimmed
+    label: hidden
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_faq: true
+  langcode: true

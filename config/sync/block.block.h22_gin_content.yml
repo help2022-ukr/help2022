@@ -11,7 +11,7 @@ _core:
 id: h22_gin_content
 theme: h22_gin
 region: content
-weight: 0
+weight: -3
 provider: null
 plugin: system_main_block
 settings:

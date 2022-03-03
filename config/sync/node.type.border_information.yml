@@ -1,0 +1,17 @@
+uuid: 364d3f7c-15f6-4595-9272-dbce8bb2d8ca
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: 'Border Information'
+type: border_information
+description: 'Information on crossing the border.'
+help: ''
+new_revision: true
+preview_mode: 0
+display_submitted: true

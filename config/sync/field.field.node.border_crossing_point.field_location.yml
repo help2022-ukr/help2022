@@ -1,0 +1,38 @@
+uuid: 4f5f041e-68ae-40df-8324-f0a81562aba9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_location
+    - node.type.border_crossing_point
+  module:
+    - geocoder_field
+    - geofield
+third_party_settings:
+  geocoder_field:
+    method: geocode
+    weight: 0
+    field: field_address
+    skip_not_empty_value: false
+    disabled: true
+    hidden: true
+    providers:
+      - googlemaps
+    dumper: wkt
+    delta_handling: default
+    failure:
+      handling: preserve
+      status_message: true
+      log: true
+id: node.border_crossing_point.field_location
+field_name: field_location
+entity_type: node
+bundle: border_crossing_point
+label: Location
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: geofield

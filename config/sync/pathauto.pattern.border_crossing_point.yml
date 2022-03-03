@@ -1,0 +1,35 @@
+uuid: d0a5c23a-7bfd-4290-9d76-bd1ed61c7d29
+langcode: en
+status: true
+dependencies:
+  module:
+    - language
+    - node
+id: border_crossing_point
+label: 'Border Crossing Point'
+type: 'canonical_entities:node'
+pattern: 'borders/crossing-point/[node:title]'
+selection_criteria:
+  06664bf5-1f2d-4ee2-a729-8c4fd5a4fba4:
+    id: node_type
+    negate: false
+    uuid: 06664bf5-1f2d-4ee2-a729-8c4fd5a4fba4
+    context_mapping:
+      node: node
+    bundles:
+      border_crossing_point: border_crossing_point
+  daa42532-a9b8-4d78-831b-93e816eedf1d:
+    id: language
+    negate: false
+    uuid: daa42532-a9b8-4d78-831b-93e816eedf1d
+    context_mapping:
+      language: 'node:langcode:language'
+    langcodes:
+      en: en
+      ru: ru
+      uk: uk
+selection_logic: and
+weight: -9
+relationships:
+  'node:langcode:language':
+    label: Language

@@ -1,0 +1,35 @@
+uuid: 5e2b1204-db2b-40b0-ac47-36cf8a20e77e
+langcode: en
+status: true
+dependencies:
+  module:
+    - language
+    - node
+id: host_location
+label: 'Host Locations'
+type: 'canonical_entities:node'
+pattern: 'host-location/[node:title]'
+selection_criteria:
+  500bf9c7-8f50-4238-a7c4-a1e20a6cd479:
+    id: node_type
+    negate: false
+    uuid: 500bf9c7-8f50-4238-a7c4-a1e20a6cd479
+    context_mapping:
+      node: node
+    bundles:
+      host_location: host_location
+  1f406e1b-409f-41a8-8400-968beb388eb5:
+    id: language
+    negate: false
+    uuid: 1f406e1b-409f-41a8-8400-968beb388eb5
+    context_mapping:
+      language: 'node:langcode:language'
+    langcodes:
+      en: en
+      ru: ru
+      uk: uk
+selection_logic: and
+weight: -10
+relationships:
+  'node:langcode:language':
+    label: Language

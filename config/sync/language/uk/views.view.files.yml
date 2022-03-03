@@ -75,6 +75,7 @@ display:
           label: 'Реєстрація модуля'
         count:
           label: 'Підрахунок використань'
+          format_plural_string: !!binary QGNvdW50A0Bjb3VudANAY291bnQ=
       pager:
         options:
           tags:

@@ -75,6 +75,7 @@ display:
           label: 'Регистрация модуля'
         count:
           label: 'Используемое количество'
+          format_plural_string: !!binary QGNvdW50A0Bjb3VudANAY291bnRbMl0=
       pager:
         options:
           tags:

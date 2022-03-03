@@ -13,3 +13,22 @@
     margin: 0.5rem 0;
   }
 }
+
+.view-border-information-countries {
+  .view-content {
+    text-align: center;
+
+    .views-row {
+      .button {
+        padding: 24px 40px;
+        font-size: 2rem;
+        &:before {
+          width: 20px;
+          height: 20px;
+          mask-size: 20px 20px;
+          margin-right: 15px;
+        }
+      }
+    }
+  }
+}

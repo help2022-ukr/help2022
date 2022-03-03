@@ -1,0 +1,10 @@
+uuid: 16e681ff-19d9-4e76-9534-54f84f28abd7
+langcode: en
+status: true
+dependencies: {  }
+id: question
+label: Question
+icon_uuid: null
+icon_default: null
+description: 'Used in Frequently Asked Questions.'
+behavior_plugins: {  }

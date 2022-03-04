@@ -27,6 +27,7 @@ class GoogleMapH22 extends MapLinkBase {
    *   The Url.
    */
   public function getAddressUrl(AddressInterface $address) {
+    // https://www.google.com/maps?daddr=34.059808,-118.368152.
     return Url::fromUri('https://google.com/maps', ['query' => ['daddr' => $this->addressString($address)]]);
   }
 
@@ -41,10 +42,9 @@ class GoogleMapH22 extends MapLinkBase {
    * @return \Drupal\Core\Url
    */
   public function getAddressUrlLatLong($lat, $long) {
-    // https://www.google.com/maps/dir/?api=1&origin=34.1030032,-118.41046840000001&destination=34.059808,-118.368152.
-    return Url::fromUri('https://google.com/maps/dir/', ['query' => [
-      'api' => '1',
-      'destination' => $lat . ',' . $long
+    // https://www.google.com/maps?daddr=34.059808,-118.368152.
+    return Url::fromUri('https://google.com/maps', ['query' => [
+      'daddr' => $lat . ',' . $long
     ]]);
   }
 

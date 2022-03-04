@@ -2,6 +2,7 @@
 
 namespace Drupal\h22_core\Form;
 
+use Drupal\address_map_link\MapLinkManager;
 use Drupal\Core\Flood\FloodInterface;
 use Drupal\Core\Form\FormBase;
 use Drupal\Core\Form\FormStateInterface;
@@ -38,10 +39,18 @@ class ViewContactInformation extends FormBase {
    */
   protected $flagService;
 
-  public function __construct(FloodInterface $flood, RequestStack $requestStack, FlagLinkBuilderInterface $flagLinkBuilder) {
+  /**
+   * The Map Plugin manager
+   *
+   * @var \Drupal\address_map_link\Annotation\MapLink
+   */
+  protected $mapManager;
+
+  public function __construct(FloodInterface $flood, RequestStack $requestStack, FlagLinkBuilderInterface $flagLinkBuilder, MapLinkManager $mapManager) {
     $this->flood = $flood;
     $this->requestStack = $requestStack->getCurrentRequest();
     $this->flagService = $flagLinkBuilder;
+    $this->mapManager = $mapManager;
   }
 
   /**
@@ -51,7 +60,8 @@ class ViewContactInformation extends FormBase {
     return new static(
       $container->get('flood'),
       $container->get('request_stack'),
-      $container->get('flag.link_builder')
+      $container->get('flag.link_builder'),
+      $container->get('plugin.manager.map_link')
     );
   }
 
@@ -138,19 +148,31 @@ class ViewContactInformation extends FormBase {
         '#weight' => '0',
       ];
     }
-  else {
-    $element['container']['tel'] = $this->node->field_phone_number->view('teaser');
-    $element['container']['telegram'] = $this->node->field_telegram->view('teaser');
-    $element['container']['email'] = $this->node->field_email->view('teaser');
-    $element['container']['fb'] = $this->node->field_facebook->view('teaser');
+    else {
+      $element['container']['tel'] = $this->node->field_phone_number->view('teaser');
+      $element['container']['telegram'] = $this->node->field_telegram->view('teaser');
+      $element['container']['email'] = $this->node->field_email->view('teaser');
+      $element['container']['fb'] = $this->node->field_facebook->view('teaser');
 
-    $flag = $this->flagService->build('node', $this->node->id(), 'host_location_report_flag');
+      $field_item = $this->node->get('field_location')->first();
+      $mapLinkType = $this->mapManager->createInstance('google_h22');
+      $url = $mapLinkType->getAddressUrlLatLong($field_item->get('lat')->getValue(), $field_item->get('lon')->getValue());
+      $element['container']['directions'] = [
+        '#type' => 'link',
+        '#title' => $this->t('Get Directions'),
+        '#url' => $url,
+        '#attributes' => [
+          'class' => ['button', 'button--primary', 'button--icon--map'],
+        ],
+      ];
 
-    $element['container']['flag'] = $flag;
-    $element['container']['flag']['#attributes']['class'][] = 'button button--danger';
-    $element['container']['flag']['#weight'] = 9;
+      $flag = $this->flagService->build('node', $this->node->id(), 'host_location_report_flag');
+
+      $element['container']['flag'] = $flag;
+      $element['container']['flag']['#attributes']['class'][] = 'button button--danger';
+      $element['container']['flag']['#weight'] = 9;
+      }
+      return $element;
     }
-    return $element;
-  }
 
 }

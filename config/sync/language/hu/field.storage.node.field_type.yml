@@ -1,0 +1,6 @@
+settings:
+  allowed_values:
+    -
+      label: Személy
+    -
+      label: Szervezet

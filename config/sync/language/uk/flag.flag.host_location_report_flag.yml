@@ -1,0 +1,5 @@
+label: 'Прапорець звіту про місцезнаходження хосту'
+flag_short: 'Повідомити про місцезнаходження'
+linkTypeConfig:
+  flag_confirmation: 'Повідомити про місцезнаходження'
+  flag_create_button: Звіт

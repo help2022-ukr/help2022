@@ -2,15 +2,11 @@ display:
   default:
     display_title: Implicit
     display_options:
-      title: Media
       fields:
         media_bulk_form:
           action_title: Acțiune
       pager:
         options:
-          tags:
-            next: ››
-            previous: ‹‹
           expose:
             items_per_page_label: 'Elemente pe pagină'
             items_per_page_options_all_label: '- Toate -'
@@ -20,7 +16,6 @@ display:
           reset_button_label: Resetează
           exposed_sorts_label: 'Sortare după'
           sort_asc_label: Ascendent
-          sort_desc_label: Desc
       sorts:
         created:
           expose:
@@ -48,14 +43,11 @@ display:
       fields:
         media_bulk_form:
           action_title: Acțiune
-        name:
-          separator: ', '
         edit_media:
           text: Modifică
         delete_media:
           text: Şterge
   widget:
-    display_title: Widget
     display_options:
       arguments:
         bundle:

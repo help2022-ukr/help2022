@@ -1,0 +1,12 @@
+display:
+  default:
+    display_options:
+      title: Határátkelőhelyek
+      fields:
+        title:
+          label: 'Átkelési pont neve'
+  page_list:
+    display_options:
+      fields:
+        field_location:
+          label: Elhelyezkedés

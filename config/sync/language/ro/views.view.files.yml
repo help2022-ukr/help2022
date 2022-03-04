@@ -6,11 +6,8 @@ display:
     display_options:
       title: Fişiere
       fields:
-        fid:
-          label: Fid
         filename:
           label: Nume
-          separator: ', '
         filemime:
           label: 'Tip MIME'
         filesize:
@@ -19,7 +16,6 @@ display:
           label: Stare
           settings:
             format_custom_false: Temporar
-            format_custom_true: Permanent
         created:
           label: 'Data încărcării'
         changed:
@@ -41,7 +37,6 @@ display:
           reset_button_label: Resetează
           exposed_sorts_label: 'Sortare după'
           sort_asc_label: Ascendent
-          sort_desc_label: Desc
       empty:
         area_text_custom:
           content: 'Nu sunt fișiere disponibile.'
@@ -73,7 +68,6 @@ display:
           label: 'Înregistrare modul'
         count:
           label: 'Număr de utilizări'
-          format_plural_string: !!binary MQNAY291bnQ=
       pager:
         options:
           tags:

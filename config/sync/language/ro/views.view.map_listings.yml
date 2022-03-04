@@ -1,0 +1,19 @@
+label: 'Harta locațiilor'
+display:
+  page_2:
+    display_options:
+      fields:
+        nothing_1:
+          label: Locație
+        field_host_adults:
+          label: Adulți
+        field_host_kids:
+          label: Copii
+        created:
+          label: 'Data postării'
+  default:
+    display_options:
+      title: Listă
+      header:
+        result:
+          content: 'Se afișează @start - @end locații ale @total locații.'

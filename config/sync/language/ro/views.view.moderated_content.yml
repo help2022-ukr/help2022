@@ -7,19 +7,14 @@ display:
       fields:
         title:
           label: Titlu
-          separator: ', '
         type:
           label: 'Tip conţinut'
-          separator: ', '
         name:
           label: Autor
-          separator: ', '
         moderation_state:
           label: 'Starea de moderare'
-          separator: ', '
         changed:
           label: Actualizat
-          separator: ', '
         operations:
           label: Operaţii
       pager:
@@ -39,7 +34,6 @@ display:
           reset_button_label: Resetează
           exposed_sorts_label: 'Sortare după'
           sort_asc_label: Ascendent
-          sort_desc_label: Desc
       filters:
         title:
           expose:

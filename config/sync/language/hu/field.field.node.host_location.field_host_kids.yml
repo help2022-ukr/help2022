@@ -1,0 +1,4 @@
+label: Gyerek
+description: 'Hány gyerek/tinédzser (18 év alatti)?'
+settings:
+  suffix: ' gyerek| gyerek'

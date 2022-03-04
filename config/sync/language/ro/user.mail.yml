@@ -1,5 +1,6 @@
 cancel_confirm:
   subject: 'Cerere de anulare cont pentru [user:display-name] la [site:name]'
+  body: "[user:display-name]\r\n\r\nA request to cancel your account has been made at [site:name].\r\n\r\nYou may now cancel your account on [site:url-brief] by clicking this link or copying and pasting it into your browser:\r\n\r\n[user:cancel-url]\r\n\r\nNOTE: The cancellation of your account is not reversible.\r\n\r\nThis link expires in one day and nothing will happen if it is not used.\r\n\r\n--  [site:name] team"
 password_reset:
   subject: 'Înlocuirea informațiilor de autentificare pentru  [user:display-name] la [site:name]'
   body: "[user:display-name],\r\n\r\n[site:name] a primit o cerere de inițializare a parolei contului dumneavoastră.\r\n\r\nVă puteți autentifica urmând această legătură sau copiind-o în browser-ul dumneavoastră:\r\n\r\n[user:one-time-login-url]\r\n\r\nAceastă legătură poate fi folosită o singură dată și vă va conduce pe o pagină unde vă veți introduce noua parolă. Expiră după o zi și nu se va întâmpla nimic dacă nu va fi folosită.\r\n\r\n--  [site:name] team"
@@ -11,6 +12,7 @@ register_no_approval_required:
   body: "[user:display-name],\r\n\r\nVă mulțumim că v-ați înregistrat pe [site:name]. Acum vă puteți autentifica prin apăsarea acestui link sau prin copierea și lipirea lui în browser-ul dumneavoastră:\r\n\r\n[user:one-time-login-url]\r\n\r\nAcest link poate fi folosit o singură dată pentru a vă autentifica și vă va duce la o pagină unde vă puteți seta parola.\r\n\r\nDupă setarea parolei, veți fi capabil să vă autentificați la [site:login-url] utilizând:\r\n\r\nnume de utilizator: [user:name]\r\nparolă: Parola dumneavoastră\r\n\r\n--  Echipa [site:name]"
 register_pending_approval:
   subject: 'Detalii cont pentru [user:display-name] la [site:name] (aprobare de către admin în așteptare)'
+  body: "[user:display-name],\r\n\r\nThank you for registering at [site:name]. Your application for an account is currently pending approval. Once it has been approved, you will receive another email containing information about how to log in, set your password, and other details.\r\n\r\n--  [site:name] team"
 register_pending_approval_admin:
   subject: 'Detalii cont pentru [user:display-name] la [site:name] (aprobare de către admin în așteptare)'
   body: "[user:display-name] a aplicat pentru un cont.\r\n\r\n[user:edit-url]"

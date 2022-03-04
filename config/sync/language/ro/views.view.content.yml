@@ -10,7 +10,6 @@ display:
           label: Titlu
         type:
           label: 'Tip conţinut'
-          separator: ', '
         name:
           label: Autor
         status:
@@ -35,7 +34,6 @@ display:
           reset_button_label: Resetează
           exposed_sorts_label: 'Sortare după'
           sort_asc_label: Ascendent
-          sort_desc_label: Desc
       empty:
         area_text_custom:
           content: 'Nu este conţinut disponibil.'

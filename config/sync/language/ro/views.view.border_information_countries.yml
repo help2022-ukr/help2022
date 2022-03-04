@@ -1,0 +1,5 @@
+label: 'Țări de informații de frontieră'
+display:
+  default:
+    display_options:
+      title: 'Informații despre punctele de trecere a frontierei'

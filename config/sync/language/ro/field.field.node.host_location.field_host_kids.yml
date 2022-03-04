@@ -1,0 +1,4 @@
+label: Copii
+description: 'Câți copii/adolescenti (sub 18 ani)?'
+settings:
+  suffix: ' Copil| Copii'

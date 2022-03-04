@@ -1,0 +1,12 @@
+settings:
+  allowed_values:
+    -
+      label: Fraudă
+    -
+      label: 'Descrierea nu este adevarata'
+    -
+      label: 'Proprietarul nu ia legătura'
+    -
+      label: 'Pentru locuință se cere chirie'
+    -
+      label: 'Mai puțin spațiu decât anunțat'

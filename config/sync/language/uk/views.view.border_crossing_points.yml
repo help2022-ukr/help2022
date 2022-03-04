@@ -8,3 +8,11 @@ display:
           label: Статус
         field_hotlines:
           label: 'Гарячі лінії'
+        field_location:
+          label: Розташування
+  default:
+    display_options:
+      title: 'Пункти перетину кордону'
+      fields:
+        title:
+          label: 'Назва точки перетину'

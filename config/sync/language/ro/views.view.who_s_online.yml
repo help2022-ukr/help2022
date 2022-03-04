@@ -11,7 +11,6 @@ display:
           reset_button_label: Resetează
           exposed_sorts_label: 'Sortare după'
           sort_asc_label: Ascendent
-          sort_desc_label: Desc
       empty:
         area_text_custom:
           content: 'În acest moment sunt 0 utilizatori conectați.'

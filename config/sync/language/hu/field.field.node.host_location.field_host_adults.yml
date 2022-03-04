@@ -1,0 +1,4 @@
+label: Felnőttek
+description: 'Hány felnőtt? (18 év feletti)'
+settings:
+  suffix: 'Felnőtt| Felnőttek'

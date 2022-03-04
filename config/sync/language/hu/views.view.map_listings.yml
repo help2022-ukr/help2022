@@ -1,0 +1,22 @@
+label: 'Térképes listák'
+display:
+  default:
+    display_options:
+      title: Listákat
+      filters:
+        field_type_value:
+          expose:
+            label: 'Menedék típusa'
+        field_host_adults_value:
+          expose:
+            label: felnőtt
+          group_info:
+            label: felnőtt
+        field_host_kids_value:
+          expose:
+            label: gyerek
+          group_info:
+            label: gyerek
+      header:
+        result:
+          content: 'A @total hely @start - @end helyeinek megjelenítése.'

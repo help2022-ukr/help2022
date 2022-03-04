@@ -1,4 +1,3 @@
-label: Watchdog
 description: 'Mesaje recente din jurnal'
 display:
   default:
@@ -8,8 +7,6 @@ display:
       fields:
         nothing:
           admin_label: Pictogramă
-        wid:
-          label: WID
         severity:
           label: Gravitate
         type:
@@ -20,14 +17,10 @@ display:
           label: Mesaj
         name:
           label: Utilizator
-          separator: ', '
         link:
           label: Operaţii
       pager:
         options:
-          tags:
-            next: ››
-            previous: ‹‹
           expose:
             items_per_page_label: 'Elemente pe pagină'
             items_per_page_options_all_label: '- Toate -'
@@ -38,7 +31,6 @@ display:
           reset_button_label: Resetează
           exposed_sorts_label: 'Sortare după'
           sort_asc_label: Ascendent
-          sort_desc_label: Desc
       empty:
         area:
           admin_label: 'Nu este disponibil niciun mesaj log.'

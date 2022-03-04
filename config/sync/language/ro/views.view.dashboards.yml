@@ -1,0 +1,12 @@
+display:
+  default:
+    display_options:
+      empty:
+        area:
+          content:
+            value: "<p>You have 0 locations added to the map. Please add a location.</p>\r\n"
+            format: basic_html
+  page_locations:
+    display_options:
+      menu:
+        title: 'Locațiile mele'

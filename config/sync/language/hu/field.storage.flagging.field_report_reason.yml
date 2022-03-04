@@ -1,0 +1,12 @@
+settings:
+  allowed_values:
+    -
+      label: Csalás
+    -
+      label: 'A leírás nem igaz'
+    -
+      label: 'A tulajdonos nem veszi fel a kapcsolatot'
+    -
+      label: 'A lakhatáshoz bérleti díj szükséges'
+    -
+      label: 'Kevesebb hely, mint a bejelentett'

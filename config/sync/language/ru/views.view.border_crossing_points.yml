@@ -1,0 +1,12 @@
+display:
+  default:
+    display_options:
+      title: 'Пограничные пункты пропуска'
+      fields:
+        title:
+          label: 'Название пункта пропуска'
+  page_list:
+    display_options:
+      fields:
+        field_location:
+          label: Местонахождение

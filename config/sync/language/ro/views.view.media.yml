@@ -1,32 +1,23 @@
-label: Media
 display:
   default:
     display_title: Implicit
     display_options:
-      title: Media
       fields:
         media_bulk_form:
           action_title: Acțiune
         thumbnail__target_id:
           label: Miniatură
-          separator: ', '
-        name:
-          separator: ', '
         bundle:
           label: Tip
-          separator: ', '
         uid:
           label: Autor
-          separator: ', '
         status:
           label: Stare
           settings:
             format_custom_false: Nepublicat
             format_custom_true: Publicat
-          separator: ', '
         changed:
           label: Actualizat
-          separator: ', '
         operations:
           label: Operaţii
       pager:
@@ -46,7 +37,6 @@ display:
           reset_button_label: Resetează
           exposed_sorts_label: 'Sortare după'
           sort_asc_label: Ascendent
-          sort_desc_label: Desc
       filters:
         bundle:
           expose:
@@ -64,8 +54,3 @@ display:
         langcode:
           expose:
             label: Limba
-  media_page_list:
-    display_title: Media
-    display_options:
-      menu:
-        title: Media

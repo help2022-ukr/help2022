@@ -10,7 +10,7 @@ field_name: field_contact_person
 entity_type: node
 bundle: host_location
 label: 'Contact Person'
-description: 'Name if the contact person.'
+description: 'Name of the contact person.'
 required: false
 translatable: false
 default_value: {  }

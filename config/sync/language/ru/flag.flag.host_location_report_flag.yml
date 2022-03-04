@@ -1,0 +1,4 @@
+flag_short: 'Что-то не так?'
+linkTypeConfig:
+  flag_confirmation: 'Что-то не так?'
+  flag_create_button: 'Что-то не так?'

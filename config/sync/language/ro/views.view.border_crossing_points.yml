@@ -1,0 +1,12 @@
+display:
+  default:
+    display_options:
+      title: 'Puncte de trecere a frontierei'
+      fields:
+        title:
+          label: 'Denumirea punctului de trecere'
+  page_list:
+    display_options:
+      fields:
+        field_location:
+          label: Locație

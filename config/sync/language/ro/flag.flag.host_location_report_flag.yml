@@ -1,0 +1,4 @@
+flag_short: 'Raportează locația'
+linkTypeConfig:
+  flag_confirmation: 'Raportează locația'
+  flag_create_button: 'Raportează locația'

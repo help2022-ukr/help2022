@@ -23,8 +23,6 @@ display:
           label: 'Ultima accesare'
         operations:
           label: Operaţii
-        mail:
-          separator: ', '
       pager:
         options:
           tags:
@@ -42,7 +40,6 @@ display:
           reset_button_label: Resetează
           exposed_sorts_label: 'Sortare după'
           sort_asc_label: Ascendent
-          sort_desc_label: Desc
       empty:
         area_text_custom:
           content: 'Nici o persoană disponibilă.'

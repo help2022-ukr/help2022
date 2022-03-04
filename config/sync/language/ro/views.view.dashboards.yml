@@ -4,8 +4,9 @@ display:
       empty:
         area:
           content:
-            value: "<p>You have 0 locations added to the map. Please add a location.</p>\r\n"
+            value: "<p>Ai 0 locații adăugate pe hartă. Vă rugăm să adăugați o locație.</p>\r\n"
             format: basic_html
+      title: 'Locațiile mele'
   page_locations:
     display_options:
       menu:

@@ -4,8 +4,9 @@ display:
       empty:
         area:
           content:
-            value: "<p>You have 0 locations added to the map. Please add a location.</p>\r\n"
+            value: "<p>0 hely van hozzáadva a térképhez. Kérjük, adjon meg egy helyet.</p>\r\n"
             format: basic_html
+      title: 'Saját helyek'
   page_locations:
     display_options:
       menu:

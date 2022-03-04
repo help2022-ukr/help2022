@@ -3,6 +3,11 @@ display:
   default:
     display_options:
       title: 'Мой список'
+      empty:
+        area:
+          content:
+            value: "<p>Вы добавили 0 мест на карту. Пожалуйста, добавьте местоположение.</p>\r\n"
+            format: basic_html
   page_locations:
     display_options:
       menu:

@@ -1,0 +1,10 @@
+name: 'H22 Migrate'
+type: module
+description: 'Custom migration and importers.'
+core_version_requirement: ^8 || ^9
+package: 'Help2022'
+dependencies:
+  - drupal:migrate
+  - migrate_source_csv:migrate_source_csv
+  - migrate_tools:migrate_tools
+  - migrate_plus:migrate_plus

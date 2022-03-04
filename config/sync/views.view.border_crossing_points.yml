@@ -1033,7 +1033,7 @@ display:
           exclude: false
           alter:
             alter_text: true
-            text: "<div class=\"phone-list-wrapper\">\r\n{{ field_hotlines }}\r\n</div>\r\n<div>\r\n<a class=\"button button--primary button--icon--map\" href=\"https://www.google.com/maps?daddr={{ field_location__lat }},{{ field_location__lon }}\">\r\n  {{ 'Get Directions'|t }}\r\n</a>\r\n</div>"
+            text: "<div class=\"phone-list-wrapper\">\r\n{{ field_hotlines }}\r\n</div>\r\n<div>\r\n<a class=\"button button--primary button--icon--map\" href=\"https://www.google.com/maps/dir/?api=1&destination={{ field_location__lat }},{{ field_location__lon }}\">\r\n  {{ 'Get Directions'|t }}\r\n</a>\r\n</div>"
             make_link: false
             path: ''
             absolute: false

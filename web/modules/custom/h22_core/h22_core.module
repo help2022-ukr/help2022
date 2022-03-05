@@ -177,6 +177,7 @@ function h22_core_leaflet_views_feature_alter(array &$feature, ResultRow $row, R
     case 'host_location':
       $host_type = $entity->get('field_type')->first()->value;
       $icon_url = \Drupal::request()->getBasePath() . '/' . $theme->getPath() . '/media/assets/img/h22--marker--' . $host_type . '.png';
+      $icon_retinal_url = \Drupal::request()->getBasePath() . '/' . $theme->getPath() . '/media/assets/img/h22--marker--' . $host_type . '-2x.png';
       $icon_class = 'marker--h22 marker-h22--' . $host_type;
       $shadow_url = \Drupal::request()->getBasePath() . '/'  . $leaflet_path . '/js/leaflet/dist/images/marker-shadow.png';
       $feature['icon']['iconSize'] = ['x' => '25', 'y' => '41'];
@@ -187,6 +188,7 @@ function h22_core_leaflet_views_feature_alter(array &$feature, ResultRow $row, R
 
   }
   $feature['icon']['iconUrl'] = $icon_url ?? '';
+  $feature['icon']['iconRetinaUrl'] = $icon_retinal_url ?? '';
   $feature['icon']['shadowUrl'] = $shadow_url ?? '';
   $feature['icon']['className'] = $icon_class;
 }

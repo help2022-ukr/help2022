@@ -5,13 +5,16 @@
  * Contains h22_core.module.
  */
 
+use Drupal\address\Plugin\Field\FieldWidget\AddressDefaultWidget;
 use Drupal\Core\Entity\Display\EntityViewDisplayInterface;
 use Drupal\Core\Entity\EntityInterface;
 use Drupal\Core\Form\FormStateInterface;
 use Drupal\Core\Language\LanguageInterface;
 use Drupal\Core\Routing\RouteMatchInterface;
+use Drupal\field\FieldStorageConfigInterface;
 use Drupal\node\Entity\NodeType;
-use http\Url;
+use Drupal\views\Plugin\views\row\RowPluginBase;
+use Drupal\views\ResultRow;
 
 /**
  * Implements hook_help().
@@ -96,6 +99,7 @@ function _h22_core_adjust_edit_or_add_for(&$form, FormStateInterface $form_state
     if ($form["revision"]["#type"] == 'checkbox') {
       $form["revision"]["#access"] = FALSE;
     }
+    $form['field_source']['#access'] = FALSE;
   }
 
   // Conditional field.
@@ -156,4 +160,62 @@ function h22_core_node_view(array &$build, EntityInterface $entity, EntityViewDi
     $build['form'] = $form;
     $build['form']['#weight'] = 9;
   }
+}
+
+/**
+ * Implements hook_leaflet_views_feature_alter().
+ */
+function h22_core_leaflet_views_feature_alter(array &$feature, ResultRow $row, RowPluginBase $rowPlugin = NULL) {
+  /** @var \Drupal\node\Entity\Node $entity */
+  $entity = $row->_entity;
+  $icon_class = 'marker-22';
+  $theme = \Drupal::theme()->getActiveTheme();
+  $module_handler = \Drupal::service('module_handler');
+  $leaflet_path = $module_handler->getModule('leaflet')->getPath();
+
+  switch ($entity->bundle()) {
+    case 'host_location':
+      $host_type = $entity->get('field_type')->first()->value;
+      $icon_url = \Drupal::request()->getBasePath() . '/' . $theme->getPath() . '/media/assets/img/h22--marker--' . $host_type . '.png';
+      $icon_class = 'marker--h22 marker-h22--' . $host_type;
+      $shadow_url = \Drupal::request()->getBasePath() . '/'  . $leaflet_path . '/js/leaflet/dist/images/marker-shadow.png';
+      $feature['icon']['iconSize'] = ['x' => '25', 'y' => '41'];
+      $feature['icon']['shadowSize'] = ['x' => '41', 'y' => '41'];
+      $feature['icon']['popupAnchor'] = ['x' => '1', 'y' => '-34'];
+      $feature['icon']['iconAnchor'] = ['x' => '12', 'y' => '41'];
+      break;
+
+  }
+  $feature['icon']['iconUrl'] = $icon_url ?? '';
+  $feature['icon']['shadowUrl'] = $shadow_url ?? '';
+  $feature['icon']['className'] = $icon_class;
+}
+
+/**
+ * Implements hook_field_views_data().
+ *
+ * Views integration for address fields.
+ */
+/**
+ * Implements hook_field_views_data_alter().
+ */
+function h22_core_field_views_data_alter(array &$data, \Drupal\field\FieldStorageConfigInterface $field) {
+  $field_type = $field->getType();
+  $field_name = $field->getName();
+  if ($field_type == 'address') {
+    foreach ($data as $table_name => $table_data) {
+      $original_field = $data[$table_name][$field_name . '_' . 'country_code'];
+      $data[$table_name][$field_name . '_' . 'country_h22'] = [];
+      $data[$table_name][$field_name . '_' . 'country_h22']['title'] = t('H22 Country of @label (@name)', $original_field['title']->getArguments());
+      $data[$table_name][$field_name . '_' . 'country_h22']['group'] = t('H22 Custom');
+      $data[$table_name][$field_name . '_' . 'country_h22']['filter'] = [
+        'id' => 'country_h22',
+        'field_name' => $field_name,
+        'real field' => $field_name . '_country_code',
+        'property' => 'country',
+      ];
+    }
+  }
+
+  return $data;
 }

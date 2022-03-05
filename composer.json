@@ -74,6 +74,7 @@
         "drupal/views_field_view": "^1.0@beta",
         "geocoder-php/google-maps-provider": "^4.6",
         "harvesthq/chosen": "^1.8",
+        "mnsami/composer-custom-directory-installer": "^2.0",
         "vlucas/phpdotenv": "^5.4"
     },
     "conflict": {
@@ -95,7 +96,8 @@
                 "type:drupal-core"
             ],
             "web/libraries/{$name}": [
-                "type:drupal-library"
+                "type:drupal-library",
+                "harvesthq/chosen"
             ],
             "web/modules/contrib/{$name}": [
                 "type:drupal-module"

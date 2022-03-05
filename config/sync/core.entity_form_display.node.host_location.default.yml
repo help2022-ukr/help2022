@@ -13,6 +13,7 @@ dependencies:
     - field.field.node.host_location.field_location
     - field.field.node.host_location.field_organization_name
     - field.field.node.host_location.field_phone_number
+    - field.field.node.host_location.field_source
     - field.field.node.host_location.field_telegram
     - field.field.node.host_location.field_type
     - node.type.host_location
@@ -149,6 +150,14 @@ content:
     region: content
     settings:
       placeholder: ''
+    third_party_settings: {  }
+  field_source:
+    type: link_default
+    weight: 35
+    region: content
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
     third_party_settings: {  }
   field_telegram:
     type: string_textfield

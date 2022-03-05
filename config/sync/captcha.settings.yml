@@ -9,5 +9,5 @@ add_captcha_description: true
 wrong_captcha_response_message: 'The answer you entered for the CAPTCHA was not correct.'
 default_validation: 1
 persistence: 1
-enable_stats: false
+enable_stats: true
 log_wrong_responses: false

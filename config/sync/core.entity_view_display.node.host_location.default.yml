@@ -13,12 +13,14 @@ dependencies:
     - field.field.node.host_location.field_location
     - field.field.node.host_location.field_organization_name
     - field.field.node.host_location.field_phone_number
+    - field.field.node.host_location.field_source
     - field.field.node.host_location.field_telegram
     - field.field.node.host_location.field_type
     - node.type.host_location
   module:
     - address
     - leaflet
+    - link
     - options
     - text
     - user
@@ -153,6 +155,18 @@ content:
       link_to_entity: false
     third_party_settings: {  }
     weight: 6
+    region: content
+  field_source:
+    type: link
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 12
     region: content
   field_type:
     type: list_default

@@ -1,0 +1,5 @@
+services:
+  h22_core.address_format_subscriber:
+    class: Drupal\h22_core\EventSubscriber\AddressFormatEventSubscriber
+    tags:
+      - {name: event_subscriber}

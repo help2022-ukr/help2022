@@ -55,3 +55,20 @@
     margin: 1rem 0;
   }
 }
+
+.leaflet-marker-pane {
+  .marker--h22 {
+    margin-left: -12px;
+    margin-top: -41px;
+    width: 25px;
+    height: 41px;
+  }
+}
+.leaflet-shadow-pane {
+  .marker--h22 {
+    margin-top: -41px;
+    margin-left: -12px;
+    height: 41px;
+    width: 41px;
+  }
+}

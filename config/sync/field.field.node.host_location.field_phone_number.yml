@@ -13,7 +13,7 @@ entity_type: node
 bundle: host_location
 label: 'Phone number'
 description: 'Please enter full phone-number, international format.'
-required: true
+required: false
 translatable: false
 default_value: {  }
 default_value_callback: ''

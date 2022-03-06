@@ -4,6 +4,7 @@ namespace Drupal\h22_core\EventSubscriber;
 
 use Drupal\address\Event\AddressEvents;
 use Drupal\address\Event\AddressFormatEvent;
+use Drupal\address\Event\AvailableCountriesEvent;
 use Symfony\Component\EventDispatcher\EventSubscriberInterface;
 
 class AddressFormatEventSubscriber implements EventSubscriberInterface {

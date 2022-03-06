@@ -205,6 +205,7 @@ function h22_core_leaflet_views_feature_alter(array &$feature, ResultRow $row, R
   $feature['icon']['iconUrl'] = $icon_url ?? '';
   $feature['icon']['iconRetinaUrl'] = $icon_retinal_url ?? '';
   $feature['icon']['shadowUrl'] = $shadow_url ?? '';
+  $feature['icon']['shadowRetinaUrl'] = $shadow_url ?? '';
   $feature['icon']['className'] = $icon_class;
 }
 

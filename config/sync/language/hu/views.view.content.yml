@@ -10,7 +10,6 @@ display:
           label: Cím
         type:
           label: Tartalomtípus
-          separator: ', '
         name:
           label: Szerző
         status:

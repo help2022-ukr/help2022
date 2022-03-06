@@ -10,9 +10,6 @@ display:
           action_title: Művelet
       pager:
         options:
-          tags:
-            next: ››
-            previous: ‹‹
           expose:
             items_per_page_label: 'Elemek száma oldalanként'
             items_per_page_options_all_label: '– Mind –'
@@ -65,8 +62,6 @@ display:
       fields:
         media_bulk_form:
           action_title: Művelet
-        name:
-          separator: ', '
         edit_media:
           alter:
             text: '{{ name }} szerkesztése'

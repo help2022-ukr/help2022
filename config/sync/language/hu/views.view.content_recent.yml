@@ -5,9 +5,6 @@ display:
     display_title: Alapértelmezés
     display_options:
       title: 'Friss tartalom'
-      fields:
-        changed:
-          separator: ', '
       exposed_form:
         options:
           submit_button: Alkalmaz

@@ -26,8 +26,6 @@ display:
             past_format: '@interval ideje'
         operations:
           label: Műveletek
-        mail:
-          separator: ', '
       pager:
         options:
           tags:

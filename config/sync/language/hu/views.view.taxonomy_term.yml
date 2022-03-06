@@ -6,9 +6,6 @@ display:
     display_options:
       pager:
         options:
-          tags:
-            next: ››
-            previous: ‹‹
           expose:
             items_per_page_label: 'Elemek száma oldalanként'
             items_per_page_options_all_label: '– Mind –'
@@ -24,7 +21,6 @@ display:
         tid:
           exception:
             title: Mind
-          title: '{{ arguments.tid }}'
   feed_1:
     display_title: Hírcsatorna
   page_1:

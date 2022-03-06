@@ -8,19 +8,14 @@ display:
       fields:
         title:
           label: Cím
-          separator: ', '
         type:
           label: Tartalomtípus
-          separator: ', '
         name:
           label: Szerző
-          separator: ', '
         moderation_state:
           label: 'Moderációs állapot'
-          separator: ', '
         changed:
           label: Frissítve
-          separator: ', '
         operations:
           label: Műveletek
       pager:

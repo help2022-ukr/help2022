@@ -8,8 +8,6 @@ display:
       fields:
         nothing:
           admin_label: Ikon
-        wid:
-          label: WID
         severity:
           label: Szint
         type:
@@ -18,18 +16,12 @@ display:
           label: Dátum
         message:
           label: Üzenet
-          alter:
-            alt: '{{ message }}'
         name:
           label: Felhasználó
-          separator: ', '
         link:
           label: Műveletek
       pager:
         options:
-          tags:
-            next: ››
-            previous: ‹‹
           expose:
             items_per_page_label: 'Elemek száma oldalanként'
             items_per_page_options_all_label: '– Mind –'

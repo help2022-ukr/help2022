@@ -46,6 +46,21 @@ function h22_core_theme() {
 /**
  * Implements hook_form_alter().
  */
+function h22_core_form_views_exposed_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state) {
+  switch ($form['#id']) {
+    case 'views-exposed-form-map-listings-page-map';
+      $form["field_address_country_h22"]["#type"] = 'select2';
+      $form["field_address_country_h22"]["#select2"] = [
+        'allowClear' => FALSE,
+        'width' => 'element',
+      ];
+      break;
+  }
+}
+
+/**
+ * Implements hook_form_alter().
+ */
 function h22_core_form_node_host_location_edit_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id) {
   _h22_core_adjust_edit_or_add_for($form, $form_state, $form_id);
 }

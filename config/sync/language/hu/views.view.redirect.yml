@@ -27,7 +27,6 @@ display:
           action_title: 'A kiválasztottakkal'
         redirect_source__path:
           label: Honnan
-          separator: ', '
         created:
           label: Létrehozva
       filters:

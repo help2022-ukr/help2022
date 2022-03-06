@@ -6,11 +6,8 @@ display:
     display_options:
       title: Fájlok
       fields:
-        fid:
-          label: Fid
         filename:
           label: Név
-          separator: ', '
         filemime:
           label: 'MIME típus'
         filesize:
@@ -73,7 +70,6 @@ display:
           label: 'Használó modul'
         count:
           label: 'Használatok száma'
-          format_plural_string: !!binary MQNAY291bnQ=
       pager:
         options:
           tags:

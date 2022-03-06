@@ -10,22 +10,14 @@ display:
           action_title: Művelet
         subject:
           label: Tárgy
-          separator: ', '
-        uid:
-          separator: ', '
         name:
           label: Szerző
-          separator: ', '
         entity_id:
           label: 'Hozzászólás ehhez'
-          separator: ', '
         changed:
           label: Frissítve
-          separator: ', '
         operations:
           label: Műveletek
-        name_1:
-          separator: ', '
       pager:
         options:
           tags:
@@ -73,22 +65,14 @@ display:
           action_title: Művelet
         subject:
           label: Tárgy
-          separator: ', '
-        uid:
-          separator: ', '
         name:
           label: Szerző
-          separator: ', '
         entity_id:
           label: 'Hozzászólás ehhez'
-          separator: ', '
         changed:
           label: Frissítve
-          separator: ', '
         operations:
           label: Műveletek
-        name_1:
-          separator: ', '
       filters:
         subject:
           expose:

@@ -8,10 +8,8 @@ display:
       fields:
         info:
           label: 'Blokk leírása'
-          separator: ', '
         type:
           label: Blokktípus
-          separator: ', '
         changed:
           label: Frissítve
         operations:

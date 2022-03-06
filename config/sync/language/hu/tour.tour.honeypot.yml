@@ -1,7 +1,5 @@
-label: Honeypot
 tips:
   honeypot-configuration:
-    label: Honeypot
     body: "A <em>Honeypot</em> modul telepítése a webhelyen megtörtént. Így már pár kattintással bekapcsolható a védelem a kéretlen robotokkal szemben.\r\n\r\nA „Következő” gombra kattintva megismerhetőek a beállítási lehetőségek ezen az oldalon."
   protect-all-forms:
     label: 'Az összes űrlap védelme'

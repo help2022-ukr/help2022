@@ -41,7 +41,7 @@
     <strong>{{ 'Country: '|t }}</strong>{{ country.name }}
   </div>
   <div>
-    <strong>{{ 'Locality (City / Village): '|t }}</strong> {{ locality.code }}
+    <strong>{{ 'Locality (City / Village): '|t }}</strong> {{ locality.code }} {{ administrative_area.code }}
   </div>
   <div>
     {% if address_line1 %}

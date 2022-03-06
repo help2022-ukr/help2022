@@ -95,7 +95,7 @@
         "enable-patching": true,
         "patches": {
             "drupal/leaflet": {
-                "fix-retina": "https://www.drupal.org/files/issues/2022-03-06/leaflet-retina-3268023-2.patch"
+                "fix-retina": "https://www.drupal.org/files/issues/2022-03-06/leaflet-retina-3268023-3.patch"
             }
         },
         "drupal-scaffold": {

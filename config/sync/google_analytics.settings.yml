@@ -9,7 +9,7 @@ visibility:
   request_path_pages: "/admin\r\n/admin/*\r\n/batch\r\n/user/*/*"
   user_role_mode: 0
   user_role_roles: {  }
-  user_account_mode: 1
+  user_account_mode: 0
 track:
   outbound: true
   mailto: true

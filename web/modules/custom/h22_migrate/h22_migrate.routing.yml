@@ -1,0 +1,7 @@
+h22_migrate.location_file_upload:
+  path: 'admin/structure/migrate/location-upload'
+  defaults:
+    _form: '\Drupal\h22_migrate\Form\LocationFileUpload'
+    _title: 'Location Source Upload'
+  requirements:
+    _permission: 'administer migrations'

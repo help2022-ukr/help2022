@@ -1,0 +1,21 @@
+id: locations
+label: Locations
+migration_group: locations
+deriver: Drupal\h22_migrate\Plugin\LocationDeriver
+source:
+  plugin: csv
+  path: 'modules/custom/h22_migrate/data/test.csv'
+  ids: [phone]
+process:
+  type:
+    plugin: default_value
+    default_value: host_location
+  field_type: shelter_type
+  field_host_adults: adults
+  field_host_kids: children
+  field_phone_number: phone
+destination:
+  plugin: 'entity:node'
+migration_dependencies:
+  required: {  }
+  optional: {  }

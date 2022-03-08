@@ -205,7 +205,7 @@ function _h22_core_form_edit_host_location_validate_contacts(&$form, FormStateIn
   if (empty($field_phone_number[0]['value']) &&
     empty($field_telegram[0]['value']) &&
     empty($field_email[0]['value']) &&
-    empty($field_facebook[0]['value'])) {
+    empty($field_facebook[0]['uri'])) {
     // Set an error for the form element with a key of "birth_year".
     $form_state->setErrorByName('field_phone_number', t('Please specify at least 1 way for people to reach you.'));
     $form_state->setErrorByName('field_telegram', t('Please specify at least 1 way for people to reach you.'));
